@@ -131,6 +131,11 @@ class Handler(BaseHTTPRequestHandler):
         content=path.read_bytes(); self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(path.name)[0] or 'application/octet-stream'); self.send_header('Content-Length',str(len(content))); self.end_headers(); self.wfile.write(content)
     def log_message(self,fmt,*args):print('%s - %s'%(self.address_string(),fmt%args))
 
-if __name__=='__main__':
-    print(f'HyperWeather API at http://127.0.0.1:8000 (repository: {ROOT})')
-    ThreadingHTTPServer(('127.0.0.1',8000),Handler).serve_forever()
+if __name__ == '__main__':
+    import os
+
+    port = int(os.environ.get('PORT', 8000))
+
+    print(f'HyperWeather API running on 0.0.0.0:{port} (repository: {ROOT})')
+
+    ThreadingHTTPServer(('0.0.0.0', port), Handler).serve_forever()
