@@ -1,6 +1,6 @@
 """Read-only development API over the repository's existing model outputs."""
 from __future__ import annotations
-import csv, json, mimetypes
+import csv, json, mimetypes, os
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -131,11 +131,8 @@ class Handler(BaseHTTPRequestHandler):
         content=path.read_bytes(); self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(path.name)[0] or 'application/octet-stream'); self.send_header('Content-Length',str(len(content))); self.end_headers(); self.wfile.write(content)
     def log_message(self,fmt,*args):print('%s - %s'%(self.address_string(),fmt%args))
 
-if __name__ == '__main__':
-    import os
-
-    port = int(os.environ.get('PORT', 8000))
-
-    print(f'HyperWeather API running on 0.0.0.0:{port} (repository: {ROOT})')
-
-    ThreadingHTTPServer(('0.0.0.0', port), Handler).serve_forever()
+if __name__=='__main__':
+    host=os.environ.get('HOST','0.0.0.0')
+    port=int(os.environ.get('PORT','8001'))
+    print(f'HyperWeather API at http://{host}:{port} (repository: {ROOT})')
+    ThreadingHTTPServer((host,port),Handler).serve_forever()

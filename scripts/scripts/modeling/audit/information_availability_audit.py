@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 import json
 import re
@@ -105,15 +106,32 @@ def inspect_scripts():
         }
     return result
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="SIH26 information-availability audit")
+    parser.add_argument("--state")
+    parser.add_argument("--district")
+    parser.add_argument("--block")
+    args = parser.parse_args()
+    if any((args.state, args.district, args.block)) and not all((args.state, args.district, args.block)):
+        parser.error("--state, --district and --block must be supplied together")
+    return args
+
+
 def main():
+    args = parse_args()
     print("="*72)
     print("SIH26 FINAL PROVENANCE + INFORMATION-AVAILABILITY AUDIT")
     print("="*72)
     print("READ-ONLY. No datasets or source scripts will be modified.\n")
 
-    state=input("State: ").strip()
-    district=input("District: ").strip()
-    block=input("Block: ").strip()
+    state=args.state or input("State: ").strip()
+    district=args.district or input("District: ").strip()
+    block=args.block or input("Block: ").strip()
+
+    if not all((state, district, block)):
+        raise ValueError("State, District and Block are required.")
+
+    print(f"State: {state}\nDistrict: {district}\nBlock: {block}")
 
     cleaned=resolve_location(CLEANED_ROOT,state,district,block)
     engineered=resolve_location(ENGINEERED_ROOT,state,district,block)

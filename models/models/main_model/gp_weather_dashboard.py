@@ -44,6 +44,7 @@ import streamlit as st
 import folium
 from folium.plugins import Fullscreen
 from streamlit_folium import st_folium
+from shapely.geometry import shape, mapping
 
 # ---------------------------------------------------------------------
 # Configuration
@@ -537,27 +538,188 @@ def color_for_value(value, vmin, vmax, variable):
     return stops[-1][1]
 
 
+@st.cache_data(show_spinner=False)
+def load_simplified_geojson(boundary_file, allowed_gp_ids=None, tolerance=0.00015):
+    """
+    Load GeoJSON, optionally filter GP features, simplify geometry,
+    and retain only the properties required by the dashboard.
+
+    This prevents large GeoJSON payloads from being sent to the browser.
+    """
+    with open(boundary_file, "r", encoding="utf-8") as f:
+        geo = json.load(f)
+
+    allowed = None
+    if allowed_gp_ids is not None:
+        allowed = {str(x).strip() for x in allowed_gp_ids}
+
+    compact_features = []
+
+    for feature in geo.get("features", []):
+        props = feature.get("properties", {}) or {}
+        geom = feature.get("geometry")
+
+        if not geom:
+            continue
+
+        # Identify GP ID from common property names.
+        gp_id = None
+        for key in [
+            "gp_id",
+            "GP_ID",
+            "gpcode",
+            "gp_code",
+            "GP_CODE",
+            "panchayat_code",
+            "PANCHAYAT_CODE",
+            "lgd_code",
+            "LGD_CODE",
+            "id",
+            "ID",
+        ]:
+            if key in props and props[key] not in (None, ""):
+                gp_id = str(props[key]).strip()
+                break
+
+        # When requested, retain only GPs belonging to the selected block.
+        if allowed is not None:
+            if gp_id is None or gp_id not in allowed:
+                continue
+
+        # Identify a compact display name.
+        gp_name = None
+        for key in [
+            "gp_name",
+            "GP_NAME",
+            "gpname",
+            "gram_panchayat_name",
+            "GRAM_PANCHAYAT_NAME",
+            "panchayat_name",
+            "PANCHAYAT_NAME",
+            "name",
+            "NAME",
+        ]:
+            if key in props and props[key] not in (None, ""):
+                gp_name = str(props[key])
+                break
+
+        if gp_name is None:
+            gp_name = f"GP {gp_id}" if gp_id else "Gram Panchayat"
+
+        # Simplify geometry while preserving topology.
+        try:
+            geom_obj = shape(geom)
+
+            if not geom_obj.is_empty:
+                geom_obj = geom_obj.simplify(
+                    tolerance,
+                    preserve_topology=True,
+                )
+
+            simplified_geometry = mapping(geom_obj)
+        except Exception:
+            simplified_geometry = geom
+
+        compact_features.append(
+            {
+                "type": "Feature",
+                "properties": {
+                    "gp_id": gp_id or "",
+                    "gp_name": gp_name,
+                },
+                "geometry": simplified_geometry,
+            }
+        )
+
+    return {
+        "type": "FeatureCollection",
+        "features": compact_features,
+    }
+
+
 def add_boundary(m, boundary_file):
+    """Add a simplified block boundary to the map."""
     if not boundary_file:
         return
 
     try:
-        with open(boundary_file, "r", encoding="utf-8") as f:
-            geo = json.load(f)
+        geo = load_simplified_geojson(
+            str(boundary_file),
+            allowed_gp_ids=None,
+            tolerance=0.00015,
+        )
+
+        if not geo.get("features"):
+            return
 
         folium.GeoJson(
             geo,
             name="Block Boundary",
             style_function=lambda _: {
-                "fillColor": "#ffffff",
+                "fillColor": "#0d0101",
                 "color": "#ffffff",
                 "weight": 4,
                 "fillOpacity": 0.03,
-                "dashArray": None,
             },
         ).add_to(m)
-    except Exception:
-        pass
+
+    except Exception as exc:
+        st.sidebar.warning(
+            f"Block boundary could not be loaded: {exc}"
+        )
+
+
+def add_gp_boundaries(m, gp_boundary_file, gp_ids):
+    """
+    Add only the GP polygons needed for the currently selected block.
+
+    This avoids sending the entire gp_master.geojson to the browser.
+    """
+    if not gp_boundary_file:
+        return
+
+    try:
+        compact_geo = load_simplified_geojson(
+            str(gp_boundary_file),
+            allowed_gp_ids=tuple(sorted(str(x) for x in gp_ids)),
+            tolerance=0.00015,
+        )
+
+        if not compact_geo.get("features"):
+            st.sidebar.warning(
+                "GP boundary file was found, but no matching GP IDs were found."
+            )
+            return
+
+        folium.GeoJson(
+            compact_geo,
+            name="Gram Panchayat Boundaries",
+            style_function=lambda _: {
+                "fillColor": "#ffffff",
+                "color": "#ffffff",
+                "weight": 1.1,
+                "opacity": 0.85,
+                "fillOpacity": 0.0,
+            },
+            highlight_function=lambda _: {
+                "color": "#00ffff",
+                "weight": 2.5,
+                "opacity": 1.0,
+                "fillOpacity": 0.05,
+            },
+            tooltip=folium.GeoJsonTooltip(
+                fields=["gp_name", "gp_id"],
+                aliases=["Gram Panchayat", "GP ID"],
+                localize=True,
+                sticky=False,
+                labels=True,
+            ),
+        ).add_to(m)
+
+    except Exception as exc:
+        st.sidebar.warning(
+            f"GP boundary overlay could not be loaded: {exc}"
+        )
 
 
 def build_map(day_df, variable, selected_gp_id=None, boundary_file=None, gp_boundary_file=None):
@@ -595,44 +757,12 @@ def build_map(day_df, variable, selected_gp_id=None, boundary_file=None, gp_boun
     # -------------------------------------------------------------
     # Gram Panchayat boundary overlay
     # -------------------------------------------------------------
-    if gp_boundary_file:
-        try:
-            with open(gp_boundary_file, "r", encoding="utf-8") as f:
-                gp_geo = json.load(f)
+    add_gp_boundaries(
+        m,
+        gp_boundary_file,
+        day_df["gp_id"].unique(),
+    )
 
-            folium.GeoJson(
-                gp_geo,
-                name="Gram Panchayat Boundaries",
-                style_function=lambda _: {
-                    "fillColor": "transparent",
-                    "color": "#ffffff",
-                    "weight": 1.25,
-                    "opacity": 0.85,
-                    "fillOpacity": 0.0,
-                },
-                highlight_function=lambda _: {
-                    "color": "#00ffff",
-                    "weight": 2.5,
-                    "opacity": 1.0,
-                    "fillOpacity": 0.05,
-                },
-                tooltip=folium.GeoJsonTooltip(
-                    fields=["gp_name", "gp_id"],
-                    aliases=["Gram Panchayat", "GP ID"],
-                    localize=True,
-                    sticky=False,
-                    labels=True,
-                ) if isinstance(gp_geo, dict)
-                and gp_geo.get("features")
-                and "gp_name" in (gp_geo["features"][0].get("properties", {}) or {})
-                and "gp_id" in (gp_geo["features"][0].get("properties", {}) or {})
-                else None,
-            ).add_to(m)
-        except Exception as exc:
-            # Boundary visualization must never break the forecast map.
-            st.sidebar.warning(
-                f"GP boundary overlay could not be loaded: {exc}"
-            )
 
     cfg = VARIABLES[variable]
     val_col = cfg["forecast"]
@@ -808,6 +938,10 @@ with c2:
     )
 
 day_data = data[data["target_date"] == selected_date].copy()
+
+# The map only needs one forecast record per GP for the selected day.
+day_data = day_data.drop_duplicates(subset=["gp_id"], keep="first").copy()
+
 if day_data.empty:
     st.error("No data for the selected date.")
     st.stop()
