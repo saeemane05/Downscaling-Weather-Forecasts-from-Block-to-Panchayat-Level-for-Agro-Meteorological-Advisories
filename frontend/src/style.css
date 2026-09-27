@@ -614,3 +614,32 @@ button:not(:disabled):active, .text-link:active { transform: translateY(0); }
 
   button:not(:disabled):hover, .text-link:hover { box-shadow: 0 7px 16px rgba(8, 91, 87, .18); }
 }
+
+/* Override legacy fixed grid heights so a row always reserves the space its cards need. */
+@media (min-width: 1100px) {
+  .lower-grid {
+    height: auto !important;
+    min-height: 0;
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+
+  .bottom-grid {
+    height: auto !important;
+    min-height: 0;
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+
+  .lower-grid > .forecast-card,
+  .lower-grid > .advisory-card,
+  .bottom-grid > .environment,
+  .bottom-stack > .spatial-card,
+  .bottom-stack > .crop-card {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .main { background: linear-gradient(135deg, #8ecfc9 0%, #64b9b2 48%, #91d1cb 100%); }
+  .page { background: radial-gradient(circle at 88% 4%, rgba(217, 250, 234, .34) 0, transparent 28%), radial-gradient(circle at 5% 28%, rgba(255,255,255,.24) 0, transparent 26%), transparent; }
+}
