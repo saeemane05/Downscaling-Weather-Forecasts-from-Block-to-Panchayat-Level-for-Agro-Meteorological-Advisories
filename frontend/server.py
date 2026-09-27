@@ -133,6 +133,6 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__=='__main__':
     host=os.environ.get('HOST','0.0.0.0')
-    port=int(os.environ.get('PORT','8000'))
+    port=int(os.environ.get('PORT','8001'))
     print(f'HyperWeather API at http://{host}:{port} (repository: {ROOT})')
     ThreadingHTTPServer((host,port),Handler).serve_forever()

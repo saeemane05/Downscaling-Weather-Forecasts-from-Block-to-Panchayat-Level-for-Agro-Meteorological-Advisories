@@ -4,13 +4,7 @@ This is a separate React application and read-only data adapter. It reads the ex
 
 ## Run locally
 
-From the repository root, start the data API:
-
-```powershell
-python frontend/server.py
-```
-
-In a second terminal:
+From the repository root:
 
 ```powershell
 cd frontend
@@ -18,7 +12,7 @@ npm install
 npm run dev
 ```
 
-Open the Vite URL shown in the terminal. For a single-process production preview, run `npm run build` inside `frontend`, then start `python frontend/server.py`; the Python server serves the built frontend and its `/api` routes on port 8000.
+Open the Vite URL shown in the terminal. `npm run dev` starts both services automatically; it runs the local API on port 8001 and Vite proxies `/api` requests to it. For a single-process production preview, run `npm run build` inside `frontend`, then start `python frontend/server.py`; the Python server serves the built frontend and its `/api` routes on port 8001.
 
 ## Deploy
 
