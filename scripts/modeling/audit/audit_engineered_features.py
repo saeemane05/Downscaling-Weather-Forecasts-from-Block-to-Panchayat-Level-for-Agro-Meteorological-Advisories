@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -109,15 +110,29 @@ def inspect_file(path, dataset_name):
     return df, result
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(description='SIH26 engineered feature audit')
+    parser.add_argument('--state')
+    parser.add_argument('--district')
+    parser.add_argument('--block')
+    args = parser.parse_args()
+    if any((args.state, args.district, args.block)) and not all((args.state, args.district, args.block)):
+        parser.error('--state, --district and --block must be supplied together')
+    return args
+
+
 def main():
+    args = parse_args()
     print('=' * 70)
     print('SIH26 ENGINEERED FEATURE AUDIT')
     print('=' * 70)
-    state = input('\nState: ').strip()
-    district = input('District: ').strip()
-    block = input('Block: ').strip()
+    state = args.state or input('\nState: ').strip()
+    district = args.district or input('District: ').strip()
+    block = args.block or input('Block: ').strip()
     if not all([state, district, block]):
         raise ValueError('State, District and Block are required.')
+
+    print(f'\nState: {state}\nDistrict: {district}\nBlock: {block}')
 
     location = resolve_location(state, district, block)
     print(f'\nResolved engineered location:\n  {location}')

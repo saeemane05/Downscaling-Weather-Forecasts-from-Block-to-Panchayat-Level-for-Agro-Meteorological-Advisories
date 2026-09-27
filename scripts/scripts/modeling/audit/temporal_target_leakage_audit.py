@@ -1,4 +1,3 @@
-import argparse
 from pathlib import Path
 import json
 import re
@@ -405,32 +404,18 @@ def classify_actual_columns(forecast, observations):
     return out
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="SIH26 temporal and target leakage audit")
-    parser.add_argument("--state")
-    parser.add_argument("--district")
-    parser.add_argument("--block")
-    args = parser.parse_args()
-    if any((args.state, args.district, args.block)) and not all((args.state, args.district, args.block)):
-        parser.error("--state, --district and --block must be supplied together")
-    return args
-
-
 def main():
-    args = parse_args()
     print("=" * 72)
     print("SIH26 TEMPORAL + TARGET LEAKAGE AUDIT")
     print("=" * 72)
     print("No files will be modified.")
 
-    state = args.state or input("\nState: ").strip()
-    district = args.district or input("District: ").strip()
-    block = args.block or input("Block: ").strip()
+    state = input("\nState: ").strip()
+    district = input("District: ").strip()
+    block = input("Block: ").strip()
 
     if not all((state, district, block)):
         raise ValueError("State, District and Block are required.")
-
-    print(f"\nState: {state}\nDistrict: {district}\nBlock: {block}")
 
     cleaned = resolve_location(CLEANED_ROOT, state, district, block)
     engineered = resolve_location(ENGINEERED_ROOT, state, district, block)

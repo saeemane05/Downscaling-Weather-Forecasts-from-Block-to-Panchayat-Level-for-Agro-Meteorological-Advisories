@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import argparse
 import json
 import re
 from pathlib import Path
@@ -176,7 +175,8 @@ def find_engineered_training_master(block_dataset_root):
         / "block_forecast_training_base_engineered.csv",
     ]
 
-    # Fallback constructed from the discovered training location hierarchy.
+    # Explicit fallback built from the known Maharashtra/Nashik/Sinnar
+    # directory hierarchy, while still remaining block-generic.
     rel_training = block_dataset_root.resolve().relative_to(
         project_root / "datasets" / "training"
     )
@@ -1463,23 +1463,7 @@ def process_horizon(
 # MAIN
 # ============================================================
 
-def parse_args():
-    parser = argparse.ArgumentParser(
-        description="SIH26 Stage-1 final block forecast correction"
-    )
-    parser.add_argument("--state")
-    parser.add_argument("--district")
-    parser.add_argument("--block")
-    args = parser.parse_args()
-    supplied = [args.state, args.district, args.block]
-    if any(supplied) and not all(supplied):
-        parser.error("--state, --district and --block must be supplied together")
-    return args
-
-
 def main():
-
-    args = parse_args()
 
     print("=" * 78)
     print("STAGE 1 — FINAL BLOCK FORECAST CORRECTION")
@@ -1493,8 +1477,9 @@ def main():
     print("  ~20% latest years    -> TEST")
 
     # Discover block directories by their horizon structure rather than
-    # assuming a fixed administrative depth. A valid block directory has
-    # D1-D7 as its immediate children under training/<state>/<district>/<block>.
+    # assuming a fixed administrative depth. The project currently uses:
+    #   training / Maharashtra / Nashik / Sinnar / D1 ... D7
+    # so Sinnar is the block directory and D1-D7 are its children.
     required_files = (
         "X_train.csv",
         "X_validation.csv",
@@ -1524,29 +1509,6 @@ def main():
     # Deterministic order and protection against accidental duplicates.
     block_dirs = sorted(set(block_dirs), key=lambda p: str(p).lower())
 
-    # When called by the master pipeline, process only the requested block.
-    # The legacy no-argument behaviour continues to discover every complete
-    # training block for independent use.
-    if args.state:
-        requested = (args.state, args.district, args.block)
-        matches = []
-        for candidate in block_dirs:
-            relative = candidate.relative_to(TRAINING_ROOT)
-            if len(relative.parts) != 3:
-                continue
-            if all(
-                re.sub(r"[^a-z0-9]+", "", actual.lower())
-                == re.sub(r"[^a-z0-9]+", "", expected.lower())
-                for actual, expected in zip(relative.parts, requested)
-            ):
-                matches.append(candidate)
-        if len(matches) != 1:
-            raise RuntimeError(
-                "Could not resolve one complete training dataset for "
-                f"{args.state}/{args.district}/{args.block}."
-            )
-        block_dirs = matches
-
     if not block_dirs:
         raise RuntimeError(
             "No block training datasets found."
@@ -1562,7 +1524,6 @@ def main():
     for block_dir in block_dirs:
 
         block_name = block_dir.name
-        relative_location = block_dir.relative_to(TRAINING_ROOT)
 
         print()
         print("#" * 78)
@@ -1570,11 +1531,23 @@ def main():
         print("#" * 78)
 
         # Keep outputs separated by block.
-        model_root = MODEL_ROOT / "trained_models" / relative_location
+        model_root = (
+            MODEL_ROOT
+            / "trained_models"
+            / block_name
+        )
 
-        prediction_root = MODEL_ROOT / "predictions" / relative_location
+        prediction_root = (
+            MODEL_ROOT
+            / "predictions"
+            / block_name
+        )
 
-        metrics_root = MODEL_ROOT / "metrics" / relative_location
+        metrics_root = (
+            MODEL_ROOT
+            / "metrics"
+            / block_name
+        )
 
         model_root.mkdir(
             parents=True,
@@ -1613,7 +1586,7 @@ def main():
                     block_dir,
                 )
 
-                result["block"] = "/".join(relative_location.parts)
+                result["block"] = block_name
 
                 all_results.append(
                     result
@@ -1678,13 +1651,10 @@ def main():
         summary_rows
     )
 
-    if args.state:
-        summary_path = (
-            MODEL_ROOT / "metrics" / relative_location
-            / "stage1_dynamic_year_split_summary.csv"
-        )
-    else:
-        summary_path = MODEL_ROOT / "stage1_dynamic_year_split_summary.csv"
+    summary_path = (
+        MODEL_ROOT
+        / "stage1_dynamic_year_split_summary.csv"
+    )
 
     summary.to_csv(
         summary_path,

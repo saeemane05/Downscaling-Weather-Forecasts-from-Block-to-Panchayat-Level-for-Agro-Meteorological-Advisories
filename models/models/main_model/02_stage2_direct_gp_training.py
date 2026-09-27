@@ -59,9 +59,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, f1_score
 # CONFIGURATION
 # =====================================================================
 
-# Resolve from this file so the existing Stage-2 methodology can be invoked
-# from any checkout, rather than only from the original developer path.
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(r"E:\SIH26_Downscaling")
 MAIN_MODEL_DIR = ROOT / "models" / "main_model"
 
 START_DATE = pd.Timestamp("2024-01-19")
@@ -194,10 +192,20 @@ def initialize_earth_engine(project: str | None = None) -> None:
     except Exception as first_error:
         print("Earth Engine initialization failed.")
         print(f"Reason: {first_error}")
-        raise RuntimeError(
-            "Could not initialize Earth Engine.\n"
-            "Run `earthengine authenticate` once, then retry this Stage-2 command."
-        ) from first_error
+        print("Attempting Earth Engine authentication...")
+
+        try:
+            ee.Authenticate()
+            if project:
+                ee.Initialize(project=project)
+            else:
+                ee.Initialize()
+            print("Earth Engine authenticated and initialized.")
+        except Exception as second_error:
+            raise RuntimeError(
+                "Could not initialize Earth Engine.\n"
+                "Run `earthengine authenticate` once, or use --gee-project."
+            ) from second_error
 
 
 # =====================================================================
@@ -764,14 +772,9 @@ def fetch_gp_historical_era5(
 
     new_chunks = []
 
-    missing_dates = pd.DatetimeIndex(
-        missing_dates
-    )
-
-    if missing_dates.empty:
-        raise RuntimeError(
-            "Missing GP/day records were detected but no missing dates "
-            "were identified."
+    if missing_dates:
+        missing_dates = pd.DatetimeIndex(
+            missing_dates
         )
 
     cursor = missing_dates.min()
