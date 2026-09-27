@@ -540,3 +540,12 @@ body { background: #eaf1f1; }
   .forecast-day > b, .advisory-title h3 { font-size: 12px; }
   .forecast-day > small, .advisory-copy p, .forecast-foot { font-size: 10px; }
 }
+
+/* Teal dashboard canvas with stronger, professional contrast. */
+body { background: #cbeeea; }
+.main { background: linear-gradient(135deg, #d8f5f1 0%, #b9ebe5 48%, #d8f4ee 100%); }
+.page { background: radial-gradient(circle at 88% 4%, rgba(255, 247, 204, .66) 0, transparent 28%), radial-gradient(circle at 5% 28%, rgba(255,255,255,.34) 0, transparent 26%), transparent; }
+.card, .map-card { background: rgba(255,255,255,.96); border-color: #bfdfdc; box-shadow: 0 12px 28px rgba(13, 78, 76, .14); }
+.map-card { border-color: #83d4ca; box-shadow: 0 18px 38px rgba(8, 100, 91, .20); }
+.dashboard-meta > div { background: rgba(255,255,255,.92); border-color: #c6e5e1; box-shadow: 0 6px 16px rgba(13, 78, 76, .08); }
+.location-panel, .selected-card { background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,255,253,.94)); }
