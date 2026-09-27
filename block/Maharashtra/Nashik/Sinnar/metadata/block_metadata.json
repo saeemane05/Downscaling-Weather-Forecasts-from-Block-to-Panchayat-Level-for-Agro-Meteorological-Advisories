@@ -1,0 +1,26 @@
+{
+  "project": "SIH26 Weather Downscaling",
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block_requested": "Sinnar",
+  "resolved_block_name": "Sinnar",
+  "block_lgd_code": "4490",
+  "district_name": "Nashik",
+  "district_code": "516",
+  "state_name": "MAHARASHTRA",
+  "number_of_gp_polygons": 119,
+  "area_km2": 1293.0942664522472,
+  "centroid_lat": 19.81762971833111,
+  "centroid_lon": 74.08262588749204,
+  "bounds": {
+    "min_lon": 73.80570838540388,
+    "min_lat": 19.6409502693625,
+    "max_lon": 74.37429122609923,
+    "max_lat": 19.975345486397984
+  },
+  "crs": "EPSG:4326",
+  "source": "Gram Manchitra",
+  "source_url": "https://grammanchitragis.nic.in/grammanchitra/rest/services/panchayat/panchayat_admin/MapServer/3/query",
+  "construction": "Block geometry created by dissolving GP polygons belonging to the resolved Block LGD code.",
+  "synthetic_values_used": false
+}

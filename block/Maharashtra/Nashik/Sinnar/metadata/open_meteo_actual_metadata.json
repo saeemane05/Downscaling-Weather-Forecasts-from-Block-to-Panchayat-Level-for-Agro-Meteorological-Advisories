@@ -1,0 +1,130 @@
+{
+  "dataset": "Open-Meteo Historical Actual Weather",
+  "source": "Open-Meteo Historical Archive",
+  "source_url": "https://archive-api.open-meteo.com/v1/archive",
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block": "Sinnar",
+  "latitude": 19.81762971833111,
+  "longitude": 74.08262588749204,
+  "collection_timezone": "Asia/Kolkata",
+  "history_years": 5,
+  "today": "2026-09-19",
+  "collection_mode": "incremental_update",
+  "collection_start": "2026-09-17",
+  "collection_end": "2026-09-19",
+  "rows_added_this_run": 3,
+  "total_rows": 1830,
+  "daily_variables": [
+    "temperature_2m_mean",
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "relative_humidity_2m_mean",
+    "relative_humidity_2m_max",
+    "relative_humidity_2m_min",
+    "precipitation_sum",
+    "rain_sum",
+    "wind_speed_10m_mean",
+    "wind_speed_10m_max",
+    "wind_gusts_10m_max",
+    "shortwave_radiation_sum",
+    "cloud_cover_mean",
+    "surface_pressure_mean",
+    "et0_fao_evapotranspiration"
+  ],
+  "quality_audit": {
+    "rows": 1830,
+    "date_start": "2021-09-16",
+    "date_end": "2026-09-19",
+    "missing_dates": 0,
+    "duplicate_dates": 0,
+    "variable_completeness": {
+      "temperature_2m_mean": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "temperature_2m_max": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "temperature_2m_min": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "relative_humidity_2m_mean": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "relative_humidity_2m_max": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "relative_humidity_2m_min": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "precipitation_sum": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "rain_sum": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "wind_speed_10m_mean": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "wind_speed_10m_max": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "wind_gusts_10m_max": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "shortwave_radiation_sum": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "cloud_cover_mean": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "surface_pressure_mean": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      },
+      "et0_fao_evapotranspiration": {
+        "rows": 1830,
+        "missing": 0,
+        "missing_percent": 0.0
+      }
+    }
+  },
+  "synthetic_values_used": false,
+  "duplicate_records_added": 0,
+  "notes": [
+    "First run collects five years back from execution date.",
+    "Later runs collect only dates after the existing latest date.",
+    "Existing records are preserved.",
+    "Duplicate dates are not appended.",
+    "No synthetic or fallback values are generated.",
+    "The source may lag the current day; only returned observations are stored.",
+    "Raw API responses are retained for reproducibility."
+  ]
+}

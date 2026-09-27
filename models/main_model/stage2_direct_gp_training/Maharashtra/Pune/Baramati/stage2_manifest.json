@@ -1,0 +1,38 @@
+{
+  "project": "SIH26",
+  "stage": "Stage 2",
+  "state": "Maharashtra",
+  "district": "Pune",
+  "block": "Baramati",
+  "method": "Feature-specific residual correction of block NWP forecasts using static GP spatial predictors and ERA5-Land reanalysis reference targets",
+  "gp_count": 99,
+  "historical_target_source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+  "historical_target_type": "ERA5-Land reanalysis reference; not independent station truth",
+  "historical_target_resolution_m": 11132,
+  "trainable_variables": [
+    "temperature",
+    "humidity",
+    "precipitation",
+    "wind"
+  ],
+  "model_count": 4,
+  "model_strategy": "one model per weather feature across D1-D7",
+  "cloud_status": "not trained because a compatible daily ERA5-Land cloud target was not used",
+  "pressure_status": "removed",
+  "synthetic_target": false,
+  "interpolated_target": false,
+  "block_actual_copied_to_gp": false,
+  "lst_target_month_used": false,
+  "chronological_split": {
+    "train": 2024,
+    "validation": 2025,
+    "test": 2026
+  },
+  "copernicus_acknowledgement": "Generated using Copernicus Climate Change Service Information.",
+  "outputs": {
+    "era5_reference": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\models\\main_model\\stage2_direct_gp_training\\Maharashtra\\Pune\\Baramati\\gp_era5_land_reference_targets.csv",
+    "training_frame": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\models\\main_model\\stage2_direct_gp_training\\Maharashtra\\Pune\\Baramati\\stage2_training_frame.csv",
+    "metrics": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\models\\main_model\\stage2_direct_gp_training\\Maharashtra\\Pune\\Baramati\\stage2_era5_reference_metrics.csv",
+    "current_gp_forecast": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\models\\main_model\\stage2_direct_gp_training\\Maharashtra\\Pune\\Baramati\\stage2_current_gp_forecast.csv"
+  }
+}

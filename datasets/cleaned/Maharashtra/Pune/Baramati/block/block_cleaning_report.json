@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-09-19T06:08:47Z",
+  "state": "Maharashtra",
+  "district": "Pune",
+  "block": "Baramati",
+  "reports": [
+    {
+      "source": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Pune\\Baramati\\processed\\merge\\block_observations_daily.csv",
+      "rows_before": 1862,
+      "rows_after": 1862,
+      "exact_duplicate_rows_removed": 0,
+      "infinite_numeric_values_converted_to_nan": 0,
+      "missing_cells_before": 47011,
+      "missing_cells_after": 47011,
+      "imputation": false,
+      "interpolation": false,
+      "outlier_removal": false,
+      "feature_engineering": false,
+      "output": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Pune\\Baramati\\block\\block_observations_daily.csv"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Pune\\Baramati\\processed\\merge\\block_forecast_training_base.csv",
+      "rows_before": 975,
+      "rows_after": 975,
+      "exact_duplicate_rows_removed": 0,
+      "infinite_numeric_values_converted_to_nan": 0,
+      "missing_cells_before": 24487,
+      "missing_cells_after": 24487,
+      "imputation": false,
+      "interpolation": false,
+      "outlier_removal": false,
+      "feature_engineering": false,
+      "output": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Pune\\Baramati\\block\\block_forecast_training_base.csv"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Pune\\Baramati\\processed\\merge\\block_current_forecast.csv",
+      "rows_before": 7,
+      "rows_after": 7,
+      "exact_duplicate_rows_removed": 0,
+      "infinite_numeric_values_converted_to_nan": 0,
+      "missing_cells_before": 0,
+      "missing_cells_after": 0,
+      "imputation": false,
+      "interpolation": false,
+      "outlier_removal": false,
+      "feature_engineering": false,
+      "output": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Pune\\Baramati\\block\\block_current_forecast.csv"
+    }
+  ]
+}

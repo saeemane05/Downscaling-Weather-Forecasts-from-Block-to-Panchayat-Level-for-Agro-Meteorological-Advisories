@@ -1,0 +1,10 @@
+{
+  "dataset": "ECMWF/ERA5_LAND/DAILY_AGGR",
+  "gp_count": 99,
+  "first_date": "2024-01-19",
+  "last_date": "2026-09-13",
+  "rows": 95931,
+  "latest_gee_date": "2026-09-13",
+  "updated_at": "2026-09-21T04:51:44.999267+00:00",
+  "incremental": true
+}

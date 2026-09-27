@@ -1,0 +1,21 @@
+{
+  "generated_utc": "2026-09-17T04:55:33.263212+00:00",
+  "state": "Goa",
+  "district": "North Goa",
+  "block": "Bicholim",
+  "raw_snapshot": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Goa\\North_Goa\\Bicholim\\raw\\boundaries\\gram_manchitra_gp_20260917T044316Z.geojson",
+  "records_in_snapshot": 18,
+  "duplicate_gp_ids": 2,
+  "duplicate_gp_id_values": [
+    "254439",
+    "254464"
+  ],
+  "gp_id_column": "gp_code",
+  "gp_name_column": "gp_name",
+  "metric_epsg": 32643,
+  "outputs": {
+    "geometry_details": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Goa\\North_Goa\\Bicholim\\processed\\duplicate_gp_geometry_details.csv",
+    "spatial_relationships": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Goa\\North_Goa\\Bicholim\\processed\\duplicate_gp_spatial_relationships.csv",
+    "conflicting_geometries": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Goa\\North_Goa\\Bicholim\\processed\\duplicate_gp_conflicts.geojson"
+  }
+}

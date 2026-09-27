@@ -1,0 +1,93 @@
+{
+  "latitude": 15.5711775,
+  "longitude": 73.998116,
+  "generationtime_ms": 0.3757476806640625,
+  "utc_offset_seconds": 0,
+  "timezone": "GMT",
+  "timezone_abbreviation": "GMT",
+  "elevation": 57.0,
+  "daily_units": {
+    "time": "iso8601",
+    "temperature_2m_mean": "°C",
+    "temperature_2m_max": "°C",
+    "temperature_2m_min": "°C",
+    "relative_humidity_2m_mean": "%",
+    "relative_humidity_2m_max": "%",
+    "relative_humidity_2m_min": "%",
+    "precipitation_sum": "mm",
+    "rain_sum": "mm",
+    "wind_speed_10m_mean": "km/h",
+    "wind_speed_10m_max": "km/h",
+    "wind_gusts_10m_max": "km/h",
+    "shortwave_radiation_sum": "MJ/m²",
+    "cloud_cover_mean": "%",
+    "surface_pressure_mean": "hPa",
+    "et0_fao_evapotranspiration": "mm"
+  },
+  "daily": {
+    "time": [
+      "2026-09-20",
+      "2026-09-21"
+    ],
+    "temperature_2m_mean": [
+      27.1,
+      26.7
+    ],
+    "temperature_2m_max": [
+      30.6,
+      30.7
+    ],
+    "temperature_2m_min": [
+      25.0,
+      23.5
+    ],
+    "relative_humidity_2m_mean": [
+      88,
+      86
+    ],
+    "relative_humidity_2m_max": [
+      97,
+      98
+    ],
+    "relative_humidity_2m_min": [
+      71,
+      71
+    ],
+    "precipitation_sum": [
+      7.7,
+      2.0
+    ],
+    "rain_sum": [
+      7.7,
+      2.0
+    ],
+    "wind_speed_10m_mean": [
+      5.1,
+      5.3
+    ],
+    "wind_speed_10m_max": [
+      10.5,
+      13.5
+    ],
+    "wind_gusts_10m_max": [
+      26.6,
+      28.8
+    ],
+    "shortwave_radiation_sum": [
+      19.5,
+      17.59
+    ],
+    "cloud_cover_mean": [
+      78,
+      70
+    ],
+    "surface_pressure_mean": [
+      1004.0,
+      1003.3
+    ],
+    "et0_fao_evapotranspiration": [
+      3.93,
+      3.62
+    ]
+  }
+}

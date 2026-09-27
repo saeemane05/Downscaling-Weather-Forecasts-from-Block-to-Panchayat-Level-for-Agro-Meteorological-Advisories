@@ -1,0 +1,11 @@
+{
+  "project_root": "E:\\SIH26_Downscaling",
+  "files_scanned": 166,
+  "wind_columns_found": 342,
+  "exact_matches": 84,
+  "metadata_files": 44,
+  "wind_inventory": "E:\\SIH26_Downscaling\\datasets\\validation\\Maharashtra\\Nashik\\Sinnar\\stage1_final\\wind_source_inventory.csv",
+  "metadata_inventory": "E:\\SIH26_Downscaling\\datasets\\validation\\Maharashtra\\Nashik\\Sinnar\\stage1_final\\wind_metadata_inventory.csv",
+  "exact_matches_file": "E:\\SIH26_Downscaling\\datasets\\validation\\Maharashtra\\Nashik\\Sinnar\\stage1_final\\wind_exact_variable_matches.csv",
+  "keyword_hits_file": "E:\\SIH26_Downscaling\\datasets\\validation\\Maharashtra\\Nashik\\Sinnar\\stage1_final\\wind_keyword_hits.csv"
+}

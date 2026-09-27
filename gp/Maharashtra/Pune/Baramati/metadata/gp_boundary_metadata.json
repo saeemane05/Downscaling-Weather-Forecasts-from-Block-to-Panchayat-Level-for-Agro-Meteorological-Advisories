@@ -1,0 +1,66 @@
+{
+  "dataset": "gp_master",
+  "description": "Gram Panchayat boundary master for SIH26 weather downscaling.",
+  "administrative_level": "Gram Panchayat",
+  "state": "Maharashtra",
+  "district": "Pune",
+  "block": "Baramati",
+  "block_lgd_code": "4512",
+  "block_source_record": {
+    "state": "MAHARASHTRA",
+    "district": "Pune",
+    "block_name": "BARAMATI",
+    "block_lgd": 4512,
+    "blkcode11": "0250",
+    "dtcode11": "521",
+    "stcode11": "27"
+  },
+  "source": {
+    "provider": "Gram Manchitra",
+    "block_layer": "https://grammanchitragis.nic.in/grammanchitra/rest/services/panchayat/adminpanch/MapServer/2/query",
+    "gp_layer": "https://grammanchitragis.nic.in/grammanchitra/rest/services/panchayat/panchayat_admin/MapServer/3/query"
+  },
+  "collection": {
+    "collected_at_utc": "2026-09-17T01:15:23.398025+00:00",
+    "reused_existing_master": false,
+    "historical_collection": false,
+    "incremental_collection": false,
+    "reason": "Administrative GP boundaries are static spatial data."
+  },
+  "processing": {
+    "source_crs": "EPSG:4326",
+    "output_crs": "EPSG:4326",
+    "synthetic_geometry": false,
+    "interpolation": false,
+    "geometry_repair": "Invalid polygon geometry may be geometrically repaired. Missing geometry is never fabricated."
+  },
+  "counts": {
+    "gp_count": 99
+  },
+  "validation": {
+    "rows": 99,
+    "unique_gp_ids": 99,
+    "unique_gp_names": 99,
+    "missing_gp_ids": 0,
+    "missing_gp_names": 0,
+    "duplicate_gp_ids": 0,
+    "duplicate_gp_names": 0,
+    "invalid_geometry": 0,
+    "empty_geometry": 0,
+    "zero_area": 0,
+    "passed": true
+  },
+  "raw_snapshot": "E:\\SIH26_Downscaling\\gp\\Maharashtra\\Pune\\Baramati\\raw\\boundaries\\gram_manchitra_gp_20260917T011520Z.geojson",
+  "schema": [
+    "state",
+    "district",
+    "block",
+    "block_lgd_code",
+    "gp_id",
+    "gp_name",
+    "area_km2",
+    "centroid_lat",
+    "centroid_lon",
+    "geometry"
+  ]
+}

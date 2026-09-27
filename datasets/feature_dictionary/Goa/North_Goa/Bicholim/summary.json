@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-09-21T13:06:05",
+  "project_root": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling",
+  "location": {
+    "state": "Goa",
+    "district": "North_Goa",
+    "block": "Bicholim"
+  },
+  "location_root": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Goa\\North_Goa\\Bicholim",
+  "total_dictionary_records": 414,
+  "datasets": {
+    "block_current_forecast": {
+      "feature_count": 21,
+      "100pct_missing": 0
+    },
+    "block_forecast_training_base": {
+      "feature_count": 139,
+      "100pct_missing": 0
+    },
+    "block_observations_daily": {
+      "feature_count": 52,
+      "100pct_missing": 0
+    },
+    "gp_merged_features": {
+      "feature_count": 202,
+      "100pct_missing": 0
+    }
+  },
+  "feature_groups": {
+    "remote_sensing": 165,
+    "weather_forecast": 70,
+    "static_spatial_environment": 68,
+    "temporal_control": 31,
+    "historical_weather": 30,
+    "provenance": 20,
+    "data_availability": 18,
+    "reanalysis": 6,
+    "spatial_location": 2,
+    "constant_physical_or_metadata": 2,
+    "identifier": 1,
+    "other_categorical": 1
+  },
+  "final_roles": {
+    "gp_spatial_predictor": 233,
+    "forecast_predictor": 70,
+    "temporal_alignment": 31,
+    "historical_source": 30,
+    "candidate_predictor": 26,
+    "metadata": 21,
+    "review": 2,
+    "metadata_or_candidate": 1
+  },
+  "engineering_actions": {
+    "retain_with_acquisition_date_and_availability_control": 165,
+    "retain_with_issue_time_and_lead_alignment": 70,
+    "retain_as_static_spatial_predictor": 68,
+    "retain_for_temporal_alignment": 31,
+    "use_only_as_past_lag_rolling_feature_or_target": 30,
+    "retain_for_audit_provenance": 20,
+    "retain_as_availability_feature": 18,
+    "retain_with_temporal_availability_control": 6,
+    "retain_for_spatial_modeling": 2,
+    "retain_for_multi_block_review_before_removal": 2,
+    "retain_for_joining_only": 1,
+    "retain_for_scientific_review": 1
+  },
+  "unavailable_features": []
+}

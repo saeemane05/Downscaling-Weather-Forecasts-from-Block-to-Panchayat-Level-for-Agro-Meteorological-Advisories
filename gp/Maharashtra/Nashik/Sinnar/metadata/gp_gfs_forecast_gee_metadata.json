@@ -1,0 +1,36 @@
+{
+  "stage": "09_gp_gfs_forecasts_gee",
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block": "Sinnar",
+  "gp_count": 113,
+  "dataset": "NOAA/GFS0P25",
+  "source": "NOAA/NCEP GFS via Google Earth Engine",
+  "date_mode": "existing training dates: E:\\SIH26_Downscaling\\datasets\\engineered\\Maharashtra\\Nashik\\Sinnar\\block\\block_forecast_training_base_engineered.csv",
+  "start_date": "2024-01-19",
+  "end_date": "2026-09-19",
+  "target_date_count": 975,
+  "leads": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "issue_cycle": "00Z",
+  "variables": [
+    "temperature_2m_above_ground",
+    "relative_humidity_2m_above_ground",
+    "total_precipitation_surface",
+    "wind_speed_10m",
+    "pressure_surface"
+  ],
+  "created_at_utc": "2026-09-20T03:05:24.346109+00:00",
+  "notes": [
+    "No synthetic or interpolated forecast values are generated.",
+    "Existing block training dates are preferred so the GP predictor table joins directly to the project's historical forecast dates.",
+    "Each lead is exported as an independent Earth Engine task."
+  ]
+}

@@ -1,0 +1,1073 @@
+[
+  {
+    "horizon": 1,
+    "target": "temperature",
+    "target_column": "actual_temperature_2m_mean",
+    "train": {
+      "target": "temperature",
+      "n": 682,
+      "MAE": 0.4371537060964376,
+      "RMSE": 0.5765740150746783,
+      "R2": 0.9700244192605448,
+      "bias": -5.417627897291087e-16
+    },
+    "validation": {
+      "target": "temperature",
+      "n": 146,
+      "MAE": 1.1766585200465403,
+      "RMSE": 1.35090296349098,
+      "R2": 0.8897191424096602,
+      "bias": 1.1596358729234861
+    },
+    "test": {
+      "target": "temperature",
+      "n": 147,
+      "MAE": 0.5203360430761578,
+      "RMSE": 0.6767570504038761,
+      "R2": 0.94345910294379,
+      "bias": -0.20539082457512914
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D1\\temperature_corrector.joblib"
+  },
+  {
+    "horizon": 1,
+    "target": "humidity",
+    "target_column": "actual_relative_humidity_2m_mean",
+    "train": {
+      "target": "humidity",
+      "n": 682,
+      "MAE": 2.463589582431661,
+      "RMSE": 3.211560508418681,
+      "R2": 0.9809894792000674,
+      "bias": -3.177647132064964e-15
+    },
+    "validation": {
+      "target": "humidity",
+      "n": 146,
+      "MAE": 6.918892001770465,
+      "RMSE": 8.233249410441946,
+      "R2": 0.5663481765887586,
+      "bias": -5.532882797657358
+    },
+    "test": {
+      "target": "humidity",
+      "n": 147,
+      "MAE": 3.3649476431083625,
+      "RMSE": 4.2610470485081,
+      "R2": 0.9395960175114987,
+      "bias": 0.25916045000638577
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D1\\humidity_corrector.joblib"
+  },
+  {
+    "horizon": 1,
+    "target": "precipitation",
+    "target_column": "actual_precipitation_sum",
+    "train": {
+      "target": "precipitation",
+      "n": 682,
+      "MAE": 1.7453055904047183,
+      "RMSE": 4.040915368164765,
+      "R2": 0.639914771143596,
+      "bias": -2.0837030374196486e-17,
+      "wet_day_MAE": 3.390635139906582
+    },
+    "validation": {
+      "target": "precipitation",
+      "n": 146,
+      "MAE": 0.0913219653117594,
+      "RMSE": 0.23421795558851258,
+      "R2": -0.4484395396482823,
+      "bias": 0.03668407285120104,
+      "wet_day_MAE": 0.45904686559076513
+    },
+    "test": {
+      "target": "precipitation",
+      "n": 147,
+      "MAE": 4.115721112790252,
+      "RMSE": 11.488596507131332,
+      "R2": 0.2603735197756817,
+      "bias": -0.8092720551599668,
+      "wet_day_MAE": 5.205554084358332
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D1\\precipitation_corrector.joblib"
+  },
+  {
+    "horizon": 1,
+    "target": "pressure",
+    "target_column": "actual_surface_pressure_mean",
+    "train": {
+      "target": "pressure",
+      "n": 682,
+      "MAE": 0.7584295202760043,
+      "RMSE": 0.9591852237287205,
+      "R2": 0.937624020910032,
+      "bias": -7.934741166494023e-14
+    },
+    "validation": {
+      "target": "pressure",
+      "n": 146,
+      "MAE": 1.2706075703534159,
+      "RMSE": 1.6031992282645298,
+      "R2": 0.3842429597664415,
+      "bias": -0.2542872597818216
+    },
+    "test": {
+      "target": "pressure",
+      "n": 147,
+      "MAE": 1.9689696840107398,
+      "RMSE": 2.342914800438329,
+      "R2": 0.0663757940400963,
+      "bias": -1.4726158185339366
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D1\\pressure_corrector.joblib"
+  },
+  {
+    "horizon": 1,
+    "target": "wind",
+    "target_column": "actual_wind_speed_10m_mean",
+    "train": {
+      "target": "wind",
+      "n": 682,
+      "MAE": 1.4449834688028809,
+      "RMSE": 1.8850090676684594,
+      "R2": 0.8958624908087259,
+      "bias": 4.1674060748392975e-16
+    },
+    "validation": {
+      "target": "wind",
+      "n": 146,
+      "MAE": 2.3380324736424574,
+      "RMSE": 2.8325574235705027,
+      "R2": -0.0812250252599922,
+      "bias": 2.3059775675741396
+    },
+    "test": {
+      "target": "wind",
+      "n": 147,
+      "MAE": 3.731120696882807,
+      "RMSE": 4.212745428635151,
+      "R2": -0.3084276041632652,
+      "bias": 3.6050490438343674
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D1\\wind_corrector.joblib"
+  },
+  {
+    "horizon": 2,
+    "target": "temperature",
+    "target_column": "actual_temperature_2m_mean",
+    "train": {
+      "target": "temperature",
+      "n": 682,
+      "MAE": 0.45281410189436955,
+      "RMSE": 0.6000174291271296,
+      "R2": 0.9675372575784486,
+      "bias": 2.1983067044777293e-15
+    },
+    "validation": {
+      "target": "temperature",
+      "n": 146,
+      "MAE": 1.2243418134236042,
+      "RMSE": 1.4065683180149147,
+      "R2": 0.8804434187165511,
+      "bias": 1.2039329669154417
+    },
+    "test": {
+      "target": "temperature",
+      "n": 147,
+      "MAE": 0.595157374888904,
+      "RMSE": 0.7964596412851414,
+      "R2": 0.9216886583595612,
+      "bias": -0.2955369442167665
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D2\\temperature_corrector.joblib"
+  },
+  {
+    "horizon": 2,
+    "target": "humidity",
+    "target_column": "actual_relative_humidity_2m_mean",
+    "train": {
+      "target": "humidity",
+      "n": 682,
+      "MAE": 2.589711769895321,
+      "RMSE": 3.3985721825545783,
+      "R2": 0.9787110229571292,
+      "bias": 3.375598920619831e-15
+    },
+    "validation": {
+      "target": "humidity",
+      "n": 146,
+      "MAE": 7.278321758236092,
+      "RMSE": 8.800785439923315,
+      "R2": 0.5045024633589654,
+      "bias": -5.846269929734622
+    },
+    "test": {
+      "target": "humidity",
+      "n": 147,
+      "MAE": 3.6814452753109728,
+      "RMSE": 4.593886533287323,
+      "R2": 0.9297908941267031,
+      "bias": 0.6200171699177538
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D2\\humidity_corrector.joblib"
+  },
+  {
+    "horizon": 2,
+    "target": "precipitation",
+    "target_column": "actual_precipitation_sum",
+    "train": {
+      "target": "precipitation",
+      "n": 682,
+      "MAE": 1.803935954637786,
+      "RMSE": 4.039474525240112,
+      "R2": 0.6401715118618523,
+      "bias": -4.167406074839297e-17,
+      "wet_day_MAE": 3.4956397059501936
+    },
+    "validation": {
+      "target": "precipitation",
+      "n": 146,
+      "MAE": 0.11350576786304645,
+      "RMSE": 0.27558819589183503,
+      "R2": -1.005308633239805,
+      "bias": 0.06070184140258167,
+      "wet_day_MAE": 0.46238465411992596
+    },
+    "test": {
+      "target": "precipitation",
+      "n": 147,
+      "MAE": 4.21034905950898,
+      "RMSE": 11.589669859858072,
+      "R2": 0.24730223274025775,
+      "bias": -0.8669171468193806,
+      "wet_day_MAE": 5.345572715254031
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D2\\precipitation_corrector.joblib"
+  },
+  {
+    "horizon": 2,
+    "target": "pressure",
+    "target_column": "actual_surface_pressure_mean",
+    "train": {
+      "target": "pressure",
+      "n": 682,
+      "MAE": 0.7810967815742423,
+      "RMSE": 0.9885442553263999,
+      "R2": 0.9337471371508833,
+      "bias": -3.5672996000624385e-14
+    },
+    "validation": {
+      "target": "pressure",
+      "n": 146,
+      "MAE": 1.2790035594149396,
+      "RMSE": 1.6210660304096756,
+      "R2": 0.37044191426696016,
+      "bias": -0.21965731726949847
+    },
+    "test": {
+      "target": "pressure",
+      "n": 147,
+      "MAE": 1.9826275434344904,
+      "RMSE": 2.3633048460817503,
+      "R2": 0.05005469118086825,
+      "bias": -1.4640968588470789
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D2\\pressure_corrector.joblib"
+  },
+  {
+    "horizon": 2,
+    "target": "wind",
+    "target_column": "actual_wind_speed_10m_mean",
+    "train": {
+      "target": "wind",
+      "n": 682,
+      "MAE": 1.5845757339843312,
+      "RMSE": 2.0826874306028924,
+      "R2": 0.8728757246172111,
+      "bias": 8.334812149678595e-16
+    },
+    "validation": {
+      "target": "wind",
+      "n": 146,
+      "MAE": 2.27236070691306,
+      "RMSE": 2.757297400078296,
+      "R2": -0.02453279772929995,
+      "bias": 2.184832785150543
+    },
+    "test": {
+      "target": "wind",
+      "n": 147,
+      "MAE": 3.6832405074308974,
+      "RMSE": 4.179592016375938,
+      "R2": -0.28791454474690537,
+      "bias": 3.526144830349898
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D2\\wind_corrector.joblib"
+  },
+  {
+    "horizon": 3,
+    "target": "temperature",
+    "target_column": "actual_temperature_2m_mean",
+    "train": {
+      "target": "temperature",
+      "n": 682,
+      "MAE": 0.4677557938346685,
+      "RMSE": 0.6223992112004991,
+      "R2": 0.965070244850457,
+      "bias": 6.199016536323455e-16
+    },
+    "validation": {
+      "target": "temperature",
+      "n": 146,
+      "MAE": 1.220346396815552,
+      "RMSE": 1.427860785831896,
+      "R2": 0.8767963543845806,
+      "bias": 1.1769604505653941
+    },
+    "test": {
+      "target": "temperature",
+      "n": 147,
+      "MAE": 0.6511714204255664,
+      "RMSE": 0.8464650944188327,
+      "R2": 0.9115464587856985,
+      "bias": -0.4519872277924276
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D3\\temperature_corrector.joblib"
+  },
+  {
+    "horizon": 3,
+    "target": "humidity",
+    "target_column": "actual_relative_humidity_2m_mean",
+    "train": {
+      "target": "humidity",
+      "n": 682,
+      "MAE": 2.716359441016555,
+      "RMSE": 3.5984870115629066,
+      "R2": 0.9761327888180636,
+      "bias": 1.5627772780647366e-16
+    },
+    "validation": {
+      "target": "humidity",
+      "n": 146,
+      "MAE": 7.421424087602422,
+      "RMSE": 9.104369198790472,
+      "R2": 0.46972841581971114,
+      "bias": -5.879703773458162
+    },
+    "test": {
+      "target": "humidity",
+      "n": 147,
+      "MAE": 3.8929861642332333,
+      "RMSE": 4.7342184937157334,
+      "R2": 0.9254359465294183,
+      "bias": 1.7240934682629019
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D3\\humidity_corrector.joblib"
+  },
+  {
+    "horizon": 3,
+    "target": "precipitation",
+    "target_column": "actual_precipitation_sum",
+    "train": {
+      "target": "precipitation",
+      "n": 682,
+      "MAE": 1.9323396867998615,
+      "RMSE": 4.231156403672593,
+      "R2": 0.6052119891523182,
+      "bias": 0.0,
+      "wet_day_MAE": 3.7488572969517664
+    },
+    "validation": {
+      "target": "precipitation",
+      "n": 146,
+      "MAE": 0.09627810440997008,
+      "RMSE": 0.25328873344186303,
+      "R2": -0.6939155104873393,
+      "bias": 0.04515512628967231,
+      "wet_day_MAE": 0.47241798453405753
+    },
+    "test": {
+      "target": "precipitation",
+      "n": 147,
+      "MAE": 5.062901240808193,
+      "RMSE": 12.320494192943988,
+      "R2": 0.1493816357123412,
+      "bias": -0.21937103406924696,
+      "wet_day_MAE": 6.353444591792136
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D3\\precipitation_corrector.joblib"
+  },
+  {
+    "horizon": 3,
+    "target": "pressure",
+    "target_column": "actual_surface_pressure_mean",
+    "train": {
+      "target": "pressure",
+      "n": 682,
+      "MAE": 0.7943534830053156,
+      "RMSE": 1.0067478680237845,
+      "R2": 0.9312846357233941,
+      "bias": 7.201277697322306e-14
+    },
+    "validation": {
+      "target": "pressure",
+      "n": 146,
+      "MAE": 1.2905397726291188,
+      "RMSE": 1.6430021222309596,
+      "R2": 0.3532884094345854,
+      "bias": -0.21560422269660556
+    },
+    "test": {
+      "target": "pressure",
+      "n": 147,
+      "MAE": 2.06858034302905,
+      "RMSE": 2.4548215995091534,
+      "R2": -0.024941275891675163,
+      "bias": -1.5654540427629091
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D3\\pressure_corrector.joblib"
+  },
+  {
+    "horizon": 3,
+    "target": "wind",
+    "target_column": "actual_wind_speed_10m_mean",
+    "train": {
+      "target": "wind",
+      "n": 682,
+      "MAE": 1.6185723225757351,
+      "RMSE": 2.11692570553232,
+      "R2": 0.8686616573973664,
+      "bias": 1.666962429935719e-15
+    },
+    "validation": {
+      "target": "wind",
+      "n": 146,
+      "MAE": 2.278138004106734,
+      "RMSE": 2.761558540853985,
+      "R2": -0.027701880506268317,
+      "bias": 2.162337307443434
+    },
+    "test": {
+      "target": "wind",
+      "n": 147,
+      "MAE": 3.869955223175757,
+      "RMSE": 4.369170688040569,
+      "R2": -0.40739916400855525,
+      "bias": 3.702156447679321
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D3\\wind_corrector.joblib"
+  },
+  {
+    "horizon": 4,
+    "target": "temperature",
+    "target_column": "actual_temperature_2m_mean",
+    "train": {
+      "target": "temperature",
+      "n": 682,
+      "MAE": 0.48915349170014466,
+      "RMSE": 0.646731643649759,
+      "R2": 0.9622857308665375,
+      "bias": -3.4485285269295186e-15
+    },
+    "validation": {
+      "target": "temperature",
+      "n": 146,
+      "MAE": 1.4047717950785161,
+      "RMSE": 1.6487955632474756,
+      "R2": 0.8357197155507403,
+      "bias": 1.365591070718662
+    },
+    "test": {
+      "target": "temperature",
+      "n": 147,
+      "MAE": 0.6589571847156885,
+      "RMSE": 0.8539389313920083,
+      "R2": 0.9099775674608247,
+      "bias": -0.43063371650947885
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D4\\temperature_corrector.joblib"
+  },
+  {
+    "horizon": 4,
+    "target": "humidity",
+    "target_column": "actual_relative_humidity_2m_mean",
+    "train": {
+      "target": "humidity",
+      "n": 682,
+      "MAE": 2.86722382707355,
+      "RMSE": 3.8339696421072467,
+      "R2": 0.9729068727733405,
+      "bias": -2.3858399778454975e-15
+    },
+    "validation": {
+      "target": "humidity",
+      "n": 146,
+      "MAE": 8.031713468819884,
+      "RMSE": 10.112667947402505,
+      "R2": 0.34577049268208226,
+      "bias": -6.3027774440645725
+    },
+    "test": {
+      "target": "humidity",
+      "n": 147,
+      "MAE": 4.218179287140621,
+      "RMSE": 5.195189123706718,
+      "R2": 0.9102084149305825,
+      "bias": 1.71647957649174
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D4\\humidity_corrector.joblib"
+  },
+  {
+    "horizon": 4,
+    "target": "precipitation",
+    "target_column": "actual_precipitation_sum",
+    "train": {
+      "target": "precipitation",
+      "n": 682,
+      "MAE": 1.990778161007949,
+      "RMSE": 4.292864199473636,
+      "R2": 0.5936127281378528,
+      "bias": 6.459479416000911e-16,
+      "wet_day_MAE": 3.8157797541902028
+    },
+    "validation": {
+      "target": "precipitation",
+      "n": 146,
+      "MAE": 0.08668912708099064,
+      "RMSE": 0.2121042569697777,
+      "R2": -0.18784225402484434,
+      "bias": 0.023375964863107456,
+      "wet_day_MAE": 0.4613303833219709
+    },
+    "test": {
+      "target": "precipitation",
+      "n": 147,
+      "MAE": 5.139940416738676,
+      "RMSE": 12.276205429525525,
+      "R2": 0.15548611873111684,
+      "bias": -0.11314366115047754,
+      "wet_day_MAE": 6.3170476400019355
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D4\\precipitation_corrector.joblib"
+  },
+  {
+    "horizon": 4,
+    "target": "pressure",
+    "target_column": "actual_surface_pressure_mean",
+    "train": {
+      "target": "pressure",
+      "n": 682,
+      "MAE": 0.8018753308375951,
+      "RMSE": 1.0136243042454658,
+      "R2": 0.9303427304825087,
+      "bias": 6.534492725348019e-14
+    },
+    "validation": {
+      "target": "pressure",
+      "n": 146,
+      "MAE": 1.3148652952614956,
+      "RMSE": 1.682364487187644,
+      "R2": 0.3219299216666608,
+      "bias": -0.2198589112654712
+    },
+    "test": {
+      "target": "pressure",
+      "n": 147,
+      "MAE": 2.1713589910675295,
+      "RMSE": 2.56000650097169,
+      "R2": -0.11465699996158407,
+      "bias": -1.6554069505171318
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D4\\pressure_corrector.joblib"
+  },
+  {
+    "horizon": 4,
+    "target": "wind",
+    "target_column": "actual_wind_speed_10m_mean",
+    "train": {
+      "target": "wind",
+      "n": 682,
+      "MAE": 1.7264775883091699,
+      "RMSE": 2.2465494778854227,
+      "R2": 0.8520849807860615,
+      "bias": -8.334812149678595e-17
+    },
+    "validation": {
+      "target": "wind",
+      "n": 146,
+      "MAE": 2.2234039557612406,
+      "RMSE": 2.753690727902757,
+      "R2": -0.021854278380242453,
+      "bias": 2.0966835831947908
+    },
+    "test": {
+      "target": "wind",
+      "n": 147,
+      "MAE": 3.6056169920032324,
+      "RMSE": 4.173542469528886,
+      "R2": -0.2841889845608454,
+      "bias": 3.3739311426899046
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D4\\wind_corrector.joblib"
+  },
+  {
+    "horizon": 5,
+    "target": "temperature",
+    "target_column": "actual_temperature_2m_mean",
+    "train": {
+      "target": "temperature",
+      "n": 682,
+      "MAE": 0.513988506100095,
+      "RMSE": 0.6886970827016818,
+      "R2": 0.9572324904686759,
+      "bias": -1.8128216425550943e-15
+    },
+    "validation": {
+      "target": "temperature",
+      "n": 146,
+      "MAE": 1.3180411061844968,
+      "RMSE": 1.5449711507060664,
+      "R2": 0.8557577213818119,
+      "bias": 1.2807881299374664
+    },
+    "test": {
+      "target": "temperature",
+      "n": 147,
+      "MAE": 0.736675275154013,
+      "RMSE": 0.938983516087878,
+      "R2": 0.8911538547472148,
+      "bias": -0.3676284041119673
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D5\\temperature_corrector.joblib"
+  },
+  {
+    "horizon": 5,
+    "target": "humidity",
+    "target_column": "actual_relative_humidity_2m_mean",
+    "train": {
+      "target": "humidity",
+      "n": 682,
+      "MAE": 3.0527111012910866,
+      "RMSE": 4.151253072950839,
+      "R2": 0.9682370948960561,
+      "bias": -5.709346322529837e-15
+    },
+    "validation": {
+      "target": "humidity",
+      "n": 146,
+      "MAE": 7.31015208785255,
+      "RMSE": 8.94429447866043,
+      "R2": 0.4882111593351476,
+      "bias": -5.304129552667868
+    },
+    "test": {
+      "target": "humidity",
+      "n": 147,
+      "MAE": 4.843716100656197,
+      "RMSE": 6.049070701611605,
+      "R2": 0.8782664645728907,
+      "bias": 1.142141277060285
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D5\\humidity_corrector.joblib"
+  },
+  {
+    "horizon": 5,
+    "target": "precipitation",
+    "target_column": "actual_precipitation_sum",
+    "train": {
+      "target": "precipitation",
+      "n": 682,
+      "MAE": 2.041049396615546,
+      "RMSE": 4.3955413369823235,
+      "R2": 0.5739402245502297,
+      "bias": -2.917184252387508e-16,
+      "wet_day_MAE": 3.869568241177632
+    },
+    "validation": {
+      "target": "precipitation",
+      "n": 146,
+      "MAE": 0.13304022603902577,
+      "RMSE": 0.29679963479038995,
+      "R2": -1.32587689488776,
+      "bias": 0.07947535990061096,
+      "wet_day_MAE": 0.584042162801113
+    },
+    "test": {
+      "target": "precipitation",
+      "n": 147,
+      "MAE": 5.466229783768338,
+      "RMSE": 12.613035363427558,
+      "R2": 0.10850743684596043,
+      "bias": 0.014268649483370748,
+      "wet_day_MAE": 6.640385770843557
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D5\\precipitation_corrector.joblib"
+  },
+  {
+    "horizon": 5,
+    "target": "pressure",
+    "target_column": "actual_surface_pressure_mean",
+    "train": {
+      "target": "pressure",
+      "n": 682,
+      "MAE": 0.8153280996858905,
+      "RMSE": 1.0357845426027403,
+      "R2": 0.9272636896380881,
+      "bias": -9.535025099232313e-14
+    },
+    "validation": {
+      "target": "pressure",
+      "n": 146,
+      "MAE": 1.3319703535242038,
+      "RMSE": 1.6757470502893572,
+      "R2": 0.32725369211660915,
+      "bias": -0.23699458602663592
+    },
+    "test": {
+      "target": "pressure",
+      "n": 147,
+      "MAE": 2.2097486636353585,
+      "RMSE": 2.62292017050516,
+      "R2": -0.170116914063714,
+      "bias": -1.709903559838837
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D5\\pressure_corrector.joblib"
+  },
+  {
+    "horizon": 5,
+    "target": "wind",
+    "target_column": "actual_wind_speed_10m_mean",
+    "train": {
+      "target": "wind",
+      "n": 682,
+      "MAE": 1.8016536917902228,
+      "RMSE": 2.3550252283203177,
+      "R2": 0.8374558191348026,
+      "bias": 1.2502218224517893e-16
+    },
+    "validation": {
+      "target": "wind",
+      "n": 146,
+      "MAE": 2.2340780710720174,
+      "RMSE": 2.8393538848882294,
+      "R2": -0.08641985028201415,
+      "bias": 2.149051385227602
+    },
+    "test": {
+      "target": "wind",
+      "n": 147,
+      "MAE": 3.4741326895409315,
+      "RMSE": 4.013446456241845,
+      "R2": -0.18755631307293963,
+      "bias": 3.15795801848841
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D5\\wind_corrector.joblib"
+  },
+  {
+    "horizon": 6,
+    "target": "temperature",
+    "target_column": "actual_temperature_2m_mean",
+    "train": {
+      "target": "temperature",
+      "n": 682,
+      "MAE": 0.5469488306090445,
+      "RMSE": 0.74377911068223,
+      "R2": 0.9501178196863054,
+      "bias": -6.980405175355823e-16
+    },
+    "validation": {
+      "target": "temperature",
+      "n": 146,
+      "MAE": 1.4261664364554798,
+      "RMSE": 1.692401381333993,
+      "R2": 0.8269153444386358,
+      "bias": 1.3903631858480863
+    },
+    "test": {
+      "target": "temperature",
+      "n": 147,
+      "MAE": 0.7268590540871334,
+      "RMSE": 0.9558302572412972,
+      "R2": 0.887213098681171,
+      "bias": -0.41672353937753825
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D6\\temperature_corrector.joblib"
+  },
+  {
+    "horizon": 6,
+    "target": "humidity",
+    "target_column": "actual_relative_humidity_2m_mean",
+    "train": {
+      "target": "humidity",
+      "n": 682,
+      "MAE": 3.307345100817198,
+      "RMSE": 4.498196025596134,
+      "R2": 0.9627060356004526,
+      "bias": 1.3231514287614769e-15
+    },
+    "validation": {
+      "target": "humidity",
+      "n": 146,
+      "MAE": 7.962998156744348,
+      "RMSE": 9.754482492755834,
+      "R2": 0.39129467559557063,
+      "bias": -5.425317984366508
+    },
+    "test": {
+      "target": "humidity",
+      "n": 147,
+      "MAE": 4.6963346533981705,
+      "RMSE": 6.010170452072271,
+      "R2": 0.8798271137268363,
+      "bias": 1.5650250921620366
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D6\\humidity_corrector.joblib"
+  },
+  {
+    "horizon": 6,
+    "target": "precipitation",
+    "target_column": "actual_precipitation_sum",
+    "train": {
+      "target": "precipitation",
+      "n": 682,
+      "MAE": 2.146642244133966,
+      "RMSE": 4.5050686474012505,
+      "R2": 0.5524427228920701,
+      "bias": -3.125554556129473e-17,
+      "wet_day_MAE": 4.050319918762238
+    },
+    "validation": {
+      "target": "precipitation",
+      "n": 146,
+      "MAE": 0.12154545868927404,
+      "RMSE": 0.262810527850828,
+      "R2": -0.82366690602909,
+      "bias": 0.06961963920772887,
+      "wet_day_MAE": 0.4918325321898354
+    },
+    "test": {
+      "target": "precipitation",
+      "n": 147,
+      "MAE": 5.583229119572975,
+      "RMSE": 12.609252658744714,
+      "R2": 0.10904208173031327,
+      "bias": -0.07219228047984676,
+      "wet_day_MAE": 6.716269845727553
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D6\\precipitation_corrector.joblib"
+  },
+  {
+    "horizon": 6,
+    "target": "pressure",
+    "target_column": "actual_surface_pressure_mean",
+    "train": {
+      "target": "pressure",
+      "n": 682,
+      "MAE": 0.8232961727481531,
+      "RMSE": 1.0375488861610989,
+      "R2": 0.9270156821908659,
+      "bias": -4.1674060748392975e-15
+    },
+    "validation": {
+      "target": "pressure",
+      "n": 146,
+      "MAE": 1.2842406550376628,
+      "RMSE": 1.6448597447764328,
+      "R2": 0.3518252035726903,
+      "bias": -0.2125646288790611
+    },
+    "test": {
+      "target": "pressure",
+      "n": 147,
+      "MAE": 2.213643576052862,
+      "RMSE": 2.5967813244643216,
+      "R2": -0.14691140023087002,
+      "bias": -1.6161045163060872
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D6\\pressure_corrector.joblib"
+  },
+  {
+    "horizon": 6,
+    "target": "wind",
+    "target_column": "actual_wind_speed_10m_mean",
+    "train": {
+      "target": "wind",
+      "n": 682,
+      "MAE": 1.8121652469180005,
+      "RMSE": 2.375588057956926,
+      "R2": 0.8346049280685985,
+      "bias": 3.7506654673553677e-16
+    },
+    "validation": {
+      "target": "wind",
+      "n": 146,
+      "MAE": 2.1808750459740858,
+      "RMSE": 2.7861251452904536,
+      "R2": -0.04606791801599308,
+      "bias": 1.9082004856977655
+    },
+    "test": {
+      "target": "wind",
+      "n": 147,
+      "MAE": 3.223561445869621,
+      "RMSE": 3.778559070728382,
+      "R2": -0.05262019506230664,
+      "bias": 2.6613741123661585
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D6\\wind_corrector.joblib"
+  },
+  {
+    "horizon": 7,
+    "target": "temperature",
+    "target_column": "actual_temperature_2m_mean",
+    "train": {
+      "target": "temperature",
+      "n": 682,
+      "MAE": 0.5515571211301942,
+      "RMSE": 0.7508974305435258,
+      "R2": 0.9491584583944274,
+      "bias": -2.0211919462970594e-15
+    },
+    "validation": {
+      "target": "temperature",
+      "n": 146,
+      "MAE": 1.354475211006958,
+      "RMSE": 1.6644471797888971,
+      "R2": 0.83258596602944,
+      "bias": 1.2742259243441225
+    },
+    "test": {
+      "target": "temperature",
+      "n": 147,
+      "MAE": 0.8625895821316893,
+      "RMSE": 1.1740361753473674,
+      "R2": 0.8298389821841192,
+      "bias": -0.4668293385465432
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D7\\temperature_corrector.joblib"
+  },
+  {
+    "horizon": 7,
+    "target": "humidity",
+    "target_column": "actual_relative_humidity_2m_mean",
+    "train": {
+      "target": "humidity",
+      "n": 682,
+      "MAE": 3.3287945276149316,
+      "RMSE": 4.500779458205337,
+      "R2": 0.9626631854843796,
+      "bias": -6.16776099076216e-15
+    },
+    "validation": {
+      "target": "humidity",
+      "n": 146,
+      "MAE": 8.252392594644801,
+      "RMSE": 10.9192367959037,
+      "R2": 0.23724826901126872,
+      "bias": -0.37801358165318155
+    },
+    "test": {
+      "target": "humidity",
+      "n": 147,
+      "MAE": 5.231556922652319,
+      "RMSE": 6.806671549886277,
+      "R2": 0.8458645611822253,
+      "bias": 2.504118546504187
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D7\\humidity_corrector.joblib"
+  },
+  {
+    "horizon": 7,
+    "target": "precipitation",
+    "target_column": "actual_precipitation_sum",
+    "train": {
+      "target": "precipitation",
+      "n": 682,
+      "MAE": 2.2491287340411357,
+      "RMSE": 4.677990637091423,
+      "R2": 0.5174253622535214,
+      "bias": 1.8753327336776838e-16,
+      "wet_day_MAE": 4.192287428536898
+    },
+    "validation": {
+      "target": "precipitation",
+      "n": 146,
+      "MAE": 0.15166029646172172,
+      "RMSE": 0.2581634591225718,
+      "R2": -0.7597442025251773,
+      "bias": 0.09095320092033457,
+      "wet_day_MAE": 0.4506263197621465
+    },
+    "test": {
+      "target": "precipitation",
+      "n": 147,
+      "MAE": 6.182991529141138,
+      "RMSE": 12.73736799226693,
+      "R2": 0.09084508678519432,
+      "bias": 0.7325528374843894,
+      "wet_day_MAE": 7.255679216637583
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D7\\precipitation_corrector.joblib"
+  },
+  {
+    "horizon": 7,
+    "target": "pressure",
+    "target_column": "actual_surface_pressure_mean",
+    "train": {
+      "target": "pressure",
+      "n": 682,
+      "MAE": 0.789030607626995,
+      "RMSE": 0.9943616072648049,
+      "R2": 0.932965077551158,
+      "bias": 8.434829895474738e-14
+    },
+    "validation": {
+      "target": "pressure",
+      "n": 146,
+      "MAE": 1.3101147587022504,
+      "RMSE": 1.6465177725398235,
+      "R2": 0.3505178173848059,
+      "bias": -0.14794594608368833
+    },
+    "test": {
+      "target": "pressure",
+      "n": 147,
+      "MAE": 2.204263068546994,
+      "RMSE": 2.5555088726236814,
+      "R2": -0.11074379972495274,
+      "bias": -1.4261602281277133
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D7\\pressure_corrector.joblib"
+  },
+  {
+    "horizon": 7,
+    "target": "wind",
+    "target_column": "actual_wind_speed_10m_mean",
+    "train": {
+      "target": "wind",
+      "n": 682,
+      "MAE": 1.8944538578676218,
+      "RMSE": 2.4632055719253234,
+      "R2": 0.8221795868151011,
+      "bias": 6.251109112258946e-16
+    },
+    "validation": {
+      "target": "wind",
+      "n": 146,
+      "MAE": 1.8980358564240187,
+      "RMSE": 2.465311801708089,
+      "R2": 0.1809652043880624,
+      "bias": 1.2400627157240915
+    },
+    "test": {
+      "target": "wind",
+      "n": 147,
+      "MAE": 2.4724273592845716,
+      "RMSE": 2.927826430775392,
+      "R2": 0.36801041687309266,
+      "bias": -0.6880714132071772
+    },
+    "model_path": "E:\\SIH26_Downscaling\\datasets\\models\\Maharashtra\\Nashik\\Sinnar\\D7\\wind_corrector.joblib"
+  }
+]

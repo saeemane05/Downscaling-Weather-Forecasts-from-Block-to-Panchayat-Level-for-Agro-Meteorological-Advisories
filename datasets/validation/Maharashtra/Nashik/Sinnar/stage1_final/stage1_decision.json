@@ -1,0 +1,22 @@
+{
+  "temperature": {
+    "decision": "RAW_FORECAST",
+    "reason": "Direct correction degraded test performance across all horizons."
+  },
+  "humidity": {
+    "decision": "RAW_FORECAST",
+    "reason": "Direct correction degraded test performance across all horizons."
+  },
+  "precipitation": {
+    "decision": "SPECIALIZED_CORRECTION",
+    "reason": "Specialized occurrence/amount correction improved D1-D5 but requires continued validation for D6-D7."
+  },
+  "wind": {
+    "decision": "RAW_FORECAST_PENDING_VERIFICATION",
+    "reason": "Observed approximately 3.6 actual/raw ratio, consistent with a possible m/s-to-km/h mismatch. No wind correction should be accepted until source units are verified."
+  },
+  "pressure": {
+    "decision": "SOURCE_REQUIRED",
+    "reason": "No pressure forecast predictor is present in the current modeling matrix."
+  }
+}

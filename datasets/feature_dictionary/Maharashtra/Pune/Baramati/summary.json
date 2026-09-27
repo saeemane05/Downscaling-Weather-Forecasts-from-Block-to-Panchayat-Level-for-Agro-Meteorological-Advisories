@@ -1,0 +1,156 @@
+{
+  "generated_at": "2026-09-21T09:36:46",
+  "project_root": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling",
+  "location": {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "block": "Baramati"
+  },
+  "location_root": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Pune\\Baramati",
+  "total_dictionary_records": 432,
+  "datasets": {
+    "block_current_forecast": {
+      "feature_count": 21,
+      "100pct_missing": 0
+    },
+    "block_forecast_training_base": {
+      "feature_count": 139,
+      "100pct_missing": 0
+    },
+    "block_observations_daily": {
+      "feature_count": 52,
+      "100pct_missing": 0
+    },
+    "gp_merged_features": {
+      "feature_count": 220,
+      "100pct_missing": 21
+    }
+  },
+  "feature_groups": {
+    "remote_sensing": 180,
+    "weather_forecast": 70,
+    "static_spatial_environment": 60,
+    "temporal_control": 31,
+    "historical_weather": 30,
+    "unavailable": 21,
+    "data_availability": 18,
+    "provenance": 10,
+    "reanalysis": 6,
+    "spatial_location": 2,
+    "constant_physical_or_metadata": 2,
+    "identifier": 1,
+    "other_categorical": 1
+  },
+  "final_roles": {
+    "gp_spatial_predictor": 240,
+    "forecast_predictor": 70,
+    "temporal_alignment": 31,
+    "historical_source": 30,
+    "candidate_predictor": 26,
+    "exclude": 21,
+    "metadata": 11,
+    "review": 2,
+    "metadata_or_candidate": 1
+  },
+  "engineering_actions": {
+    "retain_with_acquisition_date_and_availability_control": 180,
+    "retain_with_issue_time_and_lead_alignment": 70,
+    "retain_as_static_spatial_predictor": 60,
+    "retain_for_temporal_alignment": 31,
+    "use_only_as_past_lag_rolling_feature_or_target": 30,
+    "exclude_100pct_unavailable": 21,
+    "retain_as_availability_feature": 18,
+    "retain_for_audit_provenance": 10,
+    "retain_with_temporal_availability_control": 6,
+    "retain_for_spatial_modeling": 2,
+    "retain_for_multi_block_review_before_removal": 2,
+    "retain_for_joining_only": 1,
+    "retain_for_scientific_review": 1
+  },
+  "unavailable_features": [
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel2__NDVI_30d_change"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_db_ascending_mean"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_db_ascending_median"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_db_ascending_std"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_db_ascending_min"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_db_ascending_max"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vh_db_ascending_mean"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vh_db_ascending_median"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vh_db_ascending_std"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vh_db_ascending_min"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vh_db_ascending_max"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_vh_diff_db_ascending_mean"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_vh_diff_db_ascending_median"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_vh_diff_db_ascending_std"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_vh_diff_db_ascending_min"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_vv_vh_diff_db_ascending_max"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_incidence_angle_deg_ascending_mean"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_incidence_angle_deg_ascending_median"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_incidence_angle_deg_ascending_std"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_incidence_angle_deg_ascending_min"
+    },
+    {
+      "source_dataset": "gp_merged_features",
+      "column": "sentinel1__s1_incidence_angle_deg_ascending_max"
+    }
+  ]
+}

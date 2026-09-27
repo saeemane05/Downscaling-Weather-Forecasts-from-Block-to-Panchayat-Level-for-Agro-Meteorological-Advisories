@@ -1,0 +1,42 @@
+SIH26 FINAL PRE-TRAINING ANALYSIS
+================================================================================
+
+Final Decision: WIND_REQUIRES_SOURCE_FIX
+Wind Decision: WIND_REQUIRES_SOURCE_FIX
+Wind Unit Status: UNKNOWN
+Aggregation Proven: False
+Height Comparable: False
+
+STAGE-1 DECISIONS
+--------------------------------------------------------------------------------
+temperature: RAW_FORECAST
+  Reason: Existing diagnostics showed correction degraded performance.
+humidity: RAW_FORECAST
+  Reason: Existing diagnostics showed correction degraded performance.
+precipitation: SPECIALIZED_CORRECTION
+  Reason: Existing diagnostics showed improvement across most horizons; retain for further training.
+wind: WIND_REQUIRES_SOURCE_FIX
+  Reason: Wind source compatibility is not established.
+pressure: UNAVAILABLE_PENDING_FORECAST_SOURCE
+  Reason: No verified pressure forecast predictor is currently available.
+
+GLOBAL CHECKS
+--------------------------------------------------------------------------------
+required_source_columns: PASS
+forecast_temporal_integrity: PASS
+wind_numerical_validity: PASS
+target_leakage_absent: PASS
+training_datasets_exist: PASS
+wind_source_compatibility: FAIL
+
+POLICY
+--------------------------------------------------------------------------------
+automatic_wind_conversion: False
+synthetic_data_allowed: False
+interpolation_allowed: False
+actual_weather_as_gp_target: False
+actual_weather_as_X: False
+
+FINAL ACTION
+--------------------------------------------------------------------------------
+Fix/verify wind source metadata before training.

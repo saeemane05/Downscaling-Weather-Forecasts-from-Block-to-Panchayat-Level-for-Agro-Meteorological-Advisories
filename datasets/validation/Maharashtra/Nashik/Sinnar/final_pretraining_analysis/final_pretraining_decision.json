@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-09-20T15:21:43.629414",
+  "project": "SIH26",
+  "location": {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "taluka": "Sinnar"
+  },
+  "final_decision": "WIND_REQUIRES_SOURCE_FIX",
+  "wind_decision": "WIND_REQUIRES_SOURCE_FIX",
+  "unit_status": "UNKNOWN",
+  "aggregation_proven": false,
+  "height_comparable": false,
+  "global_checks": {
+    "required_source_columns": true,
+    "forecast_temporal_integrity": "True",
+    "wind_numerical_validity": "True",
+    "target_leakage_absent": true,
+    "training_datasets_exist": true,
+    "wind_source_compatibility": false
+  },
+  "stage1_decisions": {
+    "temperature": {
+      "decision": "RAW_FORECAST",
+      "reason": "Existing diagnostics showed correction degraded performance."
+    },
+    "humidity": {
+      "decision": "RAW_FORECAST",
+      "reason": "Existing diagnostics showed correction degraded performance."
+    },
+    "precipitation": {
+      "decision": "SPECIALIZED_CORRECTION",
+      "reason": "Existing diagnostics showed improvement across most horizons; retain for further training."
+    },
+    "wind": {
+      "decision": "WIND_REQUIRES_SOURCE_FIX",
+      "reason": "Wind source compatibility is not established."
+    },
+    "pressure": {
+      "decision": "UNAVAILABLE_PENDING_FORECAST_SOURCE",
+      "reason": "No verified pressure forecast predictor is currently available."
+    }
+  },
+  "training_inventory": {
+    "D1": true,
+    "D2": true,
+    "D3": true,
+    "D4": true,
+    "D5": true,
+    "D6": true,
+    "D7": true
+  },
+  "explicit_unit_evidence": [],
+  "policy": {
+    "automatic_wind_conversion": false,
+    "synthetic_data_allowed": false,
+    "interpolation_allowed": false,
+    "actual_weather_as_gp_target": false,
+    "actual_weather_as_X": false
+  },
+  "next_action": "Fix/verify wind source metadata before training."
+}

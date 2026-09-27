@@ -1,0 +1,124 @@
+{
+  "project": "SIH26",
+  "location": {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "taluka": "Sinnar"
+  },
+  "purpose": "Rainfall distribution and robustness audit",
+  "model_selection_rule": "Validation performance only",
+  "test_usage": "Final evaluation evidence only",
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "validation_based_selection": [
+    {
+      "horizon": 1,
+      "validation_RMSE_improvement_pct": 21.225788770385584,
+      "test_RMSE_improvement_pct": 39.37972545427677,
+      "validation_selected_method": "SPECIALIZED_CORRECTION",
+      "selection_basis": "VALIDATION_ONLY"
+    },
+    {
+      "horizon": 2,
+      "validation_RMSE_improvement_pct": -8.278583551009847,
+      "test_RMSE_improvement_pct": 24.04898163754239,
+      "validation_selected_method": "RAW_FORECAST",
+      "selection_basis": "VALIDATION_ONLY"
+    },
+    {
+      "horizon": 3,
+      "validation_RMSE_improvement_pct": 34.82763798788583,
+      "test_RMSE_improvement_pct": 7.164700026606018,
+      "validation_selected_method": "SPECIALIZED_CORRECTION",
+      "selection_basis": "VALIDATION_ONLY"
+    },
+    {
+      "horizon": 4,
+      "validation_RMSE_improvement_pct": 21.0898552193877,
+      "test_RMSE_improvement_pct": 55.869205633285155,
+      "validation_selected_method": "SPECIALIZED_CORRECTION",
+      "selection_basis": "VALIDATION_ONLY"
+    },
+    {
+      "horizon": 5,
+      "validation_RMSE_improvement_pct": 39.59819414365832,
+      "test_RMSE_improvement_pct": 11.885554397970733,
+      "validation_selected_method": "SPECIALIZED_CORRECTION",
+      "selection_basis": "VALIDATION_ONLY"
+    },
+    {
+      "horizon": 6,
+      "validation_RMSE_improvement_pct": 20.43503748924077,
+      "test_RMSE_improvement_pct": 0.6747637616794302,
+      "validation_selected_method": "SPECIALIZED_CORRECTION",
+      "selection_basis": "VALIDATION_ONLY"
+    },
+    {
+      "horizon": 7,
+      "validation_RMSE_improvement_pct": -11.13149584449596,
+      "test_RMSE_improvement_pct": -3.352520771112317,
+      "validation_selected_method": "RAW_FORECAST",
+      "selection_basis": "VALIDATION_ONLY"
+    }
+  ],
+  "borderline_horizons": [
+    {
+      "horizon": 1,
+      "status": "CLEAR",
+      "reasons": ""
+    },
+    {
+      "horizon": 2,
+      "status": "BORDERLINE",
+      "reasons": "validation/test improvement signs disagree"
+    },
+    {
+      "horizon": 3,
+      "status": "CLEAR",
+      "reasons": ""
+    },
+    {
+      "horizon": 4,
+      "status": "CLEAR",
+      "reasons": ""
+    },
+    {
+      "horizon": 5,
+      "status": "CLEAR",
+      "reasons": ""
+    },
+    {
+      "horizon": 6,
+      "status": "BORDERLINE",
+      "reasons": "test improvement < 5%"
+    },
+    {
+      "horizon": 7,
+      "status": "BORDERLINE",
+      "reasons": "test improvement < 5%"
+    }
+  ],
+  "outputs": {
+    "distribution": "rainfall_distribution_summary.csv",
+    "distribution_shift": "rainfall_distribution_shift.csv",
+    "extreme_events": "rainfall_extreme_event_counts.csv",
+    "error_summary": "raw_vs_corrected_error_summary.csv",
+    "category_error": "rainfall_category_error_analysis.csv",
+    "extreme_error_contribution": "extreme_event_error_contribution.csv",
+    "validation_selection": "validation_based_stage1_selection.csv",
+    "borderline": "borderline_horizons.csv"
+  },
+  "policy": {
+    "automatic_model_reselection": false,
+    "test_based_model_selection": false,
+    "synthetic_data": false,
+    "interpolation": false
+  }
+}

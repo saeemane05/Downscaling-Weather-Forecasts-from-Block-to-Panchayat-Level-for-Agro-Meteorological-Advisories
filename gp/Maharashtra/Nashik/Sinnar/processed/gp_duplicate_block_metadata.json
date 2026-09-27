@@ -1,0 +1,26 @@
+{
+  "generated_utc": "2026-09-17T04:28:29.142955+00:00",
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block": "Sinnar",
+  "gp_snapshot": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\raw\\boundaries\\gram_manchitra_gp_20260917T012721Z.geojson",
+  "block_snapshot": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\raw\\boundaries\\gram_manchitra_block_20260917T042829Z.geojson",
+  "block_source": "https://grammanchitragis.nic.in/grammanchitra/rest/services/panchayat/adminpanch/MapServer/2/query",
+  "gp_records": 119,
+  "duplicate_gp_ids": [
+    "183696",
+    "183727",
+    "183683",
+    "183677",
+    "183667"
+  ],
+  "duplicate_gp_count": 5,
+  "metric_epsg": 32643,
+  "outputs": {
+    "block_check": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\gp_duplicate_block_check.csv",
+    "same_id_relationships": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\gp_duplicate_same_id_relationships.csv",
+    "cross_gp_overlap": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\gp_duplicate_cross_overlap.csv",
+    "dissolve_simulation": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\gp_duplicate_dissolve_simulation.csv",
+    "diagnostic_geojson": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\gp_duplicate_block_diagnostic.geojson"
+  }
+}

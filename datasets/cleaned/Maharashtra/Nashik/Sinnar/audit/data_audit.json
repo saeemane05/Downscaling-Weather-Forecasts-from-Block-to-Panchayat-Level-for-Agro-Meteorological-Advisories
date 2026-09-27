@@ -1,0 +1,2922 @@
+{
+  "created_utc": "2026-09-19T06:07:50Z",
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block": "Sinnar",
+  "source_block": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar",
+  "source_gp": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar",
+  "non_destructive": true,
+  "reports": [
+    {
+      "file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\merge\\block_observations_daily.csv",
+      "rows": 1837,
+      "columns": 52,
+      "column_names": [
+        "date",
+        "actual_temperature_2m_mean",
+        "actual_temperature_2m_max",
+        "actual_temperature_2m_min",
+        "actual_relative_humidity_2m_mean",
+        "actual_relative_humidity_2m_max",
+        "actual_relative_humidity_2m_min",
+        "actual_precipitation_sum",
+        "actual_rain_sum",
+        "actual_wind_speed_10m_mean",
+        "actual_wind_speed_10m_max",
+        "actual_wind_gusts_10m_max",
+        "actual_shortwave_radiation_sum",
+        "actual_cloud_cover_mean",
+        "actual_surface_pressure_mean",
+        "actual_et0_fao_evapotranspiration",
+        "actual_latitude",
+        "actual_longitude",
+        "actual_source",
+        "actual_timezone",
+        "era5_2m_dewpoint_temperature",
+        "era5_surface_pressure",
+        "era5_volumetric_soil_water_layer_1",
+        "s2_EVI_max",
+        "s2_EVI_mean",
+        "s2_EVI_min",
+        "s2_EVI_stdDev",
+        "s2_NDVI_max",
+        "s2_NDVI_mean",
+        "s2_NDVI_min",
+        "s2_NDVI_stdDev",
+        "s2_SAVI_max",
+        "s2_SAVI_mean",
+        "s2_SAVI_min",
+        "s2_SAVI_stdDev",
+        "s2_cloud_percentage",
+        "s2_acquisition_count",
+        "s1_VH_max",
+        "s1_VH_mean",
+        "s1_VH_min",
+        "s1_VH_stdDev",
+        "s1_VV_max",
+        "s1_VV_mean",
+        "s1_VV_min",
+        "s1_VV_stdDev",
+        "s1_relative_orbit",
+        "s1_acquisition_count",
+        "lst_LST_C_max",
+        "lst_LST_C_mean",
+        "lst_LST_C_min",
+        "lst_LST_C_stdDev",
+        "lst_acquisition_count"
+      ],
+      "duplicate_column_labels": [],
+      "exact_duplicate_rows": 0,
+      "nonfinite_numeric_values": 0,
+      "constant_columns": [],
+      "likely_datetime_columns": [
+        "date",
+        "actual_timezone",
+        "s2_acquisition_count",
+        "s1_acquisition_count",
+        "lst_acquisition_count"
+      ],
+      "missing_columns": [
+        {
+          "column": "actual_temperature_2m_mean",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_temperature_2m_max",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_temperature_2m_min",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_relative_humidity_2m_mean",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_relative_humidity_2m_max",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_relative_humidity_2m_min",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_precipitation_sum",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_rain_sum",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_wind_speed_10m_mean",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_wind_speed_10m_max",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_wind_gusts_10m_max",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_shortwave_radiation_sum",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_cloud_cover_mean",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_surface_pressure_mean",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_et0_fao_evapotranspiration",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_latitude",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_longitude",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_source",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "actual_timezone",
+          "missing_count": 7,
+          "missing_percent": 0.3811
+        },
+        {
+          "column": "era5_2m_dewpoint_temperature",
+          "missing_count": 12,
+          "missing_percent": 0.6532
+        },
+        {
+          "column": "era5_surface_pressure",
+          "missing_count": 12,
+          "missing_percent": 0.6532
+        },
+        {
+          "column": "era5_volumetric_soil_water_layer_1",
+          "missing_count": 12,
+          "missing_percent": 0.6532
+        },
+        {
+          "column": "s2_EVI_max",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_EVI_mean",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_EVI_min",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_EVI_stdDev",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_NDVI_max",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_NDVI_mean",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_NDVI_min",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_NDVI_stdDev",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_SAVI_max",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_SAVI_mean",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_SAVI_min",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_SAVI_stdDev",
+          "missing_count": 1523,
+          "missing_percent": 82.9069
+        },
+        {
+          "column": "s2_cloud_percentage",
+          "missing_count": 1521,
+          "missing_percent": 82.798
+        },
+        {
+          "column": "s2_acquisition_count",
+          "missing_count": 1521,
+          "missing_percent": 82.798
+        },
+        {
+          "column": "s1_VH_max",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "s1_VH_mean",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "s1_VH_min",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "s1_VH_stdDev",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "s1_VV_max",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "s1_VV_mean",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "s1_VV_min",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "s1_VV_stdDev",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "s1_relative_orbit",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "s1_acquisition_count",
+          "missing_count": 1566,
+          "missing_percent": 85.2477
+        },
+        {
+          "column": "lst_LST_C_max",
+          "missing_count": 1663,
+          "missing_percent": 90.528
+        },
+        {
+          "column": "lst_LST_C_mean",
+          "missing_count": 1663,
+          "missing_percent": 90.528
+        },
+        {
+          "column": "lst_LST_C_min",
+          "missing_count": 1663,
+          "missing_percent": 90.528
+        },
+        {
+          "column": "lst_LST_C_stdDev",
+          "missing_count": 1663,
+          "missing_percent": 90.528
+        },
+        {
+          "column": "lst_acquisition_count",
+          "missing_count": 1663,
+          "missing_percent": 90.528
+        }
+      ],
+      "numeric_ranges": {
+        "actual_temperature_2m_mean": {
+          "min": 15.2,
+          "max": 34.8
+        },
+        "actual_temperature_2m_max": {
+          "min": 19.0,
+          "max": 42.8
+        },
+        "actual_temperature_2m_min": {
+          "min": 9.5,
+          "max": 28.7
+        },
+        "actual_relative_humidity_2m_mean": {
+          "min": 15.0,
+          "max": 92.0
+        },
+        "actual_relative_humidity_2m_max": {
+          "min": 20.0,
+          "max": 100.0
+        },
+        "actual_relative_humidity_2m_min": {
+          "min": 6.0,
+          "max": 88.0
+        },
+        "actual_precipitation_sum": {
+          "min": 0.0,
+          "max": 124.4
+        },
+        "actual_rain_sum": {
+          "min": 0.0,
+          "max": 124.4
+        },
+        "actual_wind_speed_10m_mean": {
+          "min": 4.2,
+          "max": 33.9
+        },
+        "actual_wind_speed_10m_max": {
+          "min": 8.6,
+          "max": 52.2
+        },
+        "actual_wind_gusts_10m_max": {
+          "min": 15.1,
+          "max": 79.6
+        },
+        "actual_shortwave_radiation_sum": {
+          "min": 2.95,
+          "max": 27.79
+        },
+        "actual_cloud_cover_mean": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "actual_surface_pressure_mean": {
+          "min": 929.4,
+          "max": 949.3
+        },
+        "actual_et0_fao_evapotranspiration": {
+          "min": 1.01,
+          "max": 11.67
+        },
+        "actual_latitude": {
+          "min": 19.81762971833111,
+          "max": 19.81762971833111
+        },
+        "actual_longitude": {
+          "min": 74.08262588749204,
+          "max": 74.08262588749204
+        },
+        "era5_2m_dewpoint_temperature": {
+          "min": 271.65353,
+          "max": 296.33038
+        },
+        "era5_surface_pressure": {
+          "min": 92158.67,
+          "max": 94104.125
+        },
+        "era5_volumetric_soil_water_layer_1": {
+          "min": 0.035224915,
+          "max": 0.50297546
+        },
+        "s2_EVI_max": {
+          "min": 0.1689244328382569,
+          "max": 2476979795053773.0
+        },
+        "s2_EVI_mean": {
+          "min": -7380946217.205916,
+          "max": 2070628514.1638887
+        },
+        "s2_EVI_min": {
+          "min": -955889020910208.0,
+          "max": 0.151235706381409
+        },
+        "s2_EVI_stdDev": {
+          "min": 0.0286971013785671,
+          "max": 2060338184811.837
+        },
+        "s2_NDVI_max": {
+          "min": 0.2568238213399503,
+          "max": 1.0
+        },
+        "s2_NDVI_mean": {
+          "min": 0.1144609240470911,
+          "max": 0.6289853024640475
+        },
+        "s2_NDVI_min": {
+          "min": -1.0,
+          "max": 0.1402508551881413
+        },
+        "s2_NDVI_stdDev": {
+          "min": 0.0544805774335275,
+          "max": 0.2686825293107433
+        },
+        "s2_SAVI_max": {
+          "min": 0.1510214007782101,
+          "max": 0.9318549215966282
+        },
+        "s2_SAVI_mean": {
+          "min": 0.0799455614237672,
+          "max": 0.4509250328636326
+        },
+        "s2_SAVI_min": {
+          "min": -0.5002711570638473,
+          "max": 0.0919618528610354
+        },
+        "s2_SAVI_stdDev": {
+          "min": 0.027922649842949,
+          "max": 0.1977053809734325
+        },
+        "s2_cloud_percentage": {
+          "min": 2.75e-05,
+          "max": 79.891193
+        },
+        "s2_acquisition_count": {
+          "min": 1.0,
+          "max": 8.0
+        },
+        "s1_VH_max": {
+          "min": 1.7327406613140508,
+          "max": 19.29947656889136
+        },
+        "s1_VH_mean": {
+          "min": -21.61518289275172,
+          "max": -14.1643469514762
+        },
+        "s1_VH_min": {
+          "min": -82.99628471408096,
+          "max": -44.38646192773622
+        },
+        "s1_VH_stdDev": {
+          "min": 2.665628551504695,
+          "max": 5.59202214246657
+        },
+        "s1_VV_max": {
+          "min": 11.935655881034757,
+          "max": 26.622195743382925
+        },
+        "s1_VV_mean": {
+          "min": -12.837047570667597,
+          "max": -6.964282844293248
+        },
+        "s1_VV_min": {
+          "min": -73.35081519122575,
+          "max": -33.59724799020096
+        },
+        "s1_VV_stdDev": {
+          "min": 2.7531411321937647,
+          "max": 3.9532890149554696
+        },
+        "s1_relative_orbit": {
+          "min": 34.0,
+          "max": 136.0
+        },
+        "s1_acquisition_count": {
+          "min": 1.0,
+          "max": 2.0
+        },
+        "lst_LST_C_max": {
+          "min": 30.32057786000001,
+          "max": 66.72590888000002
+        },
+        "lst_LST_C_mean": {
+          "min": 23.75910774592885,
+          "max": 55.934302117379744
+        },
+        "lst_LST_C_min": {
+          "min": 2.3269940600000325,
+          "max": 38.752833200000026
+        },
+        "lst_LST_C_stdDev": {
+          "min": 0.7403864425212321,
+          "max": 5.859184667072381
+        },
+        "lst_acquisition_count": {
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "status": "OK"
+    },
+    {
+      "file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\merge\\block_forecast_training_base.csv",
+      "rows": 975,
+      "columns": 139,
+      "column_names": [
+        "date",
+        "temp_mean_forecast_d1",
+        "rh_mean_forecast_d1",
+        "precip_forecast_d1",
+        "cloud_cover_forecast_d1",
+        "wind_speed_forecast_d1",
+        "wind_direction_forecast_d1",
+        "wind_gust_forecast_d1",
+        "vpd_forecast_d1",
+        "forecast_issued_date_d1",
+        "forecast_lead_days_d1",
+        "forecast_issued_date_rule_d1",
+        "temp_mean_forecast_d2",
+        "rh_mean_forecast_d2",
+        "precip_forecast_d2",
+        "cloud_cover_forecast_d2",
+        "wind_speed_forecast_d2",
+        "wind_direction_forecast_d2",
+        "wind_gust_forecast_d2",
+        "vpd_forecast_d2",
+        "forecast_issued_date_d2",
+        "forecast_lead_days_d2",
+        "forecast_issued_date_rule_d2",
+        "temp_mean_forecast_d3",
+        "rh_mean_forecast_d3",
+        "precip_forecast_d3",
+        "cloud_cover_forecast_d3",
+        "wind_speed_forecast_d3",
+        "wind_direction_forecast_d3",
+        "wind_gust_forecast_d3",
+        "vpd_forecast_d3",
+        "forecast_issued_date_d3",
+        "forecast_lead_days_d3",
+        "forecast_issued_date_rule_d3",
+        "temp_mean_forecast_d4",
+        "rh_mean_forecast_d4",
+        "precip_forecast_d4",
+        "cloud_cover_forecast_d4",
+        "wind_speed_forecast_d4",
+        "wind_direction_forecast_d4",
+        "wind_gust_forecast_d4",
+        "vpd_forecast_d4",
+        "forecast_issued_date_d4",
+        "forecast_lead_days_d4",
+        "forecast_issued_date_rule_d4",
+        "temp_mean_forecast_d5",
+        "rh_mean_forecast_d5",
+        "precip_forecast_d5",
+        "cloud_cover_forecast_d5",
+        "wind_speed_forecast_d5",
+        "wind_direction_forecast_d5",
+        "wind_gust_forecast_d5",
+        "vpd_forecast_d5",
+        "forecast_issued_date_d5",
+        "forecast_lead_days_d5",
+        "forecast_issued_date_rule_d5",
+        "temp_mean_forecast_d6",
+        "rh_mean_forecast_d6",
+        "precip_forecast_d6",
+        "cloud_cover_forecast_d6",
+        "wind_speed_forecast_d6",
+        "wind_direction_forecast_d6",
+        "wind_gust_forecast_d6",
+        "vpd_forecast_d6",
+        "forecast_issued_date_d6",
+        "forecast_lead_days_d6",
+        "forecast_issued_date_rule_d6",
+        "temp_mean_forecast_d7",
+        "rh_mean_forecast_d7",
+        "precip_forecast_d7",
+        "cloud_cover_forecast_d7",
+        "wind_speed_forecast_d7",
+        "wind_direction_forecast_d7",
+        "wind_gust_forecast_d7",
+        "vpd_forecast_d7",
+        "forecast_issued_date_d7",
+        "forecast_lead_days_d7",
+        "forecast_issued_date_rule_d7",
+        "latitude",
+        "longitude",
+        "forecast_source",
+        "forecast_d1_source",
+        "forecast_reference",
+        "forecast_issued_date",
+        "actual_temperature_2m_mean",
+        "actual_temperature_2m_max",
+        "actual_temperature_2m_min",
+        "actual_relative_humidity_2m_mean",
+        "actual_relative_humidity_2m_max",
+        "actual_relative_humidity_2m_min",
+        "actual_precipitation_sum",
+        "actual_rain_sum",
+        "actual_wind_speed_10m_mean",
+        "actual_wind_speed_10m_max",
+        "actual_wind_gusts_10m_max",
+        "actual_shortwave_radiation_sum",
+        "actual_cloud_cover_mean",
+        "actual_surface_pressure_mean",
+        "actual_et0_fao_evapotranspiration",
+        "actual_latitude",
+        "actual_longitude",
+        "actual_source",
+        "actual_timezone",
+        "era5_2m_dewpoint_temperature",
+        "era5_surface_pressure",
+        "era5_volumetric_soil_water_layer_1",
+        "s2_EVI_max",
+        "s2_EVI_mean",
+        "s2_EVI_min",
+        "s2_EVI_stdDev",
+        "s2_NDVI_max",
+        "s2_NDVI_mean",
+        "s2_NDVI_min",
+        "s2_NDVI_stdDev",
+        "s2_SAVI_max",
+        "s2_SAVI_mean",
+        "s2_SAVI_min",
+        "s2_SAVI_stdDev",
+        "s2_cloud_percentage",
+        "s2_acquisition_count",
+        "s1_VH_max",
+        "s1_VH_mean",
+        "s1_VH_min",
+        "s1_VH_stdDev",
+        "s1_VV_max",
+        "s1_VV_mean",
+        "s1_VV_min",
+        "s1_VV_stdDev",
+        "s1_relative_orbit",
+        "s1_acquisition_count",
+        "lst_LST_C_max",
+        "lst_LST_C_mean",
+        "lst_LST_C_min",
+        "lst_LST_C_stdDev",
+        "lst_acquisition_count",
+        "actual_is_reference_only",
+        "synthetic_data_present",
+        "interpolation_present",
+        "satellite_temporal_validity"
+      ],
+      "duplicate_column_labels": [],
+      "exact_duplicate_rows": 0,
+      "nonfinite_numeric_values": 0,
+      "constant_columns": [
+        "forecast_lead_days_d1",
+        "forecast_issued_date_rule_d1",
+        "forecast_lead_days_d2",
+        "forecast_issued_date_rule_d2",
+        "forecast_lead_days_d3",
+        "forecast_issued_date_rule_d3",
+        "forecast_lead_days_d4",
+        "forecast_issued_date_rule_d4",
+        "forecast_lead_days_d5",
+        "forecast_issued_date_rule_d5",
+        "forecast_lead_days_d6",
+        "forecast_issued_date_rule_d6",
+        "forecast_lead_days_d7",
+        "forecast_issued_date_rule_d7",
+        "latitude",
+        "longitude",
+        "forecast_source",
+        "forecast_d1_source",
+        "forecast_reference",
+        "actual_latitude",
+        "actual_longitude",
+        "actual_source",
+        "actual_timezone",
+        "actual_is_reference_only",
+        "synthetic_data_present",
+        "interpolation_present",
+        "satellite_temporal_validity"
+      ],
+      "likely_datetime_columns": [
+        "date",
+        "forecast_issued_date_d1",
+        "forecast_issued_date_rule_d1",
+        "forecast_issued_date_d2",
+        "forecast_issued_date_rule_d2",
+        "forecast_issued_date_d3",
+        "forecast_issued_date_rule_d3",
+        "forecast_issued_date_d4",
+        "forecast_issued_date_rule_d4",
+        "forecast_issued_date_d5",
+        "forecast_issued_date_rule_d5",
+        "forecast_issued_date_d6",
+        "forecast_issued_date_rule_d6",
+        "forecast_issued_date_d7",
+        "forecast_issued_date_rule_d7",
+        "forecast_issued_date",
+        "actual_timezone",
+        "s2_acquisition_count",
+        "s1_acquisition_count",
+        "lst_acquisition_count",
+        "satellite_temporal_validity"
+      ],
+      "missing_columns": [
+        {
+          "column": "temp_mean_forecast_d2",
+          "missing_count": 1,
+          "missing_percent": 0.1026
+        },
+        {
+          "column": "rh_mean_forecast_d2",
+          "missing_count": 1,
+          "missing_percent": 0.1026
+        },
+        {
+          "column": "cloud_cover_forecast_d2",
+          "missing_count": 1,
+          "missing_percent": 0.1026
+        },
+        {
+          "column": "wind_speed_forecast_d2",
+          "missing_count": 1,
+          "missing_percent": 0.1026
+        },
+        {
+          "column": "wind_direction_forecast_d2",
+          "missing_count": 1,
+          "missing_percent": 0.1026
+        },
+        {
+          "column": "wind_gust_forecast_d2",
+          "missing_count": 1,
+          "missing_percent": 0.1026
+        },
+        {
+          "column": "vpd_forecast_d2",
+          "missing_count": 1,
+          "missing_percent": 0.1026
+        },
+        {
+          "column": "temp_mean_forecast_d3",
+          "missing_count": 2,
+          "missing_percent": 0.2051
+        },
+        {
+          "column": "rh_mean_forecast_d3",
+          "missing_count": 2,
+          "missing_percent": 0.2051
+        },
+        {
+          "column": "cloud_cover_forecast_d3",
+          "missing_count": 2,
+          "missing_percent": 0.2051
+        },
+        {
+          "column": "wind_speed_forecast_d3",
+          "missing_count": 2,
+          "missing_percent": 0.2051
+        },
+        {
+          "column": "wind_direction_forecast_d3",
+          "missing_count": 2,
+          "missing_percent": 0.2051
+        },
+        {
+          "column": "wind_gust_forecast_d3",
+          "missing_count": 2,
+          "missing_percent": 0.2051
+        },
+        {
+          "column": "vpd_forecast_d3",
+          "missing_count": 2,
+          "missing_percent": 0.2051
+        },
+        {
+          "column": "temp_mean_forecast_d4",
+          "missing_count": 3,
+          "missing_percent": 0.3077
+        },
+        {
+          "column": "rh_mean_forecast_d4",
+          "missing_count": 3,
+          "missing_percent": 0.3077
+        },
+        {
+          "column": "cloud_cover_forecast_d4",
+          "missing_count": 3,
+          "missing_percent": 0.3077
+        },
+        {
+          "column": "wind_speed_forecast_d4",
+          "missing_count": 3,
+          "missing_percent": 0.3077
+        },
+        {
+          "column": "wind_direction_forecast_d4",
+          "missing_count": 3,
+          "missing_percent": 0.3077
+        },
+        {
+          "column": "wind_gust_forecast_d4",
+          "missing_count": 3,
+          "missing_percent": 0.3077
+        },
+        {
+          "column": "vpd_forecast_d4",
+          "missing_count": 3,
+          "missing_percent": 0.3077
+        },
+        {
+          "column": "temp_mean_forecast_d5",
+          "missing_count": 4,
+          "missing_percent": 0.4103
+        },
+        {
+          "column": "rh_mean_forecast_d5",
+          "missing_count": 4,
+          "missing_percent": 0.4103
+        },
+        {
+          "column": "cloud_cover_forecast_d5",
+          "missing_count": 4,
+          "missing_percent": 0.4103
+        },
+        {
+          "column": "wind_speed_forecast_d5",
+          "missing_count": 4,
+          "missing_percent": 0.4103
+        },
+        {
+          "column": "wind_direction_forecast_d5",
+          "missing_count": 4,
+          "missing_percent": 0.4103
+        },
+        {
+          "column": "wind_gust_forecast_d5",
+          "missing_count": 4,
+          "missing_percent": 0.4103
+        },
+        {
+          "column": "vpd_forecast_d5",
+          "missing_count": 4,
+          "missing_percent": 0.4103
+        },
+        {
+          "column": "temp_mean_forecast_d6",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "rh_mean_forecast_d6",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "cloud_cover_forecast_d6",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "wind_speed_forecast_d6",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "wind_direction_forecast_d6",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "wind_gust_forecast_d6",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "vpd_forecast_d6",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "temp_mean_forecast_d7",
+          "missing_count": 6,
+          "missing_percent": 0.6154
+        },
+        {
+          "column": "rh_mean_forecast_d7",
+          "missing_count": 6,
+          "missing_percent": 0.6154
+        },
+        {
+          "column": "cloud_cover_forecast_d7",
+          "missing_count": 6,
+          "missing_percent": 0.6154
+        },
+        {
+          "column": "wind_speed_forecast_d7",
+          "missing_count": 6,
+          "missing_percent": 0.6154
+        },
+        {
+          "column": "wind_direction_forecast_d7",
+          "missing_count": 6,
+          "missing_percent": 0.6154
+        },
+        {
+          "column": "wind_gust_forecast_d7",
+          "missing_count": 6,
+          "missing_percent": 0.6154
+        },
+        {
+          "column": "vpd_forecast_d7",
+          "missing_count": 6,
+          "missing_percent": 0.6154
+        },
+        {
+          "column": "era5_2m_dewpoint_temperature",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "era5_surface_pressure",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "era5_volumetric_soil_water_layer_1",
+          "missing_count": 5,
+          "missing_percent": 0.5128
+        },
+        {
+          "column": "s2_EVI_max",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_EVI_mean",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_EVI_min",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_EVI_stdDev",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_NDVI_max",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_NDVI_mean",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_NDVI_min",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_NDVI_stdDev",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_SAVI_max",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_SAVI_mean",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_SAVI_min",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_SAVI_stdDev",
+          "missing_count": 807,
+          "missing_percent": 82.7692
+        },
+        {
+          "column": "s2_cloud_percentage",
+          "missing_count": 806,
+          "missing_percent": 82.6667
+        },
+        {
+          "column": "s2_acquisition_count",
+          "missing_count": 806,
+          "missing_percent": 82.6667
+        },
+        {
+          "column": "s1_VH_max",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "s1_VH_mean",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "s1_VH_min",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "s1_VH_stdDev",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "s1_VV_max",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "s1_VV_mean",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "s1_VV_min",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "s1_VV_stdDev",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "s1_relative_orbit",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "s1_acquisition_count",
+          "missing_count": 825,
+          "missing_percent": 84.6154
+        },
+        {
+          "column": "lst_LST_C_max",
+          "missing_count": 884,
+          "missing_percent": 90.6667
+        },
+        {
+          "column": "lst_LST_C_mean",
+          "missing_count": 884,
+          "missing_percent": 90.6667
+        },
+        {
+          "column": "lst_LST_C_min",
+          "missing_count": 884,
+          "missing_percent": 90.6667
+        },
+        {
+          "column": "lst_LST_C_stdDev",
+          "missing_count": 884,
+          "missing_percent": 90.6667
+        },
+        {
+          "column": "lst_acquisition_count",
+          "missing_count": 884,
+          "missing_percent": 90.6667
+        }
+      ],
+      "numeric_ranges": {
+        "temp_mean_forecast_d1": {
+          "min": 16.995833333333334,
+          "max": 34.300000000000004
+        },
+        "rh_mean_forecast_d1": {
+          "min": 18.20833333333333,
+          "max": 94.0
+        },
+        "precip_forecast_d1": {
+          "min": 0.0,
+          "max": 224.3
+        },
+        "cloud_cover_forecast_d1": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "wind_speed_forecast_d1": {
+          "min": 0.8845833333333334,
+          "max": 9.624166666666666
+        },
+        "wind_direction_forecast_d1": {
+          "min": 74.70833333333333,
+          "max": 317.0416666666667
+        },
+        "wind_gust_forecast_d1": {
+          "min": 3.0,
+          "max": 18.3
+        },
+        "vpd_forecast_d1": {
+          "min": 0.1545833333333333,
+          "max": 4.53
+        },
+        "forecast_lead_days_d1": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "temp_mean_forecast_d2": {
+          "min": 17.241666666666667,
+          "max": 34.65833333333333
+        },
+        "rh_mean_forecast_d2": {
+          "min": 15.416666666666666,
+          "max": 94.70833333333331
+        },
+        "precip_forecast_d2": {
+          "min": 0.0,
+          "max": 141.3
+        },
+        "cloud_cover_forecast_d2": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "wind_speed_forecast_d2": {
+          "min": 0.8170833333333333,
+          "max": 9.156666666666666
+        },
+        "wind_direction_forecast_d2": {
+          "min": 70.91666666666667,
+          "max": 312.0416666666667
+        },
+        "wind_gust_forecast_d2": {
+          "min": 3.6,
+          "max": 18.5
+        },
+        "vpd_forecast_d2": {
+          "min": 0.1425,
+          "max": 4.54375
+        },
+        "forecast_lead_days_d2": {
+          "min": 2.0,
+          "max": 2.0
+        },
+        "temp_mean_forecast_d3": {
+          "min": 16.9375,
+          "max": 34.7625
+        },
+        "rh_mean_forecast_d3": {
+          "min": 17.541666666666668,
+          "max": 95.04166666666669
+        },
+        "precip_forecast_d3": {
+          "min": 0.0,
+          "max": 97.3
+        },
+        "cloud_cover_forecast_d3": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "wind_speed_forecast_d3": {
+          "min": 0.80125,
+          "max": 8.879583333333334
+        },
+        "wind_direction_forecast_d3": {
+          "min": 63.75,
+          "max": 316.0416666666667
+        },
+        "wind_gust_forecast_d3": {
+          "min": 3.7,
+          "max": 18.0
+        },
+        "vpd_forecast_d3": {
+          "min": 0.1345833333333333,
+          "max": 4.651666666666666
+        },
+        "forecast_lead_days_d3": {
+          "min": 3.0,
+          "max": 3.0
+        },
+        "temp_mean_forecast_d4": {
+          "min": 16.816666666666666,
+          "max": 34.97083333333333
+        },
+        "rh_mean_forecast_d4": {
+          "min": 15.25,
+          "max": 93.66666666666669
+        },
+        "precip_forecast_d4": {
+          "min": 0.0,
+          "max": 322.5
+        },
+        "cloud_cover_forecast_d4": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "wind_speed_forecast_d4": {
+          "min": 0.7858333333333333,
+          "max": 8.467083333333333
+        },
+        "wind_direction_forecast_d4": {
+          "min": 57.875,
+          "max": 315.125
+        },
+        "wind_gust_forecast_d4": {
+          "min": 3.7,
+          "max": 18.0
+        },
+        "vpd_forecast_d4": {
+          "min": 0.1670833333333333,
+          "max": 4.740833333333334
+        },
+        "forecast_lead_days_d4": {
+          "min": 4.0,
+          "max": 4.0
+        },
+        "temp_mean_forecast_d5": {
+          "min": 17.466666666666665,
+          "max": 35.12083333333333
+        },
+        "rh_mean_forecast_d5": {
+          "min": 15.208333333333334,
+          "max": 93.83333333333331
+        },
+        "precip_forecast_d5": {
+          "min": 0.0,
+          "max": 164.3
+        },
+        "cloud_cover_forecast_d5": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "wind_speed_forecast_d5": {
+          "min": 0.92125,
+          "max": 10.004166666666666
+        },
+        "wind_direction_forecast_d5": {
+          "min": 64.20833333333333,
+          "max": 311.125
+        },
+        "wind_gust_forecast_d5": {
+          "min": 3.8,
+          "max": 19.8
+        },
+        "vpd_forecast_d5": {
+          "min": 0.16375,
+          "max": 4.81625
+        },
+        "forecast_lead_days_d5": {
+          "min": 5.0,
+          "max": 5.0
+        },
+        "temp_mean_forecast_d6": {
+          "min": 17.741666666666667,
+          "max": 35.53333333333333
+        },
+        "rh_mean_forecast_d6": {
+          "min": 14.708333333333334,
+          "max": 93.79166666666669
+        },
+        "precip_forecast_d6": {
+          "min": 0.0,
+          "max": 145.8
+        },
+        "cloud_cover_forecast_d6": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "wind_speed_forecast_d6": {
+          "min": 0.8570833333333333,
+          "max": 10.442916666666669
+        },
+        "wind_direction_forecast_d6": {
+          "min": 51.91666666666666,
+          "max": 309.0833333333333
+        },
+        "wind_gust_forecast_d6": {
+          "min": 3.2,
+          "max": 22.0
+        },
+        "vpd_forecast_d6": {
+          "min": 0.1654166666666666,
+          "max": 4.8925
+        },
+        "forecast_lead_days_d6": {
+          "min": 6.0,
+          "max": 6.0
+        },
+        "temp_mean_forecast_d7": {
+          "min": 18.40833333333333,
+          "max": 34.925000000000004
+        },
+        "rh_mean_forecast_d7": {
+          "min": 10.75,
+          "max": 94.875
+        },
+        "precip_forecast_d7": {
+          "min": 0.0,
+          "max": 32.3
+        },
+        "cloud_cover_forecast_d7": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "wind_speed_forecast_d7": {
+          "min": 0.5712499999999999,
+          "max": 12.3625
+        },
+        "wind_direction_forecast_d7": {
+          "min": 44.0,
+          "max": 316.9583333333333
+        },
+        "wind_gust_forecast_d7": {
+          "min": 2.1,
+          "max": 21.5
+        },
+        "vpd_forecast_d7": {
+          "min": 0.1333333333333333,
+          "max": 4.677083333333333
+        },
+        "forecast_lead_days_d7": {
+          "min": 7.0,
+          "max": 7.0
+        },
+        "latitude": {
+          "min": 19.81762971833111,
+          "max": 19.81762971833111
+        },
+        "longitude": {
+          "min": 74.08262588749204,
+          "max": 74.08262588749204
+        },
+        "actual_temperature_2m_mean": {
+          "min": 17.7,
+          "max": 34.8
+        },
+        "actual_temperature_2m_max": {
+          "min": 24.1,
+          "max": 42.8
+        },
+        "actual_temperature_2m_min": {
+          "min": 11.9,
+          "max": 28.7
+        },
+        "actual_relative_humidity_2m_mean": {
+          "min": 16.0,
+          "max": 91.0
+        },
+        "actual_relative_humidity_2m_max": {
+          "min": 20.0,
+          "max": 100.0
+        },
+        "actual_relative_humidity_2m_min": {
+          "min": 7.0,
+          "max": 88.0
+        },
+        "actual_precipitation_sum": {
+          "min": 0.0,
+          "max": 124.4
+        },
+        "actual_rain_sum": {
+          "min": 0.0,
+          "max": 124.4
+        },
+        "actual_wind_speed_10m_mean": {
+          "min": 4.2,
+          "max": 33.9
+        },
+        "actual_wind_speed_10m_max": {
+          "min": 8.6,
+          "max": 52.2
+        },
+        "actual_wind_gusts_10m_max": {
+          "min": 18.7,
+          "max": 79.6
+        },
+        "actual_shortwave_radiation_sum": {
+          "min": 3.17,
+          "max": 27.79
+        },
+        "actual_cloud_cover_mean": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "actual_surface_pressure_mean": {
+          "min": 931.0,
+          "max": 948.5
+        },
+        "actual_et0_fao_evapotranspiration": {
+          "min": 1.29,
+          "max": 11.67
+        },
+        "actual_latitude": {
+          "min": 19.81762971833111,
+          "max": 19.81762971833111
+        },
+        "actual_longitude": {
+          "min": 74.08262588749204,
+          "max": 74.08262588749204
+        },
+        "era5_2m_dewpoint_temperature": {
+          "min": 271.65353,
+          "max": 296.33038
+        },
+        "era5_surface_pressure": {
+          "min": 92234.64,
+          "max": 94039.64
+        },
+        "era5_volumetric_soil_water_layer_1": {
+          "min": 0.035224915,
+          "max": 0.4972992
+        },
+        "s2_EVI_max": {
+          "min": 0.1689244328382569,
+          "max": 762797186885897.0
+        },
+        "s2_EVI_mean": {
+          "min": -202842248.96183375,
+          "max": 138712369.2632868
+        },
+        "s2_EVI_min": {
+          "min": -270497452618992.97,
+          "max": 0.1244868229373594
+        },
+        "s2_EVI_stdDev": {
+          "min": 0.0286971013785671,
+          "max": 331762468021.5014
+        },
+        "s2_NDVI_max": {
+          "min": 0.2568238213399503,
+          "max": 1.0
+        },
+        "s2_NDVI_mean": {
+          "min": 0.1264639319807198,
+          "max": 0.5794648029351541
+        },
+        "s2_NDVI_min": {
+          "min": -1.0,
+          "max": 0.1067615658362989
+        },
+        "s2_NDVI_stdDev": {
+          "min": 0.056743397988214,
+          "max": 0.249952576073729
+        },
+        "s2_SAVI_max": {
+          "min": 0.1510214007782101,
+          "max": 0.8841013449951423
+        },
+        "s2_SAVI_mean": {
+          "min": 0.0950168731975729,
+          "max": 0.4509250328636326
+        },
+        "s2_SAVI_min": {
+          "min": -0.5002711570638473,
+          "max": 0.0919618528610354
+        },
+        "s2_SAVI_stdDev": {
+          "min": 0.027922649842949,
+          "max": 0.1735583487817506
+        },
+        "s2_cloud_percentage": {
+          "min": 0.000116,
+          "max": 79.891193
+        },
+        "s2_acquisition_count": {
+          "min": 1.0,
+          "max": 8.0
+        },
+        "s1_VH_max": {
+          "min": 2.7724758474638937,
+          "max": 14.662309803936768
+        },
+        "s1_VH_mean": {
+          "min": -21.61518289275172,
+          "max": -14.1643469514762
+        },
+        "s1_VH_min": {
+          "min": -75.7203535678712,
+          "max": -49.59300710484073
+        },
+        "s1_VH_stdDev": {
+          "min": 2.706522341334029,
+          "max": 5.59202214246657
+        },
+        "s1_VV_max": {
+          "min": 11.935655881034757,
+          "max": 26.622195743382925
+        },
+        "s1_VV_mean": {
+          "min": -12.837047570667597,
+          "max": -6.964282844293248
+        },
+        "s1_VV_min": {
+          "min": -64.55514464162407,
+          "max": -36.83072743943087
+        },
+        "s1_VV_stdDev": {
+          "min": 2.7789029049022007,
+          "max": 3.9532890149554696
+        },
+        "s1_relative_orbit": {
+          "min": 34.0,
+          "max": 136.0
+        },
+        "s1_acquisition_count": {
+          "min": 1.0,
+          "max": 2.0
+        },
+        "lst_LST_C_max": {
+          "min": 30.32057786000001,
+          "max": 66.72590888000002
+        },
+        "lst_LST_C_mean": {
+          "min": 23.75910774592885,
+          "max": 54.96618919735273
+        },
+        "lst_LST_C_min": {
+          "min": 2.3269940600000325,
+          "max": 38.46401051000004
+        },
+        "lst_LST_C_stdDev": {
+          "min": 0.7403864425212321,
+          "max": 5.421857003743783
+        },
+        "lst_acquisition_count": {
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "status": "OK"
+    },
+    {
+      "file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\merge\\block_current_forecast.csv",
+      "rows": 7,
+      "columns": 21,
+      "column_names": [
+        "target_date",
+        "gfs_temp_mean_c",
+        "gfs_temp_max_c",
+        "gfs_temp_min_c",
+        "gfs_rh_mean_pct",
+        "gfs_precipitation_sum_mm",
+        "gfs_cloud_cover_mean_pct",
+        "gfs_wind_speed_mean_ms",
+        "gfs_wind_gust_max_ms",
+        "gfs_surface_pressure_mean_hpa",
+        "gfs_vpd_mean_kpa",
+        "forecast_retrieved_at",
+        "forecast_issued_at",
+        "forecast_source",
+        "forecast_model",
+        "latitude_requested",
+        "longitude_requested",
+        "synthetic",
+        "fallback_used",
+        "actual_weather_used_as_forecast_input",
+        "date"
+      ],
+      "duplicate_column_labels": [],
+      "exact_duplicate_rows": 0,
+      "nonfinite_numeric_values": 0,
+      "constant_columns": [
+        "forecast_retrieved_at",
+        "forecast_issued_at",
+        "forecast_source",
+        "forecast_model",
+        "latitude_requested",
+        "longitude_requested",
+        "synthetic",
+        "fallback_used",
+        "actual_weather_used_as_forecast_input"
+      ],
+      "likely_datetime_columns": [
+        "target_date",
+        "forecast_issued_at",
+        "date"
+      ],
+      "missing_columns": [],
+      "numeric_ranges": {
+        "gfs_temp_mean_c": {
+          "min": 23.320833333333336,
+          "max": 24.92083333333333
+        },
+        "gfs_temp_max_c": {
+          "min": 26.9,
+          "max": 30.2
+        },
+        "gfs_temp_min_c": {
+          "min": 20.9,
+          "max": 22.1
+        },
+        "gfs_rh_mean_pct": {
+          "min": 78.66666666666667,
+          "max": 86.91666666666667
+        },
+        "gfs_precipitation_sum_mm": {
+          "min": 0.0,
+          "max": 16.9
+        },
+        "gfs_cloud_cover_mean_pct": {
+          "min": 23.08333333333333,
+          "max": 99.29166666666669
+        },
+        "gfs_wind_speed_mean_ms": {
+          "min": 3.340833333333333,
+          "max": 7.8875
+        },
+        "gfs_wind_gust_max_ms": {
+          "min": 6.0,
+          "max": 13.1
+        },
+        "gfs_surface_pressure_mean_hpa": {
+          "min": 937.45,
+          "max": 941.6125
+        },
+        "gfs_vpd_mean_kpa": {
+          "min": 0.4125158193550891,
+          "max": 0.7389697691625581
+        },
+        "latitude_requested": {
+          "min": 19.81762971833111,
+          "max": 19.81762971833111
+        },
+        "longitude_requested": {
+          "min": 74.08262588749204,
+          "max": 74.08262588749204
+        }
+      },
+      "status": "OK"
+    },
+    {
+      "file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\gp_merged_features.csv",
+      "rows": 113,
+      "columns": 227,
+      "column_names": [
+        "gp_id",
+        "gp_name",
+        "terrain__aspect_cos_max",
+        "terrain__aspect_cos_mean",
+        "terrain__aspect_cos_min",
+        "terrain__aspect_cos_std",
+        "terrain__aspect_sin_max",
+        "terrain__aspect_sin_mean",
+        "terrain__aspect_sin_min",
+        "terrain__aspect_sin_std",
+        "terrain__elevation_max",
+        "terrain__elevation_mean",
+        "terrain__elevation_min",
+        "terrain__elevation_std",
+        "terrain__geometry_status",
+        "terrain__laplacian_curvature_max",
+        "terrain__laplacian_curvature_mean",
+        "terrain__laplacian_curvature_min",
+        "terrain__laplacian_curvature_std",
+        "terrain__slope_max",
+        "terrain__slope_mean",
+        "terrain__slope_min",
+        "terrain__slope_std",
+        "terrain__source_feature_count",
+        "terrain__tpi_max",
+        "terrain__tpi_mean",
+        "terrain__tpi_min",
+        "terrain__tpi_std",
+        "terrain__tri_max",
+        "terrain__tri_mean",
+        "terrain__tri_min",
+        "terrain__tri_std",
+        "terrain__aspect_mean_deg",
+        "terrain__aspect_resultant_length",
+        "landcover__source_feature_count",
+        "landcover__geometry_status",
+        "landcover__area_km2",
+        "landcover__centroid_lat",
+        "landcover__centroid_lon",
+        "landcover__state",
+        "landcover__district",
+        "landcover__block",
+        "landcover__block_lgd",
+        "landcover__block_code11",
+        "landcover__source_layer",
+        "landcover__source_snapshot",
+        "landcover__water_fraction",
+        "landcover__trees_fraction",
+        "landcover__grass_fraction",
+        "landcover__flooded_vegetation_fraction",
+        "landcover__crops_fraction",
+        "landcover__shrub_fraction",
+        "landcover__built_fraction",
+        "landcover__bare_fraction",
+        "landcover__snow_ice_fraction",
+        "landcover__dominant_landcover",
+        "landcover__dominant_probability",
+        "landcover__landcover_entropy",
+        "landcover__valid_pixel_fraction",
+        "landcover__landcover_probability_sum",
+        "sentinel2__NDVI_hist_mean",
+        "sentinel2__NDVI_hist_std",
+        "sentinel2__NDVI_hist_min",
+        "sentinel2__NDVI_hist_max",
+        "sentinel2__EVI_hist_mean",
+        "sentinel2__EVI_hist_std",
+        "sentinel2__EVI_hist_min",
+        "sentinel2__EVI_hist_max",
+        "sentinel2__SAVI_hist_mean",
+        "sentinel2__SAVI_hist_std",
+        "sentinel2__SAVI_hist_min",
+        "sentinel2__SAVI_hist_max",
+        "sentinel2__NDMI_hist_mean",
+        "sentinel2__NDMI_hist_std",
+        "sentinel2__NDMI_hist_min",
+        "sentinel2__NDMI_hist_max",
+        "sentinel2__NBR_hist_mean",
+        "sentinel2__NBR_hist_std",
+        "sentinel2__NBR_hist_min",
+        "sentinel2__NBR_hist_max",
+        "sentinel2__NDVI_7d_mean",
+        "sentinel2__EVI_7d_mean",
+        "sentinel2__SAVI_7d_mean",
+        "sentinel2__NDMI_7d_mean",
+        "sentinel2__NBR_7d_mean",
+        "sentinel2__NDVI_30d_mean",
+        "sentinel2__EVI_30d_mean",
+        "sentinel2__SAVI_30d_mean",
+        "sentinel2__NDMI_30d_mean",
+        "sentinel2__NBR_30d_mean",
+        "sentinel2__NDVI_60d_mean",
+        "sentinel2__EVI_60d_mean",
+        "sentinel2__SAVI_60d_mean",
+        "sentinel2__NDMI_60d_mean",
+        "sentinel2__NBR_60d_mean",
+        "sentinel2__NDVI_30d_change",
+        "sentinel2__observation_count",
+        "sentinel2__latest_observation_date",
+        "sentinel2__days_since_latest_observation",
+        "sentinel1__s1_observation_count",
+        "sentinel1__s1_unique_image_count",
+        "sentinel1__s1_first_date",
+        "sentinel1__s1_last_date",
+        "sentinel1__s1_ascending_count",
+        "sentinel1__s1_descending_count",
+        "sentinel1__s1_vv_db_mean",
+        "sentinel1__s1_vv_db_median",
+        "sentinel1__s1_vv_db_std",
+        "sentinel1__s1_vv_db_min",
+        "sentinel1__s1_vv_db_max",
+        "sentinel1__s1_vv_db_count",
+        "sentinel1__s1_vh_db_mean",
+        "sentinel1__s1_vh_db_median",
+        "sentinel1__s1_vh_db_std",
+        "sentinel1__s1_vh_db_min",
+        "sentinel1__s1_vh_db_max",
+        "sentinel1__s1_vh_db_count",
+        "sentinel1__s1_vv_vh_diff_db_mean",
+        "sentinel1__s1_vv_vh_diff_db_median",
+        "sentinel1__s1_vv_vh_diff_db_std",
+        "sentinel1__s1_vv_vh_diff_db_min",
+        "sentinel1__s1_vv_vh_diff_db_max",
+        "sentinel1__s1_vv_vh_diff_db_count",
+        "sentinel1__s1_incidence_angle_deg_mean",
+        "sentinel1__s1_incidence_angle_deg_median",
+        "sentinel1__s1_incidence_angle_deg_std",
+        "sentinel1__s1_incidence_angle_deg_min",
+        "sentinel1__s1_incidence_angle_deg_max",
+        "sentinel1__s1_incidence_angle_deg_count",
+        "sentinel1__s1_valid_fraction_mean",
+        "sentinel1__s1_valid_fraction_median",
+        "sentinel1__s1_valid_fraction_std",
+        "sentinel1__s1_valid_fraction_min",
+        "sentinel1__s1_valid_fraction_max",
+        "sentinel1__s1_valid_fraction_count",
+        "sentinel1__s1_vv_db_ascending_mean",
+        "sentinel1__s1_vv_db_ascending_median",
+        "sentinel1__s1_vv_db_ascending_std",
+        "sentinel1__s1_vv_db_ascending_min",
+        "sentinel1__s1_vv_db_ascending_max",
+        "sentinel1__s1_vv_db_ascending_count",
+        "sentinel1__s1_vh_db_ascending_mean",
+        "sentinel1__s1_vh_db_ascending_median",
+        "sentinel1__s1_vh_db_ascending_std",
+        "sentinel1__s1_vh_db_ascending_min",
+        "sentinel1__s1_vh_db_ascending_max",
+        "sentinel1__s1_vh_db_ascending_count",
+        "sentinel1__s1_vv_vh_diff_db_ascending_mean",
+        "sentinel1__s1_vv_vh_diff_db_ascending_median",
+        "sentinel1__s1_vv_vh_diff_db_ascending_std",
+        "sentinel1__s1_vv_vh_diff_db_ascending_min",
+        "sentinel1__s1_vv_vh_diff_db_ascending_max",
+        "sentinel1__s1_vv_vh_diff_db_ascending_count",
+        "sentinel1__s1_incidence_angle_deg_ascending_mean",
+        "sentinel1__s1_incidence_angle_deg_ascending_median",
+        "sentinel1__s1_incidence_angle_deg_ascending_std",
+        "sentinel1__s1_incidence_angle_deg_ascending_min",
+        "sentinel1__s1_incidence_angle_deg_ascending_max",
+        "sentinel1__s1_incidence_angle_deg_ascending_count",
+        "sentinel1__s1_vv_db_descending_mean",
+        "sentinel1__s1_vv_db_descending_median",
+        "sentinel1__s1_vv_db_descending_std",
+        "sentinel1__s1_vv_db_descending_min",
+        "sentinel1__s1_vv_db_descending_max",
+        "sentinel1__s1_vv_db_descending_count",
+        "sentinel1__s1_vh_db_descending_mean",
+        "sentinel1__s1_vh_db_descending_median",
+        "sentinel1__s1_vh_db_descending_std",
+        "sentinel1__s1_vh_db_descending_min",
+        "sentinel1__s1_vh_db_descending_max",
+        "sentinel1__s1_vh_db_descending_count",
+        "sentinel1__s1_vv_vh_diff_db_descending_mean",
+        "sentinel1__s1_vv_vh_diff_db_descending_median",
+        "sentinel1__s1_vv_vh_diff_db_descending_std",
+        "sentinel1__s1_vv_vh_diff_db_descending_min",
+        "sentinel1__s1_vv_vh_diff_db_descending_max",
+        "sentinel1__s1_vv_vh_diff_db_descending_count",
+        "sentinel1__s1_incidence_angle_deg_descending_mean",
+        "sentinel1__s1_incidence_angle_deg_descending_median",
+        "sentinel1__s1_incidence_angle_deg_descending_std",
+        "sentinel1__s1_incidence_angle_deg_descending_min",
+        "sentinel1__s1_incidence_angle_deg_descending_max",
+        "sentinel1__s1_incidence_angle_deg_descending_count",
+        "sentinel1__s1_obs_count_last_7d",
+        "sentinel1__s1_vv_last_7d_mean",
+        "sentinel1__s1_vv_last_7d_median",
+        "sentinel1__s1_vh_last_7d_mean",
+        "sentinel1__s1_vh_last_7d_median",
+        "sentinel1__s1_vv_vh_diff_last_7d_mean",
+        "sentinel1__s1_vv_vh_diff_last_7d_median",
+        "sentinel1__s1_incidence_angle_last_7d_mean",
+        "sentinel1__s1_incidence_angle_last_7d_median",
+        "sentinel1__s1_obs_count_last_30d",
+        "sentinel1__s1_vv_last_30d_mean",
+        "sentinel1__s1_vv_last_30d_median",
+        "sentinel1__s1_vh_last_30d_mean",
+        "sentinel1__s1_vh_last_30d_median",
+        "sentinel1__s1_vv_vh_diff_last_30d_mean",
+        "sentinel1__s1_vv_vh_diff_last_30d_median",
+        "sentinel1__s1_incidence_angle_last_30d_mean",
+        "sentinel1__s1_incidence_angle_last_30d_median",
+        "sentinel1__s1_obs_count_last_90d",
+        "sentinel1__s1_vv_last_90d_mean",
+        "sentinel1__s1_vv_last_90d_median",
+        "sentinel1__s1_vh_last_90d_mean",
+        "sentinel1__s1_vh_last_90d_median",
+        "sentinel1__s1_vv_vh_diff_last_90d_mean",
+        "sentinel1__s1_vv_vh_diff_last_90d_median",
+        "sentinel1__s1_incidence_angle_last_90d_mean",
+        "sentinel1__s1_incidence_angle_last_90d_median",
+        "sentinel1__s1_obs_count_last_365d",
+        "sentinel1__s1_vv_last_365d_mean",
+        "sentinel1__s1_vv_last_365d_median",
+        "sentinel1__s1_vh_last_365d_mean",
+        "sentinel1__s1_vh_last_365d_median",
+        "sentinel1__s1_vv_vh_diff_last_365d_mean",
+        "sentinel1__s1_vv_vh_diff_last_365d_median",
+        "sentinel1__s1_incidence_angle_last_365d_mean",
+        "sentinel1__s1_incidence_angle_last_365d_median",
+        "soil__soil_clay_rootzone_0_30cm_pct",
+        "soil__soil_sand_rootzone_0_30cm_pct",
+        "soil__soil_soc_rootzone_0_30cm_g_kg",
+        "soil__soil_bdod_rootzone_0_30cm_kg_dm3",
+        "lst__lst_mean_c",
+        "lst__lst_median_c",
+        "lst__lst_std_c",
+        "lst__lst_valid_months"
+      ],
+      "duplicate_column_labels": [],
+      "exact_duplicate_rows": 0,
+      "nonfinite_numeric_values": 0,
+      "constant_columns": [
+        "terrain__aspect_cos_max",
+        "terrain__aspect_cos_min",
+        "terrain__aspect_sin_max",
+        "terrain__aspect_sin_min",
+        "terrain__slope_min",
+        "landcover__state",
+        "landcover__district",
+        "landcover__block",
+        "landcover__block_lgd",
+        "landcover__block_code11",
+        "landcover__source_layer",
+        "landcover__source_snapshot",
+        "landcover__valid_pixel_fraction",
+        "sentinel2__NDVI_30d_change",
+        "sentinel1__s1_first_date",
+        "sentinel1__s1_ascending_count",
+        "sentinel1__s1_valid_fraction_max",
+        "sentinel1__s1_vv_db_ascending_mean",
+        "sentinel1__s1_vv_db_ascending_median",
+        "sentinel1__s1_vv_db_ascending_std",
+        "sentinel1__s1_vv_db_ascending_min",
+        "sentinel1__s1_vv_db_ascending_max",
+        "sentinel1__s1_vv_db_ascending_count",
+        "sentinel1__s1_vh_db_ascending_mean",
+        "sentinel1__s1_vh_db_ascending_median",
+        "sentinel1__s1_vh_db_ascending_std",
+        "sentinel1__s1_vh_db_ascending_min",
+        "sentinel1__s1_vh_db_ascending_max",
+        "sentinel1__s1_vh_db_ascending_count",
+        "sentinel1__s1_vv_vh_diff_db_ascending_mean",
+        "sentinel1__s1_vv_vh_diff_db_ascending_median",
+        "sentinel1__s1_vv_vh_diff_db_ascending_std",
+        "sentinel1__s1_vv_vh_diff_db_ascending_min",
+        "sentinel1__s1_vv_vh_diff_db_ascending_max",
+        "sentinel1__s1_vv_vh_diff_db_ascending_count",
+        "sentinel1__s1_incidence_angle_deg_ascending_mean",
+        "sentinel1__s1_incidence_angle_deg_ascending_median",
+        "sentinel1__s1_incidence_angle_deg_ascending_std",
+        "sentinel1__s1_incidence_angle_deg_ascending_min",
+        "sentinel1__s1_incidence_angle_deg_ascending_max",
+        "sentinel1__s1_incidence_angle_deg_ascending_count"
+      ],
+      "likely_datetime_columns": [
+        "landcover__valid_pixel_fraction",
+        "sentinel2__latest_observation_date",
+        "sentinel1__s1_first_date",
+        "sentinel1__s1_last_date",
+        "sentinel1__s1_valid_fraction_mean",
+        "sentinel1__s1_valid_fraction_median",
+        "sentinel1__s1_valid_fraction_std",
+        "sentinel1__s1_valid_fraction_min",
+        "sentinel1__s1_valid_fraction_max",
+        "sentinel1__s1_valid_fraction_count",
+        "lst__lst_valid_months"
+      ],
+      "missing_columns": [
+        {
+          "column": "sentinel2__NDVI_7d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__EVI_7d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__SAVI_7d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__NDMI_7d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__NBR_7d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__NDVI_30d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__EVI_30d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__SAVI_30d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__NDMI_30d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__NBR_30d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__NDVI_60d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__EVI_60d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__SAVI_60d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__NDMI_60d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__NBR_60d_mean",
+          "missing_count": 59,
+          "missing_percent": 52.2124
+        },
+        {
+          "column": "sentinel2__NDVI_30d_change",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_mean",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_median",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_std",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_min",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_max",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_mean",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_median",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_std",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_min",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_max",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_mean",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_median",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_std",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_min",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_max",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_mean",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_median",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_std",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_min",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_max",
+          "missing_count": 113,
+          "missing_percent": 100.0
+        }
+      ],
+      "numeric_ranges": {
+        "gp_id": {
+          "min": 183623.0,
+          "max": 237297.0
+        },
+        "terrain__aspect_cos_max": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "terrain__aspect_cos_mean": {
+          "min": -0.3314703568237268,
+          "max": 0.4712110340481731
+        },
+        "terrain__aspect_cos_min": {
+          "min": -1.0,
+          "max": -1.0
+        },
+        "terrain__aspect_cos_std": {
+          "min": 0.549185536519561,
+          "max": 0.7411244216909634
+        },
+        "terrain__aspect_sin_max": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "terrain__aspect_sin_mean": {
+          "min": -0.3585149427045095,
+          "max": 0.3389285746845838
+        },
+        "terrain__aspect_sin_min": {
+          "min": -1.0,
+          "max": -1.0
+        },
+        "terrain__aspect_sin_std": {
+          "min": 0.5853914184176967,
+          "max": 0.7481707239418801
+        },
+        "terrain__elevation_max": {
+          "min": 537.0,
+          "max": 1275.0
+        },
+        "terrain__elevation_mean": {
+          "min": 525.7529516046557,
+          "max": 1016.3161908845884
+        },
+        "terrain__elevation_min": {
+          "min": 505.0,
+          "max": 866.0
+        },
+        "terrain__elevation_std": {
+          "min": 3.2309909036587303,
+          "max": 113.38549083103948
+        },
+        "terrain__laplacian_curvature_max": {
+          "min": 6.0,
+          "max": 214.0
+        },
+        "terrain__laplacian_curvature_mean": {
+          "min": -0.46762241818368,
+          "max": 0.6300099144205534
+        },
+        "terrain__laplacian_curvature_min": {
+          "min": -206.0,
+          "max": -7.0
+        },
+        "terrain__laplacian_curvature_std": {
+          "min": 1.9374423960543143,
+          "max": 11.611497555219218
+        },
+        "terrain__slope_max": {
+          "min": 5.0,
+          "max": 73.0
+        },
+        "terrain__slope_mean": {
+          "min": 1.5929321702379424,
+          "max": 13.400296894180569
+        },
+        "terrain__slope_min": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "terrain__slope_std": {
+          "min": 0.9633406411048288,
+          "max": 11.327409886823393
+        },
+        "terrain__source_feature_count": {
+          "min": 1.0,
+          "max": 3.0
+        },
+        "terrain__tpi_max": {
+          "min": 4.429022082017468,
+          "max": 124.73501577286676
+        },
+        "terrain__tpi_mean": {
+          "min": -5.286832637690306,
+          "max": 4.054773437318653
+        },
+        "terrain__tpi_min": {
+          "min": -117.50788643533474,
+          "max": -4.570977917983896
+        },
+        "terrain__tpi_std": {
+          "min": 1.2412821187727583,
+          "max": 18.29905694266637
+        },
+        "terrain__tri_max": {
+          "min": 2.4407363267906814,
+          "max": 81.06033336756015
+        },
+        "terrain__tri_mean": {
+          "min": 1.029766753109854,
+          "max": 11.083160965052569
+        },
+        "terrain__tri_min": {
+          "min": 0.0,
+          "max": 1.1120355514974218
+        },
+        "terrain__tri_std": {
+          "min": 0.2908619234339423,
+          "max": 9.122856325116242
+        },
+        "terrain__aspect_mean_deg": {
+          "min": 1.382150214391438,
+          "max": 359.9787309948129
+        },
+        "terrain__aspect_resultant_length": {
+          "min": 0.0407764981868958,
+          "max": 0.4712110665146056
+        },
+        "landcover__source_feature_count": {
+          "min": 1.0,
+          "max": 3.0
+        },
+        "landcover__area_km2": {
+          "min": 1.312618251780581,
+          "max": 34.017076941533
+        },
+        "landcover__centroid_lat": {
+          "min": 19.66576060526823,
+          "max": 19.964629120433948
+        },
+        "landcover__centroid_lon": {
+          "min": 73.82063020616003,
+          "max": 74.35521543875612
+        },
+        "landcover__block_lgd": {
+          "min": 4490.0,
+          "max": 4490.0
+        },
+        "landcover__block_code11": {
+          "min": 205.0,
+          "max": 205.0
+        },
+        "landcover__water_fraction": {
+          "min": 0.03955656648483,
+          "max": 0.112000659266071
+        },
+        "landcover__trees_fraction": {
+          "min": 0.0616175296607559,
+          "max": 0.1589110092396042
+        },
+        "landcover__grass_fraction": {
+          "min": 0.05346634250664,
+          "max": 0.0864040144731079
+        },
+        "landcover__flooded_vegetation_fraction": {
+          "min": 0.0390332768649214,
+          "max": 0.0509278305689436
+        },
+        "landcover__crops_fraction": {
+          "min": 0.1929058833178043,
+          "max": 0.4633984343669047
+        },
+        "landcover__shrub_fraction": {
+          "min": 0.0869182211269529,
+          "max": 0.325087948086106
+        },
+        "landcover__built_fraction": {
+          "min": 0.0597693907105075,
+          "max": 0.328912456001115
+        },
+        "landcover__bare_fraction": {
+          "min": 0.0465372002305434,
+          "max": 0.11177935617
+        },
+        "landcover__snow_ice_fraction": {
+          "min": 0.0335285656409794,
+          "max": 0.0437641291734659
+        },
+        "landcover__dominant_probability": {
+          "min": 0.2272860668013082,
+          "max": 0.4633984343669047
+        },
+        "landcover__landcover_entropy": {
+          "min": 1.7664195790092865,
+          "max": 2.036030462518797
+        },
+        "landcover__valid_pixel_fraction": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "landcover__landcover_probability_sum": {
+          "min": 0.9999585529927916,
+          "max": 0.999960669751576
+        },
+        "sentinel2__NDVI_hist_mean": {
+          "min": 0.1623808917527861,
+          "max": 0.4331678145789207
+        },
+        "sentinel2__NDVI_hist_std": {
+          "min": 0.0468930378392739,
+          "max": 0.2029271750628054
+        },
+        "sentinel2__NDVI_hist_min": {
+          "min": -0.7425454052317346,
+          "max": 0.2557163879196006
+        },
+        "sentinel2__NDVI_hist_max": {
+          "min": 0.446139192079193,
+          "max": 0.7280310920621139
+        },
+        "sentinel2__EVI_hist_mean": {
+          "min": 0.1211534508869154,
+          "max": 0.2708774451714622
+        },
+        "sentinel2__EVI_hist_std": {
+          "min": 0.0317568572251726,
+          "max": 0.0917364048931703
+        },
+        "sentinel2__EVI_hist_min": {
+          "min": -0.4220652723784698,
+          "max": 0.2026653964815875
+        },
+        "sentinel2__EVI_hist_max": {
+          "min": 0.3240855120709477,
+          "max": 1.268282801806304
+        },
+        "sentinel2__SAVI_hist_mean": {
+          "min": 0.1184657100025868,
+          "max": 0.2545593527791016
+        },
+        "sentinel2__SAVI_hist_std": {
+          "min": 0.0306575514948133,
+          "max": 0.0810574366398401
+        },
+        "sentinel2__SAVI_hist_min": {
+          "min": -0.0448314338088785,
+          "max": 0.1595789920402223
+        },
+        "sentinel2__SAVI_hist_max": {
+          "min": 0.2874144133173915,
+          "max": 0.4868517233464652
+        },
+        "sentinel2__NDMI_hist_mean": {
+          "min": -0.0979566497241447,
+          "max": 0.085759751338109
+        },
+        "sentinel2__NDMI_hist_std": {
+          "min": 0.0281863448614078,
+          "max": 0.1552140779532148
+        },
+        "sentinel2__NDMI_hist_min": {
+          "min": -0.9327416431831644,
+          "max": 0.009317775977658
+        },
+        "sentinel2__NDMI_hist_max": {
+          "min": 0.1021482952101588,
+          "max": 0.3345086795621565
+        },
+        "sentinel2__NBR_hist_mean": {
+          "min": 0.0425901405995497,
+          "max": 0.2548414318237212
+        },
+        "sentinel2__NBR_hist_std": {
+          "min": 0.0402738037722216,
+          "max": 0.1788320723811126
+        },
+        "sentinel2__NBR_hist_min": {
+          "min": -0.9116053610923288,
+          "max": 0.1456267219609376
+        },
+        "sentinel2__NBR_hist_max": {
+          "min": 0.2793688534039523,
+          "max": 0.595982622299263
+        },
+        "sentinel2__NDVI_7d_mean": {
+          "min": -0.0501312836043881,
+          "max": 0.6497269366562185
+        },
+        "sentinel2__EVI_7d_mean": {
+          "min": 0.1643194901683775,
+          "max": 0.5900224970213332
+        },
+        "sentinel2__SAVI_7d_mean": {
+          "min": 0.1318063700008945,
+          "max": 0.4668963735837688
+        },
+        "sentinel2__NDMI_7d_mean": {
+          "min": -0.2134033457726606,
+          "max": 0.2402628577421959
+        },
+        "sentinel2__NBR_7d_mean": {
+          "min": -0.1165932792321971,
+          "max": 0.4425226768066854
+        },
+        "sentinel2__NDVI_30d_mean": {
+          "min": -0.0501312836043881,
+          "max": 0.6497269366562185
+        },
+        "sentinel2__EVI_30d_mean": {
+          "min": 0.1643194901683775,
+          "max": 0.5900224970213332
+        },
+        "sentinel2__SAVI_30d_mean": {
+          "min": 0.1318063700008945,
+          "max": 0.4668963735837688
+        },
+        "sentinel2__NDMI_30d_mean": {
+          "min": -0.2134033457726606,
+          "max": 0.2402628577421959
+        },
+        "sentinel2__NBR_30d_mean": {
+          "min": -0.1165932792321971,
+          "max": 0.4425226768066854
+        },
+        "sentinel2__NDVI_60d_mean": {
+          "min": -0.0501312836043881,
+          "max": 0.6497269366562185
+        },
+        "sentinel2__EVI_60d_mean": {
+          "min": 0.1643194901683775,
+          "max": 0.5900224970213332
+        },
+        "sentinel2__SAVI_60d_mean": {
+          "min": 0.1318063700008945,
+          "max": 0.4668963735837688
+        },
+        "sentinel2__NDMI_60d_mean": {
+          "min": -0.2134033457726606,
+          "max": 0.2402628577421959
+        },
+        "sentinel2__NBR_60d_mean": {
+          "min": -0.1165932792321971,
+          "max": 0.4425226768066854
+        },
+        "sentinel2__observation_count": {
+          "min": 863.0,
+          "max": 864.0
+        },
+        "sentinel2__days_since_latest_observation": {
+          "min": 5.0,
+          "max": 108.0
+        },
+        "sentinel1__s1_observation_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_unique_image_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_ascending_count": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "sentinel1__s1_descending_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_vv_db_mean": {
+          "min": -12.69186630537089,
+          "max": -9.008737549940156
+        },
+        "sentinel1__s1_vv_db_median": {
+          "min": -12.619920902825076,
+          "max": -9.352744412925526
+        },
+        "sentinel1__s1_vv_db_std": {
+          "min": 0.8052735737630211,
+          "max": 2.5302622204433387
+        },
+        "sentinel1__s1_vv_db_min": {
+          "min": -25.452900961961767,
+          "max": -10.414960751406188
+        },
+        "sentinel1__s1_vv_db_max": {
+          "min": -9.295321517086036,
+          "max": -4.320225342026427
+        },
+        "sentinel1__s1_vv_db_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_vh_db_mean": {
+          "min": -21.23337392676483,
+          "max": -17.429308004598408
+        },
+        "sentinel1__s1_vh_db_median": {
+          "min": -21.23810902669583,
+          "max": -17.68348128753947
+        },
+        "sentinel1__s1_vh_db_std": {
+          "min": 1.045067378061828,
+          "max": 3.6116480840590057
+        },
+        "sentinel1__s1_vh_db_min": {
+          "min": -43.36584605846933,
+          "max": -19.30617718761656
+        },
+        "sentinel1__s1_vh_db_max": {
+          "min": -16.334479441546097,
+          "max": -12.814366238472074
+        },
+        "sentinel1__s1_vh_db_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_vv_vh_diff_db_mean": {
+          "min": 7.141519694056647,
+          "max": 8.633724986777294
+        },
+        "sentinel1__s1_vv_vh_diff_db_median": {
+          "min": 7.177694247567862,
+          "max": 8.477417798863518
+        },
+        "sentinel1__s1_vv_vh_diff_db_std": {
+          "min": 0.3883846979874611,
+          "max": 2.302098796563586
+        },
+        "sentinel1__s1_vv_vh_diff_db_min": {
+          "min": 2.2640359797342926,
+          "max": 7.464815785441435
+        },
+        "sentinel1__s1_vv_vh_diff_db_max": {
+          "min": 8.009242335784613,
+          "max": 25.253299321550195
+        },
+        "sentinel1__s1_vv_vh_diff_db_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_incidence_angle_deg_mean": {
+          "min": 36.48941338814356,
+          "max": 43.5043174160904
+        },
+        "sentinel1__s1_incidence_angle_deg_median": {
+          "min": 30.79554133403572,
+          "max": 43.54010353994583
+        },
+        "sentinel1__s1_incidence_angle_deg_std": {
+          "min": 0.0820889168867149,
+          "max": 6.584027069400065
+        },
+        "sentinel1__s1_incidence_angle_deg_min": {
+          "min": 30.781445805765937,
+          "max": 43.44472043097271
+        },
+        "sentinel1__s1_incidence_angle_deg_max": {
+          "min": 41.24946394770876,
+          "max": 44.32214143643215
+        },
+        "sentinel1__s1_incidence_angle_deg_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_valid_fraction_mean": {
+          "min": 0.527253320817548,
+          "max": 1.0
+        },
+        "sentinel1__s1_valid_fraction_median": {
+          "min": 0.7226263290637838,
+          "max": 1.0
+        },
+        "sentinel1__s1_valid_fraction_std": {
+          "min": 0.0,
+          "max": 0.4795285486318205
+        },
+        "sentinel1__s1_valid_fraction_min": {
+          "min": 1.799675300687855e-05,
+          "max": 1.0
+        },
+        "sentinel1__s1_valid_fraction_max": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "sentinel1__s1_valid_fraction_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_vv_db_ascending_count": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "sentinel1__s1_vh_db_ascending_count": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "sentinel1__s1_vv_vh_diff_db_ascending_count": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "sentinel1__s1_incidence_angle_deg_ascending_count": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "sentinel1__s1_vv_db_descending_mean": {
+          "min": -12.69186630537089,
+          "max": -9.008737549940156
+        },
+        "sentinel1__s1_vv_db_descending_median": {
+          "min": -12.619920902825076,
+          "max": -9.352744412925526
+        },
+        "sentinel1__s1_vv_db_descending_std": {
+          "min": 0.8052735737630211,
+          "max": 2.5302622204433387
+        },
+        "sentinel1__s1_vv_db_descending_min": {
+          "min": -25.452900961961767,
+          "max": -10.414960751406188
+        },
+        "sentinel1__s1_vv_db_descending_max": {
+          "min": -9.295321517086036,
+          "max": -4.320225342026427
+        },
+        "sentinel1__s1_vv_db_descending_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_vh_db_descending_mean": {
+          "min": -21.23337392676483,
+          "max": -17.429308004598408
+        },
+        "sentinel1__s1_vh_db_descending_median": {
+          "min": -21.23810902669583,
+          "max": -17.68348128753947
+        },
+        "sentinel1__s1_vh_db_descending_std": {
+          "min": 1.045067378061828,
+          "max": 3.6116480840590057
+        },
+        "sentinel1__s1_vh_db_descending_min": {
+          "min": -43.36584605846933,
+          "max": -19.30617718761656
+        },
+        "sentinel1__s1_vh_db_descending_max": {
+          "min": -16.334479441546097,
+          "max": -12.814366238472074
+        },
+        "sentinel1__s1_vh_db_descending_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_vv_vh_diff_db_descending_mean": {
+          "min": 7.141519694056647,
+          "max": 8.633724986777294
+        },
+        "sentinel1__s1_vv_vh_diff_db_descending_median": {
+          "min": 7.177694247567862,
+          "max": 8.477417798863518
+        },
+        "sentinel1__s1_vv_vh_diff_db_descending_std": {
+          "min": 0.3883846979874611,
+          "max": 2.302098796563586
+        },
+        "sentinel1__s1_vv_vh_diff_db_descending_min": {
+          "min": 2.2640359797342926,
+          "max": 7.464815785441435
+        },
+        "sentinel1__s1_vv_vh_diff_db_descending_max": {
+          "min": 8.009242335784613,
+          "max": 25.253299321550195
+        },
+        "sentinel1__s1_vv_vh_diff_db_descending_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_incidence_angle_deg_descending_mean": {
+          "min": 36.48941338814356,
+          "max": 43.5043174160904
+        },
+        "sentinel1__s1_incidence_angle_deg_descending_median": {
+          "min": 30.79554133403572,
+          "max": 43.54010353994583
+        },
+        "sentinel1__s1_incidence_angle_deg_descending_std": {
+          "min": 0.0820889168867149,
+          "max": 6.584027069400065
+        },
+        "sentinel1__s1_incidence_angle_deg_descending_min": {
+          "min": 30.781445805765937,
+          "max": 43.44472043097271
+        },
+        "sentinel1__s1_incidence_angle_deg_descending_max": {
+          "min": 41.24946394770876,
+          "max": 44.32214143643215
+        },
+        "sentinel1__s1_incidence_angle_deg_descending_count": {
+          "min": 119.0,
+          "max": 267.0
+        },
+        "sentinel1__s1_obs_count_last_7d": {
+          "min": 1.0,
+          "max": 2.0
+        },
+        "sentinel1__s1_vv_last_7d_mean": {
+          "min": -11.50327227617903,
+          "max": -7.715534142950537
+        },
+        "sentinel1__s1_vv_last_7d_median": {
+          "min": -11.50327227617903,
+          "max": -7.715534142950537
+        },
+        "sentinel1__s1_vh_last_7d_mean": {
+          "min": -18.891842460246497,
+          "max": -15.565159814721676
+        },
+        "sentinel1__s1_vh_last_7d_median": {
+          "min": -18.891842460246497,
+          "max": -15.565159814721676
+        },
+        "sentinel1__s1_vv_vh_diff_last_7d_mean": {
+          "min": 6.142655859415068,
+          "max": 7.964486007350977
+        },
+        "sentinel1__s1_vv_vh_diff_last_7d_median": {
+          "min": 6.142655859415068,
+          "max": 7.964486007350977
+        },
+        "sentinel1__s1_incidence_angle_last_7d_mean": {
+          "min": 37.167246217513934,
+          "max": 43.54952739807548
+        },
+        "sentinel1__s1_incidence_angle_last_7d_median": {
+          "min": 37.167246217513934,
+          "max": 43.54952739807548
+        },
+        "sentinel1__s1_obs_count_last_30d": {
+          "min": 3.0,
+          "max": 6.0
+        },
+        "sentinel1__s1_vv_last_30d_mean": {
+          "min": -11.482611702205665,
+          "max": -7.726193176710822
+        },
+        "sentinel1__s1_vv_last_30d_median": {
+          "min": -11.50327227617903,
+          "max": -7.715534142950537
+        },
+        "sentinel1__s1_vh_last_30d_mean": {
+          "min": -19.14019980267373,
+          "max": -15.596932052878492
+        },
+        "sentinel1__s1_vh_last_30d_median": {
+          "min": -19.050704184975125,
+          "max": -15.567761502904965
+        },
+        "sentinel1__s1_vv_vh_diff_last_30d_mean": {
+          "min": 6.329306843982216,
+          "max": 8.090543582118842
+        },
+        "sentinel1__s1_vv_vh_diff_last_30d_median": {
+          "min": 6.360677998994284,
+          "max": 8.197754950092964
+        },
+        "sentinel1__s1_incidence_angle_last_30d_mean": {
+          "min": 37.168919079437536,
+          "max": 43.55325312339989
+        },
+        "sentinel1__s1_incidence_angle_last_30d_median": {
+          "min": 37.167246217513934,
+          "max": 43.55392262815728
+        },
+        "sentinel1__s1_obs_count_last_90d": {
+          "min": 8.0,
+          "max": 16.0
+        },
+        "sentinel1__s1_vv_last_90d_mean": {
+          "min": -11.23153851864003,
+          "max": -8.12845635522452
+        },
+        "sentinel1__s1_vv_last_90d_median": {
+          "min": -11.390300081838484,
+          "max": -8.010051257911112
+        },
+        "sentinel1__s1_vh_last_90d_mean": {
+          "min": -19.688860640812955,
+          "max": -16.405331260252613
+        },
+        "sentinel1__s1_vh_last_90d_median": {
+          "min": -19.19033022876892,
+          "max": -15.924784982248948
+        },
+        "sentinel1__s1_vv_vh_diff_last_90d_mean": {
+          "min": 7.139738484698993,
+          "max": 9.114490066167898
+        },
+        "sentinel1__s1_vv_vh_diff_last_90d_median": {
+          "min": 6.978839200136338,
+          "max": 9.400104392515198
+        },
+        "sentinel1__s1_incidence_angle_last_90d_mean": {
+          "min": 37.16693286810302,
+          "max": 43.54932725688208
+        },
+        "sentinel1__s1_incidence_angle_last_90d_median": {
+          "min": 37.15975794151057,
+          "max": 43.55178424785163
+        },
+        "sentinel1__s1_obs_count_last_365d": {
+          "min": 31.0,
+          "max": 60.0
+        },
+        "sentinel1__s1_vv_last_365d_mean": {
+          "min": -12.63468895491606,
+          "max": -8.837488188620245
+        },
+        "sentinel1__s1_vv_last_365d_median": {
+          "min": -12.45569715531824,
+          "max": -9.16889051335211
+        },
+        "sentinel1__s1_vh_last_365d_mean": {
+          "min": -20.649233695007737,
+          "max": -17.33468235278694
+        },
+        "sentinel1__s1_vh_last_365d_median": {
+          "min": -20.682032741139977,
+          "max": -17.891064821993407
+        },
+        "sentinel1__s1_vv_vh_diff_last_365d_mean": {
+          "min": 7.223257319431409,
+          "max": 8.605073850112678
+        },
+        "sentinel1__s1_vv_vh_diff_last_365d_median": {
+          "min": 7.206029189004939,
+          "max": 8.557385021863286
+        },
+        "sentinel1__s1_incidence_angle_last_365d_mean": {
+          "min": 37.37325475631672,
+          "max": 43.53806166406861
+        },
+        "sentinel1__s1_incidence_angle_last_365d_median": {
+          "min": 41.0307885831194,
+          "max": 44.05736960385347
+        },
+        "soil__soil_clay_rootzone_0_30cm_pct": {
+          "min": 39.12491203180221,
+          "max": 47.65163230450192
+        },
+        "soil__soil_sand_rootzone_0_30cm_pct": {
+          "min": 23.39893398789589,
+          "max": 31.27489395914224
+        },
+        "soil__soil_soc_rootzone_0_30cm_g_kg": {
+          "min": 7.629274632443082,
+          "max": 17.675882199603965
+        },
+        "soil__soil_bdod_rootzone_0_30cm_kg_dm3": {
+          "min": 1.4511764378393617,
+          "max": 1.5906342747528233
+        },
+        "lst__lst_mean_c": {
+          "min": 36.543744633366536,
+          "max": 42.26622408267019
+        },
+        "lst__lst_median_c": {
+          "min": 33.91609448553658,
+          "max": 40.47932523414962
+        },
+        "lst__lst_std_c": {
+          "min": 6.05457884668427,
+          "max": 8.649806164718036
+        },
+        "lst__lst_valid_months": {
+          "min": 47.0,
+          "max": 50.0
+        }
+      },
+      "status": "OK"
+    }
+  ]
+}

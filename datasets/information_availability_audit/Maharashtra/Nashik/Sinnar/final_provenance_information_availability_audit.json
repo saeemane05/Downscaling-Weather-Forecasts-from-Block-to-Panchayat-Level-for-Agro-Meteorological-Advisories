@@ -1,0 +1,252 @@
+{
+  "location": {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "block": "Sinnar"
+  },
+  "source_shape": [
+    975,
+    139
+  ],
+  "engineered_shape": [
+    975,
+    185
+  ],
+  "forecast_temporal_checks": [
+    {
+      "day": 1,
+      "issue_column": "forecast_issued_date_d1",
+      "rows_checked": 975,
+      "bad_rows": 0,
+      "min_target_minus_issue_days": 1.0,
+      "max_target_minus_issue_days": 1.0,
+      "status": "PASS"
+    },
+    {
+      "day": 2,
+      "issue_column": "forecast_issued_date_d2",
+      "rows_checked": 975,
+      "bad_rows": 0,
+      "min_target_minus_issue_days": 2.0,
+      "max_target_minus_issue_days": 2.0,
+      "status": "PASS"
+    },
+    {
+      "day": 3,
+      "issue_column": "forecast_issued_date_d3",
+      "rows_checked": 975,
+      "bad_rows": 0,
+      "min_target_minus_issue_days": 3.0,
+      "max_target_minus_issue_days": 3.0,
+      "status": "PASS"
+    },
+    {
+      "day": 4,
+      "issue_column": "forecast_issued_date_d4",
+      "rows_checked": 975,
+      "bad_rows": 0,
+      "min_target_minus_issue_days": 4.0,
+      "max_target_minus_issue_days": 4.0,
+      "status": "PASS"
+    },
+    {
+      "day": 5,
+      "issue_column": "forecast_issued_date_d5",
+      "rows_checked": 975,
+      "bad_rows": 0,
+      "min_target_minus_issue_days": 5.0,
+      "max_target_minus_issue_days": 5.0,
+      "status": "PASS"
+    },
+    {
+      "day": 6,
+      "issue_column": "forecast_issued_date_d6",
+      "rows_checked": 975,
+      "bad_rows": 0,
+      "min_target_minus_issue_days": 6.0,
+      "max_target_minus_issue_days": 6.0,
+      "status": "PASS"
+    },
+    {
+      "day": 7,
+      "issue_column": "forecast_issued_date_d7",
+      "rows_checked": 975,
+      "bad_rows": 0,
+      "min_target_minus_issue_days": 7.0,
+      "max_target_minus_issue_days": 7.0,
+      "status": "PASS"
+    }
+  ],
+  "ground_truth_controls": {
+    "actual_is_reference_only": {
+      "status": "PASS",
+      "values": [
+        "true"
+      ]
+    },
+    "synthetic_data_present": {
+      "status": "PASS",
+      "values": [
+        "false"
+      ]
+    },
+    "interpolation_present": {
+      "status": "PASS",
+      "values": [
+        "false"
+      ]
+    }
+  },
+  "collector_provenance": {
+    "era5": {
+      "script_found": true,
+      "path": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\scripts\\block\\04_era5_land.py",
+      "line_count": 1058,
+      "status": "REVIEW_REQUIRED",
+      "relevant_code_contexts": [
+        "te\"], errors=\"coerce\").dropna()      if dates.empty:         return None      return dates.dt.date.max()   def determine_collection_period() -> tuple[date, date, str, date]:     \"\"\"     Determine the incremental request window and the permanent historical     anchor for this block.      The first run establishes a permanent collection_start. Later runs use     latest stored valid date + 1. This prevents today's date from silently     changing",
+        "f\"  Removed {removed} existing rows before permanent \"             f\"collection start {collection_start}.\"         )         print(             \"  These rows were outside the project's intended historical \"             \"window and are not used.\"         )      return df  def merge_and_save(     existing: pd.DataFrame,     new_frames: list[pd.DataFrame], ) -> pd.DataFrame:     valid_new = [x for x in new_frames if x is not None and not x.empty",
+        ": {RAW_DIR}\")     print()      start, end, mode, collection_start = determine_collection_period()      print(f\"Mode: {mode}\")     print(f\"Permanent collection start: {collection_start}\")     print(f\"Requested collection window: {start} -> {end}\")     print(         \"ERA5-Land nodes/day: \"         \"2 (00:00 UTC, 12:00 UTC)\"     )     print(         \"Batch strategy: exact calendar-month batches; \"         \"maximum safe CDS payload per batch\"   ",
+        "he requested source period.\"         )         existing = read_existing_output()         if not existing.empty:             # The audit here is for the permanent dataset boundary, not the             # empty incremental window.             final_audit(existing, collection_start, end)             existing.to_csv(OUTPUT_CSV, index=False)         return      batches = list(month_batches(start, end))      print(f\"\\nTotal exact-safe batches: {len(",
+        "                    f,                     indent=2,                 )      if latest is None:         start = collection_start         mode = \"INITIAL 5-YEAR COLLECTION\"     else:         start = max(latest + timedelta(days=1), collection_start)         mode = \"INCREMENTAL UPDATE\"      return start, REQUEST_END, mode, collection_start   def month_batches(start: date, end: date):     \"\"\"     Yield exact, calendar-month-safe requests.      T",
+        ",     batch_end: date,     lat: float,     lon: float,     times: list[str] | None = None, ) -> dict:     # Because batch_start/end are guaranteed to be in the SAME month,     # year/month/day lists are unambiguous.     days = [         f\"{d:02d}\"         for d in range(batch_start.day, batch_end.day + 1)     ]      if times is None:         times = TIMES      return {         \"variable\": ERA5_VARIABLES,         \"year\": [str(batch_start.yea",
+        "ch_end.day + 1)     ]      if times is None:         times = TIMES      return {         \"variable\": ERA5_VARIABLES,         \"year\": [str(batch_start.year)],         \"month\": [f\"{batch_start.month:02d}\"],         \"day\": days,         \"time\": times,         \"area\": [             lat + AREA_HALF_DEG,             lon - AREA_HALF_DEG,             lat - AREA_HALF_DEG,             lon + AREA_HALF_DEG,         ],         # CDS now expects data_for",
+        "tart,             current_end,             lat,             lon,             current_times,         )          print(             f\"  Downloading: {current_start} -> {current_end}\"             f\" | {len(request['day'])} days \u00d7 {len(current_times)} nodes\"         )          try:             client.retrieve(DATASET, request, str(target))              if not target.exists() or target.stat().st_size == 0:                 raise RuntimeError(    ",
+        "TC on the latest date, request 00 UTC only for that date.             safe_end = min(current_end, available_date)              if available_hour < 12 and safe_end == available_date:                 # Request all earlier days with both nodes, then the latest                 # partial day with its one actually available node.                 previous_end = available_date - timedelta(days=1)                  if current_start <= previous_end:  ",
+        "= available_date:                 # Request all earlier days with both nodes, then the latest                 # partial day with its one actually available node.                 previous_end = available_date - timedelta(days=1)                  if current_start <= previous_end:                     attempts.insert(                         0,                         (current_start, previous_end, TIMES),                     )                  ",
+        "\"\"\" SIH26 \u2014 Block-level ERA5-Land collector Exact-date-safe, incremental, real-source-only version.  Rules: - First run: approximately last 5 years through today. - Later runs: latest valid stored date + 1 through the REAL source frontier. - Maximum 2 ERA5-Land nodes/day: 0",
+        "\"\"\" SIH26 \u2014 Block-level ERA5-Land collector Exact-date-safe, incremental, real-source-only version.  Rules: - First run: approximately last 5 years through today. - Later runs: latest valid stored date + 1 through the REAL source frontier. - Maximum 2 ERA5-Land nodes/day: 00:00 and 12:00 UTC. - CDS requests are MONTH-SAFE because separate year/month/day fields can   otherwise create unintended Cartesian date combinati",
+        "id stored date + 1 through the REAL source frontier. - Maximum 2 ERA5-Land nodes/day: 00:00 and 12:00 UTC. - CDS requests are MONTH-SAFE because separate year/month/day fields can   otherwise create unintended Cartesian date combinations. - No synthetic/fallback values. - Returned rows are strictly filtered to the requested interval. - Daily values are the mean of the two available synoptic nodes. - Existing valid data are preserved and dup",
+        "rned rows are strictly filtered to the requested interval. - Daily values are the mean of the two available synoptic nodes. - Existing valid data are preserved and duplicates are removed. - A final audit reports missing dates, duplicate dates, and out-of-range rows.  NOTE: ERA5-Land is a historical/reanalysis source and may lag the current date. The collector never fabricates unavailable dates. \"\"\"  from __future__ import annotations  impor",
+        "ictly filtered to the requested interval. - Daily values are the mean of the two available synoptic nodes. - Existing valid data are preserved and duplicates are removed. - A final audit reports missing dates, duplicate dates, and out-of-range rows.  NOTE: ERA5-Land is a historical/reanalysis source and may lag the current date. The collector never fabricates unavailable dates. \"\"\"  from __future__ import annotations  import calendar import",
+        ". - Existing valid data are preserved and duplicates are removed. - A final audit reports missing dates, duplicate dates, and out-of-range rows.  NOTE: ERA5-Land is a historical/reanalysis source and may lag the current date. The collector never fabricates unavailable dates. \"\"\"  from __future__ import annotations  import calendar import json import re import sys import time import warnings from concurrent.futures import ThreadPoolExecutor,",
+        "tes are removed. - A final audit reports missing dates, duplicate dates, and out-of-range rows.  NOTE: ERA5-Land is a historical/reanalysis source and may lag the current date. The collector never fabricates unavailable dates. \"\"\"  from __future__ import annotations  import calendar import json import re import sys import time import warnings from concurrent.futures import ThreadPoolExecutor, as_completed from datetime import date, datetime",
+        "er fabricates unavailable dates. \"\"\"  from __future__ import annotations  import calendar import json import re import sys import time import warnings from concurrent.futures import ThreadPoolExecutor, as_completed from datetime import date, datetime, timedelta from pathlib import Path  import pandas as pd import requests  try:     import cdsapi except ImportError:     cdsapi = None   # ------------------------------------------------------",
+        "()             available_hour = available.hour              print(                 f\"  CDS source availability reported as \"                 f\"{available:%Y-%m-%d %H:%M}.\"             )              # The source has not advanced to the requested incremental             # start date. This is NOT an error. There is simply no new             # real ERA5-Land data to collect yet.             if available_date < current_start:                 print",
+        " \"\"\"  from __future__ import annotations  import calendar import json import re import sys import time import warnings from concurrent.futures import ThreadPoolExecutor, as_completed from datetime import date, datetime, timedelta from pathlib import Path  import pandas as pd import requests  try:     import cdsapi except ImportError:     cdsapi = None   # --------------------------------------------------------------------- # Configuration # ---",
+        "       },                     f,                     indent=2,                 )      if latest is None:         start = collection_start         mode = \"INITIAL 5-YEAR COLLECTION\"     else:         start = max(latest + timedelta(days=1), collection_start)         mode = \"INCREMENTAL UPDATE\"      return start, REQUEST_END, mode, collection_start   def month_batches(start: date, end: date):     \"\"\"     Yield exact, calendar-month-safe requests.  ",
+        "safe_end == available_date:                 # Request all earlier days with both nodes, then the latest                 # partial day with its one actually available node.                 previous_end = available_date - timedelta(days=1)                  if current_start <= previous_end:                     attempts.insert(                         0,                         (current_start, previous_end, TIMES),                     )             "
+      ],
+      "note": "This report records collector logic for human verification; it does not infer a safe cutoff from column names."
+    },
+    "satellite": {
+      "script_found": true,
+      "path": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\scripts\\block\\06_block_satellite.py",
+      "line_count": 1391,
+      "status": "REVIEW_REQUIRED",
+      "relevant_code_contexts": [
+        "__file__).parent)   # ============================================================ # CONFIGURATION # ============================================================   SCRIPT_VERSION = \"SIH26-06-block-satellite-v2\"  DEFAULT_START_DATE = \"2021-08-15\" BATCH_DAYS = 90  S2_COLLECTION = \"COPERNICUS/S2_SR_HARMONIZED\" S1_COLLECTION = \"COPERNICUS/S1_GRD\"  LANDSAT_COLLECTIONS = [     \"LANDSAT/LC08/C02/T1_L2\",     \"LANDSAT/LC09/C02/T1_L2\", ]  S2_CLOUD_LIMIT = ",
+        "        df[\"acquisition_date\"],             errors=\"coerce\",         ).dropna()          if dates.empty:             return None          return dates.max().date()      except Exception:         return None   def choose_start_date(path: Path):     latest = existing_latest_date(path)      if latest is None:         return DEFAULT_START_DATE      return latest.strftime(\"%Y-%m-%d\")   def choose_end_date():     # GEE filterDate end is exclusive. Use ",
+        "      return None          return dates.max().date()      except Exception:         return None   def choose_start_date(path: Path):     latest = existing_latest_date(path)      if latest is None:         return DEFAULT_START_DATE      return latest.strftime(\"%Y-%m-%d\")   def choose_end_date():     # GEE filterDate end is exclusive. Use tomorrow so today's acquisitions     # are included where the source has already published them.     today = pd",
+        "),         \"cloud_percentage\": image.get(             \"CLOUDY_PIXEL_PERCENTAGE\"         ),         \"source_dataset\": S2_COLLECTION,         \"sensor\": \"Sentinel-2\",     })   def collect_sentinel2(     block_geometry,     start_date,     end_date, ):     \"\"\"     Collect Sentinel-2 statistics in date batches.      A single getInfo() over hundreds of mapped images can exceed the     Earth Engine computation timeout. We therefore process 90-day window",
+        "Each window is an independent server-side computation and the results     are concatenated locally.      No observations are fabricated if a batch fails.     \"\"\"     print(\"\\n[1/3] Sentinel-2\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []      batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days), ",
+        "),         \"relative_orbit\": image.get(             \"relativeOrbitNumber_start\"         ),         \"source_dataset\": S1_COLLECTION,         \"sensor\": \"Sentinel-1\",     })   def collect_sentinel1(     block_geometry,     start_date,     end_date, ):     \"\"\"     Collect Sentinel-1 statistics in 90-day Earth Engine batches to avoid     large server-side getInfo() computations.     \"\"\"     print(\"\\n[2/3] Sentinel-1\")      start = pd.Timestamp(start_d",
+        "rt_date,     end_date, ):     \"\"\"     Collect Sentinel-1 statistics in 90-day Earth Engine batches to avoid     large server-side getInfo() computations.     \"\"\"     print(\"\\n[2/3] Sentinel-1\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []     batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),  ",
+        ",         \"system_index\": image.get(\"system:index\"),         \"source_dataset\": image.get(             \"SPACECRAFT_ID\"         ),         \"sensor\": \"Landsat-8/9\",     })   def collect_landsat_lst(     block_geometry,     start_date,     end_date, ):     \"\"\"     Collect Landsat LST in 90-day Earth Engine batches.     \"\"\"     print(\"\\n[3/3] Landsat LST\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_D",
+        " Exception:         return None   def choose_start_date(path: Path):     latest = existing_latest_date(path)      if latest is None:         return DEFAULT_START_DATE      return latest.strftime(\"%Y-%m-%d\")   def choose_end_date():     # GEE filterDate end is exclusive. Use tomorrow so today's acquisitions     # are included where the source has already published them.     today = pd.Timestamp.now(tz=\"Asia/Kolkata\").date()     return (today + p",
+        "d_percentage\": image.get(             \"CLOUDY_PIXEL_PERCENTAGE\"         ),         \"source_dataset\": S2_COLLECTION,         \"sensor\": \"Sentinel-2\",     })   def collect_sentinel2(     block_geometry,     start_date,     end_date, ):     \"\"\"     Collect Sentinel-2 statistics in date batches.      A single getInfo() over hundreds of mapped images can exceed the     Earth Engine computation timeout. We therefore process 90-day windows.     Each wi",
+        "r-side computation and the results     are concatenated locally.      No observations are fabricated if a batch fails.     \"\"\"     print(\"\\n[1/3] Sentinel-2\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []      batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),             end,         )       ",
+        "tive_orbit\": image.get(             \"relativeOrbitNumber_start\"         ),         \"source_dataset\": S1_COLLECTION,         \"sensor\": \"Sentinel-1\",     })   def collect_sentinel1(     block_geometry,     start_date,     end_date, ):     \"\"\"     Collect Sentinel-1 statistics in 90-day Earth Engine batches to avoid     large server-side getInfo() computations.     \"\"\"     print(\"\\n[2/3] Sentinel-1\")      start = pd.Timestamp(start_date)     end =",
+        "   Collect Sentinel-1 statistics in 90-day Earth Engine batches to avoid     large server-side getInfo() computations.     \"\"\"     print(\"\\n[2/3] Sentinel-1\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []     batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),             end,         )        ",
+        "m_index\": image.get(\"system:index\"),         \"source_dataset\": image.get(             \"SPACECRAFT_ID\"         ),         \"sensor\": \"Landsat-8/9\",     })   def collect_landsat_lst(     block_geometry,     start_date,     end_date, ):     \"\"\"     Collect Landsat LST in 90-day Earth Engine batches.     \"\"\"     print(\"\\n[3/3] Landsat LST\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_pa",
+        "     block_geometry,     start_date,     end_date, ):     \"\"\"     Collect Landsat LST in 90-day Earth Engine batches.     \"\"\"     print(\"\\n[3/3] Landsat LST\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []     batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),             end,         )        ",
+        "================================ # METADATA # ============================================================   def save_metadata(     path: Path,     state: str,     district: str,     block: str,     start_date: str,     end_date: str, ):     metadata = {         \"state\": state,         \"district\": district,         \"block\": block,         \"collection_date_range\": {             \"requested_start\": start_date,             \"requested_end_exclusive\"",
+        "t_date,     end_date, ):     \"\"\"     Collect Sentinel-2 statistics in date batches.      A single getInfo() over hundreds of mapped images can exceed the     Earth Engine computation timeout. We therefore process 90-day windows.     Each window is an independent server-side computation and the results     are concatenated locally.      No observations are fabricated if a batch fails.     \"\"\"     print(\"\\n[1/3] Sentinel-2\")      start = pd.Tim",
+        "te, ):     \"\"\"     Collect Sentinel-2 statistics in date batches.      A single getInfo() over hundreds of mapped images can exceed the     Earth Engine computation timeout. We therefore process 90-day windows.     Each window is an independent server-side computation and the results     are concatenated locally.      No observations are fabricated if a batch fails.     \"\"\"     print(\"\\n[1/3] Sentinel-2\")      start = pd.Timestamp(start_date)",
+        "================================================== # CONFIGURATION # ============================================================   SCRIPT_VERSION = \"SIH26-06-block-satellite-v2\"  DEFAULT_START_DATE = \"2021-08-15\" BATCH_DAYS = 90  S2_COLLECTION = \"COPERNICUS/S2_SR_HARMONIZED\" S1_COLLECTION = \"COPERNICUS/S1_GRD\"  LANDSAT_COLLECTIONS = [     \"LANDSAT/LC08/C02/T1_L2\",     \"LANDSAT/LC09/C02/T1_L2\", ]  S2_CLOUD_LIMIT = 80  S2_SCALE = 10 S1_SCALE",
+        "E filterDate end is exclusive. Use tomorrow so today's acquisitions     # are included where the source has already published them.     today = pd.Timestamp.now(tz=\"Asia/Kolkata\").date()     return (today + pd.Timedelta(days=1)).strftime(\"%Y-%m-%d\")   # ============================================================ # SENTINEL-2 # ============================================================   def mask_s2_clouds(image):     \"\"\"     Mask Sentine",
+        "d the results     are concatenated locally.      No observations are fabricated if a batch fails.     \"\"\"     print(\"\\n[1/3] Sentinel-2\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []      batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),             end,         )          batch_start_st",
+        "     are concatenated locally.      No observations are fabricated if a batch fails.     \"\"\"     print(\"\\n[1/3] Sentinel-2\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []      batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),             end,         )          batch_start_str = batch_sta",
+        "mestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []      batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),             end,         )          batch_start_str = batch_start.strftime(\"%Y-%m-%d\")         batch_end_str = batch_end.strftime(\"%Y-%m-%d\")          print(             f\"  Batch: {batch_start_str} -> \"   ",
+        "rt_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []      batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),             end,         )          batch_start_str = batch_start.strftime(\"%Y-%m-%d\")         batch_end_str = batch_end.strftime(\"%Y-%m-%d\")          print(             f\"  Batch: {batch_start_str} -> \"             f",
+        " statistics in 90-day Earth Engine batches to avoid     large server-side getInfo() computations.     \"\"\"     print(\"\\n[2/3] Sentinel-1\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []     batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),             end,         )          batch_start_str",
+        "n 90-day Earth Engine batches to avoid     large server-side getInfo() computations.     \"\"\"     print(\"\\n[2/3] Sentinel-1\")      start = pd.Timestamp(start_date)     end = pd.Timestamp(end_date)      batch_days = BATCH_DAYS     all_parts = []     batch_start = start      while batch_start < end:         batch_end = min(             batch_start + pd.Timedelta(days=batch_days),             end,         )          batch_start_str = batch_star",
+        "turn None   def choose_start_date(path: Path):     latest = existing_latest_date(path)      if latest is None:         return DEFAULT_START_DATE      return latest.strftime(\"%Y-%m-%d\")   def choose_end_date():     # GEE filterDate end is exclusive. Use tomorrow so today's acquisitions     # are included where the source has already published them.     today = pd.Timestamp.now(tz=\"Asia/Kolkata\").date()     return (today + pd.Timedelta(days=1)).str",
+        " print(             f\"  Batch: {batch_start_str} -> \"             f\"{batch_end_str}\"         )          collection = (             ee.ImageCollection(S2_COLLECTION)             .filterBounds(block_geometry)             .filterDate(                 batch_start_str,                 batch_end_str,             )             .filter(                 ee.Filter.lte(                     \"CLOUDY_PIXEL_PERCENTAGE\",                     S2_CLOUD_LIMIT,      ",
+        " print(             f\"  Batch: {batch_start_str} -> \"             f\"{batch_end_str}\"         )          collection = (             ee.ImageCollection(S1_COLLECTION)             .filterBounds(block_geometry)             .filterDate(                 batch_start_str,                 batch_end_str,             )             .filter(                 ee.Filter.eq(                     \"instrumentMode\",                     \"IW\",                 )        ",
+        "ch: {batch_start_str} -> \"             f\"{batch_end_str}\"         )          collections = [             (                 ee.ImageCollection(collection_id)                 .filterBounds(block_geometry)                 .filterDate(                     batch_start_str,                     batch_end_str,                 )                 .filter(                     ee.Filter.eq(                         \"PROCESSING_LEVEL\",                         \"",
+        "--------------- - Real Google Earth Engine data only. - No synthetic/sample fallback. - No temporal interpolation or fabricated replacement values. - Cloud screening is applied to Sentinel-2. - Every observation retains acquisition date/time and source provenance. - Existing observations are preserved; only genuinely new acquisition dates   are appended. - The script is universal: State/District/Block are selected at runtime. - Static terrain vari",
+        "erpolation or fabricated replacement values. - Cloud screening is applied to Sentinel-2. - Every observation retains acquisition date/time and source provenance. - Existing observations are preserved; only genuinely new acquisition dates   are appended. - The script is universal: State/District/Block are selected at runtime. - Static terrain variables are intentionally NOT extracted here; those belong   to the GP-level terrain module where fine-sc",
+        "ANGE # ============================================================   def existing_latest_date(path: Path):     if not path.exists():         return None      try:         df = pd.read_csv(path)          if df.empty or \"acquisition_date\" not in df.columns:             return None          dates = pd.to_datetime(             df[\"acquisition_date\"],             errors=\"coerce\",         ).dropna()          if dates.empty:             return None     ",
+        "  if not path.exists():         return None      try:         df = pd.read_csv(path)          if df.empty or \"acquisition_date\" not in df.columns:             return None          dates = pd.to_datetime(             df[\"acquisition_date\"],             errors=\"coerce\",         ).dropna()          if dates.empty:             return None          return dates.max().date()      except Exception:         return None   def choose_start_date(path: Path):",
+        "test = existing_latest_date(path)      if latest is None:         return DEFAULT_START_DATE      return latest.strftime(\"%Y-%m-%d\")   def choose_end_date():     # GEE filterDate end is exclusive. Use tomorrow so today's acquisitions     # are included where the source has already published them.     today = pd.Timestamp.now(tz=\"Asia/Kolkata\").date()     return (today + pd.Timedelta(days=1)).strftime(\"%Y-%m-%d\")   # ================================",
+        "         geometry=block_geometry,         scale=S2_SCALE,         bestEffort=True,         tileScale=GEE_TILE_SCALE,         maxPixels=1e9,     )      return ee.Feature(         None,         stats,     ).set({         \"acquisition_datetime\": image.date().format(             \"YYYY-MM-dd HH:mm:ss\"         ),         \"acquisition_date\": image.date().format(             \"YYYY-MM-dd\"         ),         \"system_index\": image.get(\"system:index\"),       ",
+        "le=GEE_TILE_SCALE,         maxPixels=1e9,     )      return ee.Feature(         None,         stats,     ).set({         \"acquisition_datetime\": image.date().format(             \"YYYY-MM-dd HH:mm:ss\"         ),         \"acquisition_date\": image.date().format(             \"YYYY-MM-dd\"         ),         \"system_index\": image.get(\"system:index\"),         \"cloud_percentage\": image.get(             \"CLOUDY_PIXEL_PERCENTAGE\"         ),         \"source_",
+        "         geometry=block_geometry,         scale=S1_SCALE,         bestEffort=True,         tileScale=GEE_TILE_SCALE,         maxPixels=1e9,     )      return ee.Feature(         None,         stats,     ).set({         \"acquisition_datetime\": image.date().format(             \"YYYY-MM-dd HH:mm:ss\"         ),         \"acquisition_date\": image.date().format(             \"YYYY-MM-dd\"         ),         \"system_index\": image.get(\"system:index\"),       ",
+        "--- - Real Google Earth Engine data only. - No synthetic/sample fallback. - No temporal interpolation or fabricated replacement values. - Cloud screening is applied to Sentinel-2. - Every observation retains acquisition date/time and source provenance. - Existing observations are preserved; only genuinely new acquisition dates   are appended. - The script is universal: State/District/Block are selected at runtime. - Static terrain variables",
+        "r fabricated replacement values. - Cloud screening is applied to Sentinel-2. - Every observation retains acquisition date/time and source provenance. - Existing observations are preserved; only genuinely new acquisition dates   are appended. - The script is universal: State/District/Block are selected at runtime. - Static terrain variables are intentionally NOT extracted here; those belong   to the GP-level terrain module where fine-scale s"
+      ],
+      "note": "This report records collector logic for human verification; it does not infer a safe cutoff from column names."
+    },
+    "merge": {
+      "script_found": true,
+      "path": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\scripts\\block\\07_block_merge.py",
+      "line_count": 332,
+      "status": "REVIEW_REQUIRED",
+      "relevant_code_contexts": [
+        "\", \"forecast_issued_at\", \"forecast_retrieved_at\",                  \"forecast_run_datetime\", \"target_datetime\",                  \"forecast_source\", \"forecast_model\", \"forecast_lead_hours\",                  \"forecast_lead_days_d1\", \"synthetic\", \"fallback_used\"}     return y.rename(columns={         c: (c if c in protected or c.startswith(p) else p + c)         for c in y.columns     })   def prep_actual(x):     return prefix(date_key(x, [\"dat",
+        "r c in df.columns}     col = next((lower[x.lower()] for x in preferred if x.lower() in lower), None)     if col is None:         for x in [\"date\", \"target_date\", \"target_datetime\", \"time\",                   \"datetime\", \"acquisition_date\"]:             if x in lower:                 col = lower[x]                 break     if col is None:         raise RuntimeError(f\"No date column found. Columns: {list(df.columns)}\")     y = df.copy()     y[\"date\"",
+        "st_retrieved_at\",               \"forecast_run_datetime\", \"target_datetime\"]:         if c in y:             y[c] = pd.to_datetime(y[c], errors=\"coerce\", utc=True)     return y   def prep_sat(x, p):     y = date_key(x, [\"acquisition_date\", \"date\"])     if y.empty:         return y     protected = {\"date\", \"acquisition_date\", \"acquisition_datetime\",                  \"system_index\", \"source_dataset\", \"sensor\", \"orbit_pass\"}     nums = []     for c in",
+        " c in y:             y[c] = pd.to_datetime(y[c], errors=\"coerce\", utc=True)     return y   def prep_sat(x, p):     y = date_key(x, [\"acquisition_date\", \"date\"])     if y.empty:         return y     protected = {\"date\", \"acquisition_date\", \"acquisition_datetime\",                  \"system_index\", \"source_dataset\", \"sensor\", \"orbit_pass\"}     nums = []     for c in y.columns:         if c not in protected:             z = pd.to_numeric(y[c], errors=\"",
+        " y[c] = pd.to_datetime(y[c], errors=\"coerce\", utc=True)     return y   def prep_sat(x, p):     y = date_key(x, [\"acquisition_date\", \"date\"])     if y.empty:         return y     protected = {\"date\", \"acquisition_date\", \"acquisition_datetime\",                  \"system_index\", \"source_dataset\", \"sensor\", \"orbit_pass\"}     nums = []     for c in y.columns:         if c not in protected:             z = pd.to_numeric(y[c], errors=\"coerce\")            ",
+        "             y[c] = z                 nums.append(c)     if not nums:         return y[[\"date\"]].drop_duplicates()     z = y.groupby(\"date\", as_index=False)[nums].mean()     counts = y.groupby(\"date\").size().rename(p + \"acquisition_count\").reset_index()     z = z.merge(counts, on=\"date\", how=\"left\", validate=\"one_to_one\")     return prefix(z, p)   def daily_master(parts):     frames = [x for x in parts if not x.empty]     if not frames:         re",
+        "rrent_path),         },         \"rules\": {             \"actual_weather_role\": \"reference/target only\",             \"historical_forecast_runs_collapsed\": False,             \"satellite_daily_aggregation\": \"mean of numeric acquisition statistics\",             \"missing_imputation\": False,             \"interpolation\": False,             \"synthetic\": False,             \"future_satellite_information_automatically_allowed\": False,         },         \"crea",
+        "from __future__ import annotations  import json import re from datetime import datetime, timezone from pathlib import Path  import numpy as np import pandas as pd   def find_root(start: Path) -> Path:     for p in [start.resolve(), *start.resolve().parents]:         if all((p / x).exist",
+        "from __future__ import annotations  import json import re from datetime import datetime, timezone from pathlib import Path  import numpy as np import pandas as pd   def find_root(start: Path) -> Path:     for p in [start.resolve(), *start.resolve().parents]:         if all((p / x).exists() for x in [\"b",
+        "):     if p is None:         print(f\"  {label}: NOT FOUND\")         return pd.DataFrame()     print(f\"  {label}: {p}\")     x = pd.read_csv(p)     print(f\"    {len(x)} rows x {len(x.columns)} columns\")     return x   def date_key(df, preferred):     if df.empty:         return df     lower = {str(c).lower(): c for c in df.columns}     col = next((lower[x.lower()] for x in preferred if x.lower() in lower), None)     if col is None:         fo",
+        "preferred):     if df.empty:         return df     lower = {str(c).lower(): c for c in df.columns}     col = next((lower[x.lower()] for x in preferred if x.lower() in lower), None)     if col is None:         for x in [\"date\", \"target_date\", \"target_datetime\", \"time\",                   \"datetime\", \"acquisition_date\"]:             if x in lower:                 col = lower[x]                 break     if col is None:         raise RuntimeErr",
+        " if df.empty:         return df     lower = {str(c).lower(): c for c in df.columns}     col = next((lower[x.lower()] for x in preferred if x.lower() in lower), None)     if col is None:         for x in [\"date\", \"target_date\", \"target_datetime\", \"time\",                   \"datetime\", \"acquisition_date\"]:             if x in lower:                 col = lower[x]                 break     if col is None:         raise RuntimeError(f\"No date co",
+        "       return df     lower = {str(c).lower(): c for c in df.columns}     col = next((lower[x.lower()] for x in preferred if x.lower() in lower), None)     if col is None:         for x in [\"date\", \"target_date\", \"target_datetime\", \"time\",                   \"datetime\", \"acquisition_date\"]:             if x in lower:                 col = lower[x]                 break     if col is None:         raise RuntimeError(f\"No date column found. Col",
+        "ower(): c for c in df.columns}     col = next((lower[x.lower()] for x in preferred if x.lower() in lower), None)     if col is None:         for x in [\"date\", \"target_date\", \"target_datetime\", \"time\",                   \"datetime\", \"acquisition_date\"]:             if x in lower:                 col = lower[x]                 break     if col is None:         raise RuntimeError(f\"No date column found. Columns: {list(df.columns)}\")     y = df.",
+        "lumns}     col = next((lower[x.lower()] for x in preferred if x.lower() in lower), None)     if col is None:         for x in [\"date\", \"target_date\", \"target_datetime\", \"time\",                   \"datetime\", \"acquisition_date\"]:             if x in lower:                 col = lower[x]                 break     if col is None:         raise RuntimeError(f\"No date column found. Columns: {list(df.columns)}\")     y = df.copy()     y[\"date\"] = p",
+        "d):     if df.empty:         return df     lower = {str(c).lower(): c for c in df.columns}     col = next((lower[x.lower()] for x in preferred if x.lower() in lower), None)     if col is None:         for x in [\"date\", \"target_date\", \"target_datetime\", \"time\",                   \"datetime\", \"acquisition_date\"]:             if x in lower:                 col = lower[x]                 break     if col is None:         raise RuntimeError(f\"No date co",
+        "mpty:         return df     lower = {str(c).lower(): c for c in df.columns}     col = next((lower[x.lower()] for x in preferred if x.lower() in lower), None)     if col is None:         for x in [\"date\", \"target_date\", \"target_datetime\", \"time\",                   \"datetime\", \"acquisition_date\"]:             if x in lower:                 col = lower[x]                 break     if col is None:         raise RuntimeError(f\"No date column found. Col",
+        "].notna()].copy()     return y   def prefix(df, p):     if df.empty:         return df     y = df.copy()     protected = {\"date\", \"forecast_issued_at\", \"forecast_retrieved_at\",                  \"forecast_run_datetime\", \"target_datetime\",                  \"forecast_source\", \"forecast_model\", \"forecast_lead_hours\",                  \"forecast_lead_days_d1\", \"synthetic\", \"fallback_used\"}     return y.rename(columns={         c: (c if c in protected or",
+        " \"synthetic\", \"fallback_used\"}     return y.rename(columns={         c: (c if c in protected or c.startswith(p) else p + c)         for c in y.columns     })   def prep_actual(x):     return prefix(date_key(x, [\"date\", \"target_date\"]), \"actual_\")   def prep_era5(x):     y = date_key(x, [\"date\", \"target_date\"])     if not y.empty:         y = y.drop_duplicates(\"date\", keep=\"last\")     return prefix(y, \"era5_\")   def prep_forecast(x):     y = date_k",
+        " c in protected or c.startswith(p) else p + c)         for c in y.columns     })   def prep_actual(x):     return prefix(date_key(x, [\"date\", \"target_date\"]), \"actual_\")   def prep_era5(x):     y = date_key(x, [\"date\", \"target_date\"])     if not y.empty:         y = y.drop_duplicates(\"date\", keep=\"last\")     return prefix(y, \"era5_\")   def prep_forecast(x):     y = date_key(x, [\"target_date\", \"target_datetime\", \"date\"])     for c in [\"forecast_iss",
+        "tual_\")   def prep_era5(x):     y = date_key(x, [\"date\", \"target_date\"])     if not y.empty:         y = y.drop_duplicates(\"date\", keep=\"last\")     return prefix(y, \"era5_\")   def prep_forecast(x):     y = date_key(x, [\"target_date\", \"target_datetime\", \"date\"])     for c in [\"forecast_issued_at\", \"forecast_retrieved_at\",               \"forecast_run_datetime\", \"target_datetime\"]:         if c in y:             y[c] = pd.to_datetime(y[c], errors=\"co",
+        "rep_era5(x):     y = date_key(x, [\"date\", \"target_date\"])     if not y.empty:         y = y.drop_duplicates(\"date\", keep=\"last\")     return prefix(y, \"era5_\")   def prep_forecast(x):     y = date_key(x, [\"target_date\", \"target_datetime\", \"date\"])     for c in [\"forecast_issued_at\", \"forecast_retrieved_at\",               \"forecast_run_datetime\", \"target_datetime\"]:         if c in y:             y[c] = pd.to_datetime(y[c], errors=\"coerce\", utc=True",
+        "     return prefix(y, \"era5_\")   def prep_forecast(x):     y = date_key(x, [\"target_date\", \"target_datetime\", \"date\"])     for c in [\"forecast_issued_at\", \"forecast_retrieved_at\",               \"forecast_run_datetime\", \"target_datetime\"]:         if c in y:             y[c] = pd.to_datetime(y[c], errors=\"coerce\", utc=True)     return y   def prep_sat(x, p):     y = date_key(x, [\"acquisition_date\", \"date\"])     if y.empty:         return y     prot",
+        "te\"] = pd.to_datetime(y[col], errors=\"coerce\").dt.strftime(\"%Y-%m-%d\")     y = y[y[\"date\"].notna()].copy()     return y   def prefix(df, p):     if df.empty:         return df     y = df.copy()     protected = {\"date\", \"forecast_issued_at\", \"forecast_retrieved_at\",                  \"forecast_run_datetime\", \"target_datetime\",                  \"forecast_source\", \"forecast_model\", \"forecast_lead_hours\",                  \"forecast_lead_days_d1\", \"syntheti",
+        "\"target_date\"])     if not y.empty:         y = y.drop_duplicates(\"date\", keep=\"last\")     return prefix(y, \"era5_\")   def prep_forecast(x):     y = date_key(x, [\"target_date\", \"target_datetime\", \"date\"])     for c in [\"forecast_issued_at\", \"forecast_retrieved_at\",               \"forecast_run_datetime\", \"target_datetime\"]:         if c in y:             y[c] = pd.to_datetime(y[c], errors=\"coerce\", utc=True)     return y   def prep_sat(x, p):     y = d",
+        " is joined for diagnostic completeness only. It must pass an     # availability test downstream before being used as a forecasting feature.     m[\"satellite_temporal_validity\"] = \"UNKNOWN\"     issue = next((c for c in [\"forecast_issued_at\", \"forecast_retrieved_at\",                               \"forecast_run_datetime\"] if c in m.columns), None)     if issue:         issue_t = pd.to_datetime(m[issue], errors=\"coerce\", utc=True)         target_t = pd.to",
+        "base(actual, era5, forecast, s2, s1, lst)     base_path = out / \"block_forecast_training_base.csv\"     if not base.empty:         base.to_csv(base_path, index=False)         keys = [c for c in [\"forecast_retrieved_at\", \"forecast_issued_at\",                             \"forecast_run_datetime\", \"target_datetime\", \"date\"]                 if c in base.columns]         audit(\"BLOCK FORECAST TRAINING BASE\", base, keys if len(keys) >= 2 else [\"date\"])     el"
+      ],
+      "note": "This report records collector logic for human verification; it does not infer a safe cutoff from column names."
+    }
+  },
+  "feature_family_status": {
+    "ERA5": {
+      "feature_count": 3,
+      "acquisition_count_columns": [],
+      "status": "REQUIRES_COLLECTOR_PROVENANCE"
+    },
+    "Sentinel-1": {
+      "feature_count": 10,
+      "acquisition_count_columns": [
+        "s1_acquisition_count"
+      ],
+      "status": "REQUIRES_COLLECTOR_PROVENANCE"
+    },
+    "Sentinel-2": {
+      "feature_count": 14,
+      "acquisition_count_columns": [
+        "s2_acquisition_count"
+      ],
+      "status": "REQUIRES_COLLECTOR_PROVENANCE"
+    },
+    "LST": {
+      "feature_count": 5,
+      "acquisition_count_columns": [
+        "lst_acquisition_count"
+      ],
+      "status": "REQUIRES_COLLECTOR_PROVENANCE"
+    }
+  },
+  "status": "REVIEW_REQUIRED",
+  "blockers": [
+    "era5 timing still requires verification from the displayed collector/merge logic and its source-date fields.",
+    "satellite timing still requires verification from the displayed collector/merge logic and its source-date fields.",
+    "merge timing still requires verification from the displayed collector/merge logic and its source-date fields."
+  ]
+}

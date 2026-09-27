@@ -1,0 +1,11 @@
+{
+  "source": "Official Gram Manchitra",
+  "source_url": "https://grammanchitragis.nic.in/grammanchitra/rest/services/panchayat/adminpanch/MapServer/2/query",
+  "retrieved_at_utc": "2026-09-17T06:46:10.163476+00:00",
+  "record_count": 7141,
+  "crs": "EPSG:4326",
+  "page_size": 1000,
+  "registry_sha256": "9b0f337d363e4d9ec43c8a9168f5b6e2e6ace3ac326c4cfdb0050d0268d42641",
+  "cache_file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\metadata\\official_registry\\gram_manchitra_block_registry.geojson",
+  "synthetic_data": false
+}

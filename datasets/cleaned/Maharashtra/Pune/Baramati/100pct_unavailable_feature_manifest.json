@@ -1,0 +1,217 @@
+{
+  "rule": "Remove only columns that are 100% unavailable (all values are NaN).",
+  "state": "Maharashtra",
+  "district": "Pune",
+  "block": "Baramati",
+  "source_files_untouched": true,
+  "row_deletion_performed": false,
+  "imputation_performed": false,
+  "interpolation_performed": false,
+  "partial_missing_features_retained": true,
+  "datasets": {
+    "block_observations_daily": {
+      "input_file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Pune\\Baramati\\processed\\merge\\block_observations_daily.csv",
+      "output_file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Pune\\Baramati\\block\\block_observations_daily_model_features.csv",
+      "input_rows": 1862,
+      "output_rows": 1862,
+      "input_columns": 52,
+      "output_columns": 52,
+      "removed_columns": [],
+      "removed_count": 0,
+      "row_deletion_count": 0,
+      "imputation_performed": false,
+      "interpolation_performed": false,
+      "source_untouched": true
+    },
+    "block_forecast_training_base": {
+      "input_file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Pune\\Baramati\\processed\\merge\\block_forecast_training_base.csv",
+      "output_file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Pune\\Baramati\\block\\block_forecast_training_base_model_features.csv",
+      "input_rows": 975,
+      "output_rows": 975,
+      "input_columns": 139,
+      "output_columns": 139,
+      "removed_columns": [],
+      "removed_count": 0,
+      "row_deletion_count": 0,
+      "imputation_performed": false,
+      "interpolation_performed": false,
+      "source_untouched": true
+    },
+    "block_current_forecast": {
+      "input_file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Pune\\Baramati\\processed\\merge\\block_current_forecast.csv",
+      "output_file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Pune\\Baramati\\block\\block_current_forecast_model_features.csv",
+      "input_rows": 7,
+      "output_rows": 7,
+      "input_columns": 21,
+      "output_columns": 21,
+      "removed_columns": [],
+      "removed_count": 0,
+      "row_deletion_count": 0,
+      "imputation_performed": false,
+      "interpolation_performed": false,
+      "source_untouched": true
+    },
+    "gp_merged_features": {
+      "input_file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Pune\\Baramati\\processed\\gp_merged_features.csv",
+      "output_file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Pune\\Baramati\\gp\\gp_merged_features_model_features.csv",
+      "input_rows": 99,
+      "output_rows": 99,
+      "input_columns": 220,
+      "output_columns": 199,
+      "removed_columns": [
+        {
+          "column": "sentinel2__NDVI_30d_change",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_mean",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_median",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_std",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_min",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_db_ascending_max",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_mean",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_median",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_std",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_min",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vh_db_ascending_max",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_mean",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_median",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_std",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_min",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_vv_vh_diff_db_ascending_max",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_mean",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_median",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_std",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_min",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        },
+        {
+          "column": "sentinel1__s1_incidence_angle_deg_ascending_max",
+          "rows": 99,
+          "missing_count": 99,
+          "missing_percent": 100.0,
+          "reason": "100_percent_unavailable"
+        }
+      ],
+      "removed_count": 21,
+      "row_deletion_count": 0,
+      "imputation_performed": false,
+      "interpolation_performed": false,
+      "source_untouched": true
+    }
+  }
+}

@@ -1,0 +1,672 @@
+{
+  "generated_at": "2026-09-21T09:34:29",
+  "location": {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "block": "Sinnar"
+  },
+  "status": "REVIEW_REQUIRED",
+  "blockers": [
+    "Some actual_* columns could not be assigned safe target/reference semantics automatically."
+  ],
+  "dataset_shapes": {
+    "block_observations_source": [
+      1837,
+      52
+    ],
+    "block_observations_engineered": [
+      1837,
+      98
+    ],
+    "block_forecast_source": [
+      975,
+      139
+    ],
+    "block_forecast_engineered": [
+      975,
+      185
+    ]
+  },
+  "rolling_verification": [
+    {
+      "feature": "hist__actual_rain_sum__lag_1d",
+      "source_column": "actual_rain_sum",
+      "operation": "lag_1d",
+      "comparisons": 1829,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__lag_3d",
+      "source_column": "actual_rain_sum",
+      "operation": "lag_3d",
+      "comparisons": 1827,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__lag_7d",
+      "source_column": "actual_rain_sum",
+      "operation": "lag_7d",
+      "comparisons": 1823,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__rolling_mean_3d",
+      "source_column": "actual_rain_sum",
+      "operation": "rolling_mean_3d",
+      "comparisons": 1827,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__rolling_std_3d",
+      "source_column": "actual_rain_sum",
+      "operation": "rolling_std_3d",
+      "comparisons": 1827,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__rolling_mean_7d",
+      "source_column": "actual_rain_sum",
+      "operation": "rolling_mean_7d",
+      "comparisons": 1823,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__rolling_std_7d",
+      "source_column": "actual_rain_sum",
+      "operation": "rolling_std_7d",
+      "comparisons": 1823,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__rolling_mean_14d",
+      "source_column": "actual_rain_sum",
+      "operation": "rolling_mean_14d",
+      "comparisons": 1816,
+      "max_abs_error": 3.552713678800501e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__rolling_std_14d",
+      "source_column": "actual_rain_sum",
+      "operation": "rolling_std_14d",
+      "comparisons": 1816,
+      "max_abs_error": 3.552713678800501e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__rolling_sum_3d",
+      "source_column": "actual_rain_sum",
+      "operation": "rolling_sum_3d",
+      "comparisons": 1827,
+      "max_abs_error": 1.4210854715202004e-14,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__wet_days_3d",
+      "source_column": "actual_rain_sum",
+      "operation": "wet_days_3d",
+      "comparisons": 1835,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__rolling_sum_7d",
+      "source_column": "actual_rain_sum",
+      "operation": "rolling_sum_7d",
+      "comparisons": 1823,
+      "max_abs_error": 2.842170943040401e-14,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__wet_days_7d",
+      "source_column": "actual_rain_sum",
+      "operation": "wet_days_7d",
+      "comparisons": 1831,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__rolling_sum_14d",
+      "source_column": "actual_rain_sum",
+      "operation": "rolling_sum_14d",
+      "comparisons": 1816,
+      "max_abs_error": 2.842170943040401e-14,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_rain_sum__wet_days_14d",
+      "source_column": "actual_rain_sum",
+      "operation": "wet_days_14d",
+      "comparisons": 1824,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_temperature_2m_max__lag_1d",
+      "source_column": "actual_temperature_2m_max",
+      "operation": "lag_1d",
+      "comparisons": 1829,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_temperature_2m_max__lag_3d",
+      "source_column": "actual_temperature_2m_max",
+      "operation": "lag_3d",
+      "comparisons": 1827,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_temperature_2m_max__lag_7d",
+      "source_column": "actual_temperature_2m_max",
+      "operation": "lag_7d",
+      "comparisons": 1823,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_temperature_2m_max__rolling_mean_3d",
+      "source_column": "actual_temperature_2m_max",
+      "operation": "rolling_mean_3d",
+      "comparisons": 1827,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_temperature_2m_max__rolling_std_3d",
+      "source_column": "actual_temperature_2m_max",
+      "operation": "rolling_std_3d",
+      "comparisons": 1827,
+      "max_abs_error": 4.440892098500626e-16,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_temperature_2m_max__rolling_mean_7d",
+      "source_column": "actual_temperature_2m_max",
+      "operation": "rolling_mean_7d",
+      "comparisons": 1823,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_temperature_2m_max__rolling_std_7d",
+      "source_column": "actual_temperature_2m_max",
+      "operation": "rolling_std_7d",
+      "comparisons": 1823,
+      "max_abs_error": 8.881784197001252e-16,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_temperature_2m_max__rolling_mean_14d",
+      "source_column": "actual_temperature_2m_max",
+      "operation": "rolling_mean_14d",
+      "comparisons": 1816,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_temperature_2m_max__rolling_std_14d",
+      "source_column": "actual_temperature_2m_max",
+      "operation": "rolling_std_14d",
+      "comparisons": 1816,
+      "max_abs_error": 8.881784197001252e-16,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_relative_humidity_2m_max__lag_1d",
+      "source_column": "actual_relative_humidity_2m_max",
+      "operation": "lag_1d",
+      "comparisons": 1829,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_relative_humidity_2m_max__lag_3d",
+      "source_column": "actual_relative_humidity_2m_max",
+      "operation": "lag_3d",
+      "comparisons": 1827,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_relative_humidity_2m_max__lag_7d",
+      "source_column": "actual_relative_humidity_2m_max",
+      "operation": "lag_7d",
+      "comparisons": 1823,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_relative_humidity_2m_max__rolling_mean_3d",
+      "source_column": "actual_relative_humidity_2m_max",
+      "operation": "rolling_mean_3d",
+      "comparisons": 1827,
+      "max_abs_error": 1.4210854715202004e-14,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_relative_humidity_2m_max__rolling_std_3d",
+      "source_column": "actual_relative_humidity_2m_max",
+      "operation": "rolling_std_3d",
+      "comparisons": 1827,
+      "max_abs_error": 3.552713678800501e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_relative_humidity_2m_max__rolling_mean_7d",
+      "source_column": "actual_relative_humidity_2m_max",
+      "operation": "rolling_mean_7d",
+      "comparisons": 1823,
+      "max_abs_error": 1.4210854715202004e-14,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_relative_humidity_2m_max__rolling_std_7d",
+      "source_column": "actual_relative_humidity_2m_max",
+      "operation": "rolling_std_7d",
+      "comparisons": 1823,
+      "max_abs_error": 3.552713678800501e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_relative_humidity_2m_max__rolling_mean_14d",
+      "source_column": "actual_relative_humidity_2m_max",
+      "operation": "rolling_mean_14d",
+      "comparisons": 1816,
+      "max_abs_error": 1.4210854715202004e-14,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_relative_humidity_2m_max__rolling_std_14d",
+      "source_column": "actual_relative_humidity_2m_max",
+      "operation": "rolling_std_14d",
+      "comparisons": 1816,
+      "max_abs_error": 3.552713678800501e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_wind_gusts_10m_max__lag_1d",
+      "source_column": "actual_wind_gusts_10m_max",
+      "operation": "lag_1d",
+      "comparisons": 1829,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_wind_gusts_10m_max__lag_3d",
+      "source_column": "actual_wind_gusts_10m_max",
+      "operation": "lag_3d",
+      "comparisons": 1827,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_wind_gusts_10m_max__lag_7d",
+      "source_column": "actual_wind_gusts_10m_max",
+      "operation": "lag_7d",
+      "comparisons": 1823,
+      "max_abs_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_wind_gusts_10m_max__rolling_mean_3d",
+      "source_column": "actual_wind_gusts_10m_max",
+      "operation": "rolling_mean_3d",
+      "comparisons": 1827,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_wind_gusts_10m_max__rolling_std_3d",
+      "source_column": "actual_wind_gusts_10m_max",
+      "operation": "rolling_std_3d",
+      "comparisons": 1827,
+      "max_abs_error": 3.552713678800501e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_wind_gusts_10m_max__rolling_mean_7d",
+      "source_column": "actual_wind_gusts_10m_max",
+      "operation": "rolling_mean_7d",
+      "comparisons": 1823,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_wind_gusts_10m_max__rolling_std_7d",
+      "source_column": "actual_wind_gusts_10m_max",
+      "operation": "rolling_std_7d",
+      "comparisons": 1823,
+      "max_abs_error": 1.7763568394002505e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_wind_gusts_10m_max__rolling_mean_14d",
+      "source_column": "actual_wind_gusts_10m_max",
+      "operation": "rolling_mean_14d",
+      "comparisons": 1816,
+      "max_abs_error": 7.105427357601002e-15,
+      "status": "PASS"
+    },
+    {
+      "feature": "hist__actual_wind_gusts_10m_max__rolling_std_14d",
+      "source_column": "actual_wind_gusts_10m_max",
+      "operation": "rolling_std_14d",
+      "comparisons": 1816,
+      "max_abs_error": 1.7763568394002505e-15,
+      "status": "PASS"
+    }
+  ],
+  "rolling_errors": [],
+  "forecast_temporal_structure": {
+    "target_column": null,
+    "run_or_issue_column": null,
+    "lead_column": null,
+    "target_after_run_all_rows": null,
+    "minimum_target_minus_run_days": null,
+    "maximum_target_minus_run_days": null
+  },
+  "actual_column_analysis": [
+    {
+      "actual_column": "actual_temperature_2m_mean",
+      "observation_column_match": "actual_temperature_2m_mean",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.05333333333333334,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_temperature_2m_max",
+      "observation_column_match": "actual_temperature_2m_max",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.04923076923076923,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_temperature_2m_min",
+      "observation_column_match": "actual_temperature_2m_min",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.059487179487179485,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_relative_humidity_2m_mean",
+      "observation_column_match": "actual_relative_humidity_2m_mean",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.10564102564102563,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_relative_humidity_2m_max",
+      "observation_column_match": "actual_relative_humidity_2m_max",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.14666666666666667,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_relative_humidity_2m_min",
+      "observation_column_match": "actual_relative_humidity_2m_min",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.0841025641025641,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_precipitation_sum",
+      "observation_column_match": "actual_precipitation_sum",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.5046153846153846,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_rain_sum",
+      "observation_column_match": "actual_rain_sum",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.5046153846153846,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_wind_speed_10m_mean",
+      "observation_column_match": "actual_wind_speed_10m_mean",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.021538461538461538,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_wind_speed_10m_max",
+      "observation_column_match": "actual_wind_speed_10m_max",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.01641025641025641,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_wind_gusts_10m_max",
+      "observation_column_match": "actual_wind_gusts_10m_max",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.024615384615384615,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_shortwave_radiation_sum",
+      "observation_column_match": "actual_shortwave_radiation_sum",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.0041025641025641026,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_cloud_cover_mean",
+      "observation_column_match": "actual_cloud_cover_mean",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.13538461538461538,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_surface_pressure_mean",
+      "observation_column_match": "actual_surface_pressure_mean",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.05333333333333334,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_et0_fao_evapotranspiration",
+      "observation_column_match": "actual_et0_fao_evapotranspiration",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 0.009230769230769232,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "REVIEW",
+      "reason": "Could not establish safe target/reference semantics automatically."
+    },
+    {
+      "actual_column": "actual_latitude",
+      "observation_column_match": "actual_latitude",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 1.0,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "spatial_metadata",
+      "reason": "Location metadata; keep only if explicitly justified as a predictor."
+    },
+    {
+      "actual_column": "actual_longitude",
+      "observation_column_match": "actual_longitude",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": 1.0,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 975,
+      "provisional_role": "spatial_metadata",
+      "reason": "Location metadata; keep only if explicitly justified as a predictor."
+    },
+    {
+      "actual_column": "actual_source",
+      "observation_column_match": "actual_source",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": null,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 0,
+      "provisional_role": "metadata_or_reference",
+      "reason": "Metadata/provenance field; should not be a model predictor."
+    },
+    {
+      "actual_column": "actual_timezone",
+      "observation_column_match": "actual_timezone",
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": null,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 0,
+      "provisional_role": "metadata_or_reference",
+      "reason": "Metadata/provenance field; should not be a model predictor."
+    },
+    {
+      "actual_column": "actual_is_reference_only",
+      "observation_column_match": null,
+      "target_date_exact_value_match_rate": null,
+      "run_date_exact_value_match_rate": null,
+      "target_date_comparisons": 0,
+      "run_date_comparisons": 0,
+      "provisional_role": "metadata_or_reference",
+      "reason": "Metadata/provenance field; should not be a model predictor."
+    }
+  ],
+  "engineered_forecast_actual_columns": [
+    "actual_temperature_2m_mean",
+    "actual_temperature_2m_max",
+    "actual_temperature_2m_min",
+    "actual_relative_humidity_2m_mean",
+    "actual_relative_humidity_2m_max",
+    "actual_relative_humidity_2m_min",
+    "actual_precipitation_sum",
+    "actual_rain_sum",
+    "actual_wind_speed_10m_mean",
+    "actual_wind_speed_10m_max",
+    "actual_wind_gusts_10m_max",
+    "actual_shortwave_radiation_sum",
+    "actual_cloud_cover_mean",
+    "actual_surface_pressure_mean",
+    "actual_et0_fao_evapotranspiration",
+    "actual_latitude",
+    "actual_longitude",
+    "actual_source",
+    "actual_timezone",
+    "actual_is_reference_only"
+  ],
+  "target_candidate_columns": [
+    "actual_temperature_2m_mean",
+    "actual_temperature_2m_max",
+    "actual_temperature_2m_min",
+    "actual_relative_humidity_2m_mean",
+    "actual_relative_humidity_2m_max",
+    "actual_relative_humidity_2m_min",
+    "actual_precipitation_sum",
+    "actual_rain_sum",
+    "actual_wind_speed_10m_mean",
+    "actual_wind_speed_10m_max",
+    "actual_wind_gusts_10m_max",
+    "actual_shortwave_radiation_sum",
+    "actual_cloud_cover_mean",
+    "actual_surface_pressure_mean",
+    "actual_et0_fao_evapotranspiration",
+    "actual_latitude",
+    "actual_longitude",
+    "actual_source",
+    "actual_timezone",
+    "actual_is_reference_only",
+    "time__day_of_year_sin",
+    "time__day_of_year_cos",
+    "hist__actual_rain_sum__lag_1d",
+    "hist__actual_rain_sum__lag_3d",
+    "hist__actual_rain_sum__lag_7d",
+    "hist__actual_rain_sum__rolling_mean_3d",
+    "hist__actual_rain_sum__rolling_std_3d",
+    "hist__actual_rain_sum__rolling_mean_7d",
+    "hist__actual_rain_sum__rolling_std_7d",
+    "hist__actual_rain_sum__rolling_mean_14d",
+    "hist__actual_rain_sum__rolling_std_14d",
+    "hist__actual_rain_sum__rolling_sum_3d",
+    "hist__actual_rain_sum__wet_days_3d",
+    "hist__actual_rain_sum__rolling_sum_7d",
+    "hist__actual_rain_sum__wet_days_7d",
+    "hist__actual_rain_sum__rolling_sum_14d",
+    "hist__actual_rain_sum__wet_days_14d",
+    "hist__actual_temperature_2m_max__lag_1d",
+    "hist__actual_temperature_2m_max__lag_3d",
+    "hist__actual_temperature_2m_max__lag_7d",
+    "hist__actual_temperature_2m_max__rolling_mean_3d",
+    "hist__actual_temperature_2m_max__rolling_std_3d",
+    "hist__actual_temperature_2m_max__rolling_mean_7d",
+    "hist__actual_temperature_2m_max__rolling_std_7d",
+    "hist__actual_temperature_2m_max__rolling_mean_14d",
+    "hist__actual_temperature_2m_max__rolling_std_14d",
+    "hist__actual_relative_humidity_2m_max__lag_1d",
+    "hist__actual_relative_humidity_2m_max__lag_3d",
+    "hist__actual_relative_humidity_2m_max__lag_7d",
+    "hist__actual_relative_humidity_2m_max__rolling_mean_3d",
+    "hist__actual_relative_humidity_2m_max__rolling_std_3d",
+    "hist__actual_relative_humidity_2m_max__rolling_mean_7d",
+    "hist__actual_relative_humidity_2m_max__rolling_std_7d",
+    "hist__actual_relative_humidity_2m_max__rolling_mean_14d",
+    "hist__actual_relative_humidity_2m_max__rolling_std_14d",
+    "hist__actual_wind_gusts_10m_max__lag_1d",
+    "hist__actual_wind_gusts_10m_max__lag_3d",
+    "hist__actual_wind_gusts_10m_max__lag_7d",
+    "hist__actual_wind_gusts_10m_max__rolling_mean_3d",
+    "hist__actual_wind_gusts_10m_max__rolling_std_3d",
+    "hist__actual_wind_gusts_10m_max__rolling_mean_7d",
+    "hist__actual_wind_gusts_10m_max__rolling_std_7d",
+    "hist__actual_wind_gusts_10m_max__rolling_mean_14d",
+    "hist__actual_wind_gusts_10m_max__rolling_std_14d"
+  ],
+  "interpretation": {
+    "rolling_features": "PASS only when recomputed from source.shift(1).rolling(...) exactly.",
+    "actual_columns": "Actual observations may be legitimate targets/references, but must not enter model predictors X.",
+    "training_gate": "Do not train until any REVIEW_REQUIRED items are resolved."
+  }
+}

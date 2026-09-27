@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-09-21T07:36:04.997249+00:00",
+  "location": [
+    "Goa",
+    "North_Goa",
+    "Bicholim"
+  ],
+  "report": {
+    "source": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Goa\\North_Goa\\Bicholim\\processed\\gp_merged_features.csv",
+    "rows": 16,
+    "exact_duplicate_rows_removed": 0,
+    "infinite_to_nan": 0,
+    "imputation": false,
+    "interpolation": false,
+    "outlier_removal": false,
+    "output": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Goa\\North_Goa\\Bicholim\\gp\\gp_merged_features.csv"
+  }
+}

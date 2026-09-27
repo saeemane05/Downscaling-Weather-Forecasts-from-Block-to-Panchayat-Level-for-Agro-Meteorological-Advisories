@@ -1,0 +1,24 @@
+@"
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+*.csv
+*.zip
+*.parquet
+*.jsonl
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.joblib
+*.pkl
+
+.env
+.venv/
+venv/
+"@ | Out-File -Encoding utf8 .gitignore

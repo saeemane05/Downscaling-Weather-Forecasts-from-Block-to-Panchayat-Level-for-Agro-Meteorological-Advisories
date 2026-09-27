@@ -1,0 +1,45 @@
+{
+  "state": "Goa",
+  "district": "North_Goa",
+  "block": "Bicholim",
+  "collection_date_range": {
+    "requested_start": "2021-08-15",
+    "requested_end_exclusive": "2026-09-22"
+  },
+  "datasets": {
+    "sentinel2": {
+      "collection": "COPERNICUS/S2_SR_HARMONIZED",
+      "variables": [
+        "NDVI",
+        "EVI",
+        "SAVI"
+      ],
+      "scale_m": 10,
+      "cloud_limit_percent": 80,
+      "cloud_mask": "QA60 + SCL"
+    },
+    "sentinel1": {
+      "collection": "COPERNICUS/S1_GRD",
+      "variables": [
+        "VV",
+        "VH"
+      ],
+      "scale_m": 10
+    },
+    "landsat_lst": {
+      "collections": [
+        "LANDSAT/LC08/C02/T1_L2",
+        "LANDSAT/LC09/C02/T1_L2"
+      ],
+      "variable": "LST_C",
+      "scale_m": 30
+    }
+  },
+  "spatial_method": "polygon zonal statistics over block boundary; not centroid-only extraction",
+  "synthetic": false,
+  "fallback_used": false,
+  "temporal_interpolation": false,
+  "future_information_used": false,
+  "availability_cutoff_note": "Downstream forecasting dataset must restrict satellite observations to those available before forecast issuance.",
+  "created_at_utc": "2026-09-21T07:36:02.906512+00:00"
+}

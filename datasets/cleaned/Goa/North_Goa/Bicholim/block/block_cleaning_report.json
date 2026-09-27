@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-09-21T07:36:04.645816+00:00",
+  "location": [
+    "Goa",
+    "North_Goa",
+    "Bicholim"
+  ],
+  "reports": [
+    {
+      "source": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Goa\\North_Goa\\Bicholim\\processed\\merge\\block_observations_daily.csv",
+      "rows": 1838,
+      "exact_duplicate_rows_removed": 0,
+      "infinite_to_nan": 0,
+      "imputation": false,
+      "interpolation": false,
+      "outlier_removal": false,
+      "output": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Goa\\North_Goa\\Bicholim\\block\\block_observations_daily.csv"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Goa\\North_Goa\\Bicholim\\processed\\merge\\block_forecast_training_base.csv",
+      "rows": 977,
+      "exact_duplicate_rows_removed": 0,
+      "infinite_to_nan": 0,
+      "imputation": false,
+      "interpolation": false,
+      "outlier_removal": false,
+      "output": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Goa\\North_Goa\\Bicholim\\block\\block_forecast_training_base.csv"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Goa\\North_Goa\\Bicholim\\processed\\merge\\block_current_forecast.csv",
+      "rows": 7,
+      "exact_duplicate_rows_removed": 0,
+      "infinite_to_nan": 0,
+      "imputation": false,
+      "interpolation": false,
+      "outlier_removal": false,
+      "output": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Goa\\North_Goa\\Bicholim\\block\\block_current_forecast.csv"
+    }
+  ]
+}

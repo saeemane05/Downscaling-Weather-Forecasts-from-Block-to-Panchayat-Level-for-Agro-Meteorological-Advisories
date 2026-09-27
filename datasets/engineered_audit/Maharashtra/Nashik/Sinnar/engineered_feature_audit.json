@@ -1,0 +1,1080 @@
+{
+  "location": {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "block": "Sinnar"
+  },
+  "engineered_root": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\engineered\\Maharashtra\\Nashik\\Sinnar",
+  "datasets": [
+    {
+      "dataset": "block_observations_daily_engineered",
+      "path": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\engineered\\Maharashtra\\Nashik\\Sinnar\\block\\block_observations_daily_engineered.csv",
+      "rows": 1837,
+      "columns": 98,
+      "duplicate_column_labels": [],
+      "duplicate_rows": 0,
+      "nonfinite_numeric_values": 0,
+      "all_missing_columns": [],
+      "constant_columns": [
+        "actual_latitude",
+        "actual_longitude",
+        "actual_source",
+        "actual_timezone"
+      ],
+      "date_columns": [
+        "date"
+      ],
+      "min_dates": {
+        "date": "2021-08-15 00:00:00"
+      },
+      "max_dates": {
+        "date": "2026-09-19 00:00:00"
+      },
+      "leakage_flags": [
+        {
+          "column": "hist__actual_rain_sum__rolling_mean_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_std_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_mean_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_std_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_mean_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_std_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_sum_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_sum_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_sum_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_mean_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_std_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_mean_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_std_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_mean_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_std_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_mean_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_std_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_mean_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_std_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_mean_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_std_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_mean_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_std_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_mean_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_std_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_mean_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_std_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        }
+      ]
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "path": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\engineered\\Maharashtra\\Nashik\\Sinnar\\block\\block_forecast_training_base_engineered.csv",
+      "rows": 975,
+      "columns": 185,
+      "duplicate_column_labels": [],
+      "duplicate_rows": 0,
+      "nonfinite_numeric_values": 0,
+      "all_missing_columns": [],
+      "constant_columns": [
+        "forecast_lead_days_d1",
+        "forecast_issued_date_rule_d1",
+        "forecast_lead_days_d2",
+        "forecast_issued_date_rule_d2",
+        "forecast_lead_days_d3",
+        "forecast_issued_date_rule_d3",
+        "forecast_lead_days_d4",
+        "forecast_issued_date_rule_d4",
+        "forecast_lead_days_d5",
+        "forecast_issued_date_rule_d5",
+        "forecast_lead_days_d6",
+        "forecast_issued_date_rule_d6",
+        "forecast_lead_days_d7",
+        "forecast_issued_date_rule_d7",
+        "latitude",
+        "longitude",
+        "forecast_source",
+        "forecast_d1_source",
+        "forecast_reference",
+        "actual_latitude",
+        "actual_longitude",
+        "actual_source",
+        "actual_timezone",
+        "actual_is_reference_only",
+        "synthetic_data_present",
+        "interpolation_present",
+        "satellite_temporal_validity"
+      ],
+      "date_columns": [
+        "date",
+        "forecast_issued_date_d1",
+        "forecast_issued_date_rule_d1",
+        "forecast_issued_date_d2",
+        "forecast_issued_date_rule_d2",
+        "forecast_issued_date_d3",
+        "forecast_issued_date_rule_d3",
+        "forecast_issued_date_d4",
+        "forecast_issued_date_rule_d4",
+        "forecast_issued_date_d5",
+        "forecast_issued_date_rule_d5",
+        "forecast_issued_date_d6",
+        "forecast_issued_date_rule_d6",
+        "forecast_issued_date_d7",
+        "forecast_issued_date_rule_d7",
+        "forecast_issued_date"
+      ],
+      "min_dates": {
+        "date": "2024-01-19 00:00:00",
+        "forecast_issued_date_d1": "2024-01-18 00:00:00",
+        "forecast_issued_date_d2": "2024-01-17 00:00:00",
+        "forecast_issued_date_d3": "2024-01-16 00:00:00",
+        "forecast_issued_date_d4": "2024-01-15 00:00:00",
+        "forecast_issued_date_d5": "2024-01-14 00:00:00",
+        "forecast_issued_date_d6": "2024-01-13 00:00:00",
+        "forecast_issued_date_d7": "2024-01-12 00:00:00",
+        "forecast_issued_date": "2024-01-18 00:00:00"
+      },
+      "max_dates": {
+        "date": "2026-09-19 00:00:00",
+        "forecast_issued_date_d1": "2026-09-18 00:00:00",
+        "forecast_issued_date_d2": "2026-09-17 00:00:00",
+        "forecast_issued_date_d3": "2026-09-16 00:00:00",
+        "forecast_issued_date_d4": "2026-09-15 00:00:00",
+        "forecast_issued_date_d5": "2026-09-14 00:00:00",
+        "forecast_issued_date_d6": "2026-09-13 00:00:00",
+        "forecast_issued_date_d7": "2026-09-12 00:00:00",
+        "forecast_issued_date": "2026-09-18 00:00:00"
+      },
+      "leakage_flags": [
+        {
+          "column": "actual_temperature_2m_mean",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_temperature_2m_max",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_temperature_2m_min",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_relative_humidity_2m_mean",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_relative_humidity_2m_max",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_relative_humidity_2m_min",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_precipitation_sum",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_rain_sum",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_wind_speed_10m_mean",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_wind_speed_10m_max",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_wind_gusts_10m_max",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_shortwave_radiation_sum",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_cloud_cover_mean",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_surface_pressure_mean",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_et0_fao_evapotranspiration",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_latitude",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_longitude",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_source",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_timezone",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "actual_is_reference_only",
+          "risk": "REVIEW",
+          "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_mean_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_std_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_mean_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_std_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_mean_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_std_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_sum_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_sum_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_rain_sum__rolling_sum_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_mean_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_std_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_mean_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_std_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_mean_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_temperature_2m_max__rolling_std_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_mean_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_std_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_mean_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_std_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_mean_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_relative_humidity_2m_max__rolling_std_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_mean_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_std_3d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_mean_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_std_7d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_mean_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        },
+        {
+          "column": "hist__actual_wind_gusts_10m_max__rolling_std_14d",
+          "risk": "REVIEW",
+          "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+        }
+      ]
+    },
+    {
+      "dataset": "block_current_forecast_engineered",
+      "path": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\engineered\\Maharashtra\\Nashik\\Sinnar\\block\\block_current_forecast_engineered.csv",
+      "rows": 7,
+      "columns": 25,
+      "duplicate_column_labels": [],
+      "duplicate_rows": 0,
+      "nonfinite_numeric_values": 0,
+      "all_missing_columns": [],
+      "constant_columns": [
+        "forecast_retrieved_at",
+        "forecast_issued_at",
+        "forecast_source",
+        "forecast_model",
+        "latitude_requested",
+        "longitude_requested",
+        "synthetic",
+        "fallback_used",
+        "actual_weather_used_as_forecast_input",
+        "time__month_sin",
+        "time__month_cos"
+      ],
+      "date_columns": [
+        "target_date",
+        "date"
+      ],
+      "min_dates": {
+        "target_date": "2026-09-19 00:00:00",
+        "date": "2026-09-19 00:00:00"
+      },
+      "max_dates": {
+        "target_date": "2026-09-25 00:00:00",
+        "date": "2026-09-25 00:00:00"
+      },
+      "leakage_flags": []
+    },
+    {
+      "dataset": "gp_merged_features_engineered",
+      "path": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\engineered\\Maharashtra\\Nashik\\Sinnar\\gp\\gp_merged_features_engineered.csv",
+      "rows": 113,
+      "columns": 250,
+      "duplicate_column_labels": [],
+      "duplicate_rows": 0,
+      "nonfinite_numeric_values": 0,
+      "all_missing_columns": [],
+      "constant_columns": [
+        "terrain__aspect_cos_max",
+        "terrain__aspect_cos_min",
+        "terrain__aspect_sin_max",
+        "terrain__aspect_sin_min",
+        "terrain__slope_min",
+        "landcover__state",
+        "landcover__district",
+        "landcover__block",
+        "landcover__block_lgd",
+        "landcover__block_code11",
+        "landcover__source_layer",
+        "landcover__source_snapshot",
+        "landcover__valid_pixel_fraction",
+        "sentinel1__s1_first_date",
+        "sentinel1__s1_ascending_count",
+        "sentinel1__s1_valid_fraction_max",
+        "sentinel1__s1_vv_db_ascending_count",
+        "sentinel1__s1_vh_db_ascending_count",
+        "sentinel1__s1_vv_vh_diff_db_ascending_count",
+        "sentinel1__s1_incidence_angle_deg_ascending_count"
+      ],
+      "date_columns": [
+        "sentinel2__latest_observation_date",
+        "sentinel1__s1_first_date",
+        "sentinel1__s1_last_date"
+      ],
+      "min_dates": {
+        "sentinel2__latest_observation_date": "2026-06-04 00:00:00",
+        "sentinel1__s1_first_date": "2021-09-20 00:00:00",
+        "sentinel1__s1_last_date": "2026-09-13 00:00:00"
+      },
+      "max_dates": {
+        "sentinel2__latest_observation_date": "2026-09-15 00:00:00",
+        "sentinel1__s1_first_date": "2021-09-20 00:00:00",
+        "sentinel1__s1_last_date": "2026-09-18 00:00:00"
+      },
+      "leakage_flags": []
+    }
+  ],
+  "missing_expected_files": [],
+  "date_ranges": [
+    {
+      "dataset": "block_observations_daily_engineered",
+      "date_column": "date",
+      "min": "2021-08-15 00:00:00",
+      "max": "2026-09-19 00:00:00"
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "date",
+      "min": "2024-01-19 00:00:00",
+      "max": "2026-09-19 00:00:00"
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_d1",
+      "min": "2024-01-18 00:00:00",
+      "max": "2026-09-18 00:00:00"
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_rule_d1",
+      "min": null,
+      "max": null
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_d2",
+      "min": "2024-01-17 00:00:00",
+      "max": "2026-09-17 00:00:00"
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_rule_d2",
+      "min": null,
+      "max": null
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_d3",
+      "min": "2024-01-16 00:00:00",
+      "max": "2026-09-16 00:00:00"
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_rule_d3",
+      "min": null,
+      "max": null
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_d4",
+      "min": "2024-01-15 00:00:00",
+      "max": "2026-09-15 00:00:00"
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_rule_d4",
+      "min": null,
+      "max": null
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_d5",
+      "min": "2024-01-14 00:00:00",
+      "max": "2026-09-14 00:00:00"
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_rule_d5",
+      "min": null,
+      "max": null
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_d6",
+      "min": "2024-01-13 00:00:00",
+      "max": "2026-09-13 00:00:00"
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_rule_d6",
+      "min": null,
+      "max": null
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_d7",
+      "min": "2024-01-12 00:00:00",
+      "max": "2026-09-12 00:00:00"
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date_rule_d7",
+      "min": null,
+      "max": null
+    },
+    {
+      "dataset": "block_forecast_training_base_engineered",
+      "date_column": "forecast_issued_date",
+      "min": "2024-01-18 00:00:00",
+      "max": "2026-09-18 00:00:00"
+    },
+    {
+      "dataset": "block_current_forecast_engineered",
+      "date_column": "target_date",
+      "min": "2026-09-19 00:00:00",
+      "max": "2026-09-25 00:00:00"
+    },
+    {
+      "dataset": "block_current_forecast_engineered",
+      "date_column": "date",
+      "min": "2026-09-19 00:00:00",
+      "max": "2026-09-25 00:00:00"
+    },
+    {
+      "dataset": "gp_merged_features_engineered",
+      "date_column": "sentinel2__latest_observation_date",
+      "min": "2026-06-04 00:00:00",
+      "max": "2026-09-15 00:00:00"
+    },
+    {
+      "dataset": "gp_merged_features_engineered",
+      "date_column": "sentinel1__s1_first_date",
+      "min": "2021-09-20 00:00:00",
+      "max": "2021-09-20 00:00:00"
+    },
+    {
+      "dataset": "gp_merged_features_engineered",
+      "date_column": "sentinel1__s1_last_date",
+      "min": "2026-09-13 00:00:00",
+      "max": "2026-09-18 00:00:00"
+    }
+  ],
+  "leakage_flags": [
+    {
+      "column": "hist__actual_rain_sum__rolling_mean_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_std_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_mean_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_std_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_mean_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_std_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_sum_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_sum_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_sum_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_mean_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_std_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_mean_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_std_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_mean_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_std_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_mean_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_std_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_mean_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_std_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_mean_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_std_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_mean_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_std_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_mean_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_std_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_mean_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_std_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "actual_temperature_2m_mean",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_temperature_2m_max",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_temperature_2m_min",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_relative_humidity_2m_mean",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_relative_humidity_2m_max",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_relative_humidity_2m_min",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_precipitation_sum",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_rain_sum",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_wind_speed_10m_mean",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_wind_speed_10m_max",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_wind_gusts_10m_max",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_shortwave_radiation_sum",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_cloud_cover_mean",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_surface_pressure_mean",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_et0_fao_evapotranspiration",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_latitude",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_longitude",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_source",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_timezone",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "actual_is_reference_only",
+      "risk": "REVIEW",
+      "reason": "Raw actual-weather feature appears in forecast training dataset; verify it is not the same target timestamp."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_mean_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_std_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_mean_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_std_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_mean_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_std_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_sum_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_sum_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_rain_sum__rolling_sum_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_mean_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_std_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_mean_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_std_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_mean_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_temperature_2m_max__rolling_std_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_mean_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_std_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_mean_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_std_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_mean_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_relative_humidity_2m_max__rolling_std_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_mean_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_std_3d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_mean_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_std_7d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_mean_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    },
+    {
+      "column": "hist__actual_wind_gusts_10m_max__rolling_std_14d",
+      "risk": "REVIEW",
+      "reason": "Temporal aggregation feature found; verify implementation uses shift(1) before rolling."
+    }
+  ],
+  "status": "REVIEW_REQUIRED"
+}

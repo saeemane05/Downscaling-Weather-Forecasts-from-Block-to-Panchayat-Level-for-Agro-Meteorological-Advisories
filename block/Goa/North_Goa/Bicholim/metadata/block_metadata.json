@@ -1,0 +1,26 @@
+{
+  "project": "SIH26 Weather Downscaling",
+  "state": "Goa",
+  "district": "North_Goa",
+  "block_requested": "Bicholim",
+  "resolved_block_name": "Bicholim",
+  "block_lgd_code": "5930",
+  "district_name": "North Goa",
+  "district_code": "585",
+  "state_name": "GOA",
+  "number_of_gp_polygons": 18,
+  "area_km2": 215.68137681295437,
+  "centroid_lat": 15.58199526754813,
+  "centroid_lon": 73.98321619110425,
+  "bounds": {
+    "min_lon": 73.88074760576387,
+    "min_lat": 15.442629664625011,
+    "max_lon": 74.26024908478568,
+    "max_lat": 15.701907497640299
+  },
+  "crs": "EPSG:4326",
+  "source": "Gram Manchitra",
+  "source_url": "https://grammanchitragis.nic.in/grammanchitra/rest/services/panchayat/panchayat_admin/MapServer/3/query",
+  "construction": "Block geometry created by dissolving GP polygons belonging to the resolved Block LGD code.",
+  "synthetic_values_used": false
+}

@@ -1,0 +1,45 @@
+{
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block": "Sinnar",
+  "collection_date_range": {
+    "requested_start": "2026-09-05",
+    "requested_end_exclusive": "2026-09-20"
+  },
+  "datasets": {
+    "sentinel2": {
+      "collection": "COPERNICUS/S2_SR_HARMONIZED",
+      "variables": [
+        "NDVI",
+        "EVI",
+        "SAVI"
+      ],
+      "scale_m": 10,
+      "cloud_limit_percent": 80,
+      "cloud_mask": "QA60 + SCL"
+    },
+    "sentinel1": {
+      "collection": "COPERNICUS/S1_GRD",
+      "variables": [
+        "VV",
+        "VH"
+      ],
+      "scale_m": 10
+    },
+    "landsat_lst": {
+      "collections": [
+        "LANDSAT/LC08/C02/T1_L2",
+        "LANDSAT/LC09/C02/T1_L2"
+      ],
+      "variable": "LST_C",
+      "scale_m": 30
+    }
+  },
+  "spatial_method": "polygon zonal statistics over block boundary; not centroid-only extraction",
+  "synthetic": false,
+  "fallback_used": false,
+  "temporal_interpolation": false,
+  "future_information_used": false,
+  "availability_cutoff_note": "Downstream forecasting dataset must restrict satellite observations to those available before forecast issuance.",
+  "created_at_utc": "2026-09-19T05:05:10.561940+00:00"
+}

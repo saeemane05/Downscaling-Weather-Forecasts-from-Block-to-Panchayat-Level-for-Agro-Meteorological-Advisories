@@ -1,0 +1,26 @@
+{
+  "project": "SIH26 Weather Downscaling",
+  "state": "Maharashtra",
+  "district": "Satara",
+  "block_requested": "Wai",
+  "resolved_block_name": "Wai",
+  "block_lgd_code": "4569",
+  "district_name": "Satara",
+  "district_code": "527",
+  "state_name": "MAHARASHTRA",
+  "number_of_gp_polygons": 98,
+  "area_km2": 585.198595258245,
+  "centroid_lat": 17.95086736197898,
+  "centroid_lon": 73.87461818167424,
+  "bounds": {
+    "min_lon": 73.6266928728643,
+    "min_lat": 17.808096432648476,
+    "max_lon": 74.0578047757127,
+    "max_lat": 18.079199018914164
+  },
+  "crs": "EPSG:4326",
+  "source": "Gram Manchitra",
+  "source_url": "https://grammanchitragis.nic.in/grammanchitra/rest/services/panchayat/panchayat_admin/MapServer/3/query",
+  "construction": "Block geometry created by dissolving GP polygons belonging to the resolved Block LGD code.",
+  "synthetic_values_used": false
+}

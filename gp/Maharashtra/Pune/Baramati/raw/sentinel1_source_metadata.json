@@ -1,0 +1,32 @@
+{
+  "stage": "SIH26_STAGE_5_SENTINEL1_GP",
+  "collection": "COPERNICUS/S1_GRD",
+  "master_path": "E:\\SIH26_Downscaling\\gp\\Maharashtra\\Pune\\Baramati\\processed\\gp_master.geojson",
+  "fetch_mode": "INITIAL_WINDOW",
+  "fetch_start": "2021-09-18",
+  "fetch_end": "2026-09-18",
+  "initial_years": 5,
+  "incremental_rule": "latest stored acquisition date + 1 day",
+  "date_chunk_days": 365,
+  "gp_batch_size": 8,
+  "scale_m": 10,
+  "instrument_mode": "IW",
+  "required_polarizations": [
+    "VV",
+    "VH"
+  ],
+  "required_resolution_meters": 10,
+  "synthetic": false,
+  "imputation": false,
+  "raw_rows": 11682,
+  "unique_gps": 99,
+  "unique_images": 118,
+  "last_successful_acquisition_date": "2026-09-13",
+  "status": "SUCCESS",
+  "notes": [
+    "Raw GP\u00d7image observations are retained.",
+    "Ascending and descending orbit observations are not silently merged at acquisition level.",
+    "No synthetic observations, interpolation, or imputation.",
+    "Processed temporal summaries are descriptive and must be shifted to forecast issuance time during model feature construction."
+  ]
+}

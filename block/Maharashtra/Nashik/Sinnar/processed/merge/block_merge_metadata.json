@@ -1,0 +1,31 @@
+{
+  "script": "07_block_merge.py",
+  "version": "SIH26-07-v1",
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block": "Sinnar",
+  "inputs": {
+    "actual": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\open_meteo_actual_daily.csv",
+    "historical_forecast": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\raw\\historical_forecasts\\historical_forecasts_previous_runs_d1_d7.csv",
+    "era5": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\era5_land\\era5_land_daily.csv",
+    "gfs": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\gfs\\gfs_daily_archive.csv",
+    "sentinel2": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\satellite\\sentinel2_block.csv",
+    "sentinel1": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\satellite\\sentinel1_block.csv",
+    "landsat_lst": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\satellite\\landsat_lst_block.csv"
+  },
+  "outputs": {
+    "daily_observations": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\merge\\block_observations_daily.csv",
+    "forecast_training_base": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\merge\\block_forecast_training_base.csv",
+    "current_forecast": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\merge\\block_current_forecast.csv"
+  },
+  "rules": {
+    "actual_weather_role": "reference/target only",
+    "historical_forecast_runs_collapsed": false,
+    "satellite_daily_aggregation": "mean of numeric acquisition statistics",
+    "missing_imputation": false,
+    "interpolation": false,
+    "synthetic": false,
+    "future_satellite_information_automatically_allowed": false
+  },
+  "created_at_utc": "2026-09-19T05:05:11.058987+00:00"
+}

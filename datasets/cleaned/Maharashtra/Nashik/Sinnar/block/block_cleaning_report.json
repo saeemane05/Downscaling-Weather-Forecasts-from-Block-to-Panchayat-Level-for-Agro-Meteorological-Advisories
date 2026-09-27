@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-09-20T04:27:40.629746+00:00",
+  "location": [
+    "Maharashtra",
+    "Nashik",
+    "Sinnar"
+  ],
+  "reports": [
+    {
+      "source": "E:\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\merge\\block_observations_daily.csv",
+      "rows": 1837,
+      "exact_duplicate_rows_removed": 0,
+      "infinite_to_nan": 0,
+      "imputation": false,
+      "interpolation": false,
+      "outlier_removal": false,
+      "output": "E:\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Nashik\\Sinnar\\block\\block_observations_daily.csv"
+    },
+    {
+      "source": "E:\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\merge\\block_forecast_training_base.csv",
+      "rows": 975,
+      "exact_duplicate_rows_removed": 0,
+      "infinite_to_nan": 0,
+      "imputation": false,
+      "interpolation": false,
+      "outlier_removal": false,
+      "output": "E:\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Nashik\\Sinnar\\block\\block_forecast_training_base.csv"
+    },
+    {
+      "source": "E:\\SIH26_Downscaling\\block\\Maharashtra\\Nashik\\Sinnar\\processed\\merge\\block_current_forecast.csv",
+      "rows": 7,
+      "exact_duplicate_rows_removed": 0,
+      "infinite_to_nan": 0,
+      "imputation": false,
+      "interpolation": false,
+      "outlier_removal": false,
+      "output": "E:\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Nashik\\Sinnar\\block\\block_current_forecast.csv"
+    }
+  ]
+}

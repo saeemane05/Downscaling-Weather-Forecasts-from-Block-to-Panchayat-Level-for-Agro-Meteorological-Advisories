@@ -1,0 +1,35 @@
+{
+  "pipeline": "SIH26_UNIVERSAL_GP_SENTINEL2_V5",
+  "state": "Goa",
+  "district": "North_Goa",
+  "block": "Bicholim",
+  "gp_count": 16,
+  "candidate_image_count": 627,
+  "initial_date": "2021-01-01",
+  "end_date": "2026-09-18",
+  "source": "COPERNICUS/S2_SR_HARMONIZED",
+  "spatial_resolution_m": 10,
+  "cloud_filter_percent": 80,
+  "mask": "SCL cloud/shadow/cirrus/snow + QA60 cloud/cirrus",
+  "indices": [
+    "NDVI",
+    "EVI",
+    "SAVI",
+    "NDMI",
+    "NBR"
+  ],
+  "synthetic_data": false,
+  "imputation": false,
+  "per_acquisition_gp_statistics": false,
+  "historical_features_are_descriptive": true,
+  "historical_features_are_leakage_safe": false,
+  "training_requirement": "For historical forecast dates, recompute rolling Sentinel-2 features using imagery available on or before each forecast issuance date.",
+  "recent_window_image_counts": {
+    "last_30d": 15,
+    "last_60d": 17,
+    "last_7d": 4
+  },
+  "gp_coverage": "PASS",
+  "gp_output_rows": 16,
+  "elapsed_seconds": 166.19
+}

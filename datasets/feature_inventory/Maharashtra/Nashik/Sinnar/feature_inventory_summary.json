@@ -1,0 +1,43 @@
+{
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block": "Sinnar",
+  "purpose": "Actual column inventory before feature engineering. No engineered features were created.",
+  "total_feature_records": 439,
+  "datasets": {
+    "block_observations_daily": {
+      "file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Nashik\\Sinnar\\block\\block_observations_daily.csv",
+      "rows": 1837,
+      "columns": 52,
+      "100pct_missing_columns": 0,
+      "constant_columns": 4,
+      "partially_missing_columns": 51
+    },
+    "block_forecast_training_base": {
+      "file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Nashik\\Sinnar\\block\\block_forecast_training_base.csv",
+      "rows": 975,
+      "columns": 139,
+      "100pct_missing_columns": 0,
+      "constant_columns": 27,
+      "partially_missing_columns": 74
+    },
+    "block_current_forecast": {
+      "file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Nashik\\Sinnar\\block\\block_current_forecast.csv",
+      "rows": 7,
+      "columns": 21,
+      "100pct_missing_columns": 0,
+      "constant_columns": 9,
+      "partially_missing_columns": 0
+    },
+    "gp_merged_features": {
+      "file": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Nashik\\Sinnar\\gp\\gp_merged_features.csv",
+      "rows": 113,
+      "columns": 227,
+      "100pct_missing_columns": 21,
+      "constant_columns": 20,
+      "partially_missing_columns": 15
+    }
+  },
+  "classification_is_preliminary": true,
+  "final_modeling_decisions_required": true
+}

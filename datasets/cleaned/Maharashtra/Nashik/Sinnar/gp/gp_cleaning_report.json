@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-09-20T04:27:41.616821+00:00",
+  "location": [
+    "Maharashtra",
+    "Nashik",
+    "Sinnar"
+  ],
+  "report": {
+    "source": "E:\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\gp_merged_features.csv",
+    "rows": 113,
+    "exact_duplicate_rows_removed": 0,
+    "infinite_to_nan": 0,
+    "imputation": false,
+    "interpolation": false,
+    "outlier_removal": false,
+    "output": "E:\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Nashik\\Sinnar\\gp\\gp_merged_features.csv"
+  }
+}

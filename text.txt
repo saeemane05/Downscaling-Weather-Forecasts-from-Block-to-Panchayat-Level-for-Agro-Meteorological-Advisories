@@ -1,0 +1,189 @@
+PS C:\Users\Admin\Desktop\SIH26_Downscaling> python .\scripts\block\06_block_satellite.py
+C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\google\api_core\_python_version_support.py:254: FutureWarning: You are using a Python version (3.10.11) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+
+Enter the target block location.
+State: Maharashtra
+District: Pune
+Block: Baramati
+GEE initialized.
+
+======================================================================
+SIH26 — BLOCK SATELLITE COLLECTION
+======================================================================
+State   : Maharashtra
+District: Pune
+Block   : Baramati
+Boundary: C:\Users\Admin\Desktop\SIH26_Downscaling\block\Maharashtra\Pune\Baramati\processed\block_boundary.geojson
+
+Sentinel-2 start: 2021-08-15
+Sentinel-1 start: 2021-08-15
+Landsat LST start: 2021-08-15
+End date (exclusive): 2026-09-17
+
+Polygon zonal statistics: ENABLED
+Synthetic/fallback data: DISABLED
+Interpolation: DISABLED
+
+[1/3] Sentinel-2
+  Batch: 2021-08-15 -> 2021-11-13
+    Candidate scenes: 33
+  Batch: 2021-11-13 -> 2022-02-11
+    Candidate scenes: 44
+  Batch: 2022-02-11 -> 2022-05-12
+    Candidate scenes: 46
+  Batch: 2022-05-12 -> 2022-08-10
+    Candidate scenes: 27
+  Batch: 2022-08-10 -> 2022-11-08
+    Candidate scenes: 21
+  Batch: 2022-11-08 -> 2023-02-06
+    Candidate scenes: 59
+  Batch: 2023-02-06 -> 2023-05-07
+    Candidate scenes: 52
+  Batch: 2023-05-07 -> 2023-08-05
+    Candidate scenes: 27
+  Batch: 2023-08-05 -> 2023-11-03
+    Candidate scenes: 38
+  Batch: 2023-11-03 -> 2024-02-01
+    Candidate scenes: 43
+  Batch: 2024-02-01 -> 2024-05-01
+    Candidate scenes: 54
+  Batch: 2024-05-01 -> 2024-07-30
+    Candidate scenes: 27
+  Batch: 2024-07-30 -> 2024-10-28
+    Candidate scenes: 21
+  Batch: 2024-10-28 -> 2025-01-26
+    Candidate scenes: 54
+  Batch: 2025-01-26 -> 2025-04-26
+    Candidate scenes: 60
+  Batch: 2025-04-26 -> 2025-07-25
+    Candidate scenes: 30
+  Batch: 2025-07-25 -> 2025-10-23
+    Candidate scenes: 24
+  Batch: 2025-10-23 -> 2026-01-21
+    Candidate scenes: 61
+  Batch: 2026-01-21 -> 2026-04-21
+    Candidate scenes: 60
+  Batch: 2026-04-21 -> 2026-07-20
+    Candidate scenes: 53
+  Batch: 2026-07-20 -> 2026-09-17
+    Candidate scenes: 21
+
+-----------------------------------------------------------------
+Sentinel-2 AUDIT
+-----------------------------------------------------------------
+Rows: 855
+Date range: 2021-09-01 -> 2026-09-15
+Duplicate acquisition IDs: 0
+Synthetic data: DISABLED
+Interpolation: DISABLED
+Audit: PASS
+
+[2/3] Sentinel-1
+  Batch: 2021-08-15 -> 2021-11-13
+    Candidate scenes: 8
+  Batch: 2021-11-13 -> 2022-02-11
+    Candidate scenes: 6
+  Batch: 2022-02-11 -> 2022-05-12
+    Candidate scenes: 6
+  Batch: 2022-05-12 -> 2022-08-10
+    Candidate scenes: 7
+  Batch: 2022-08-10 -> 2022-11-08
+    Candidate scenes: 1
+  Batch: 2022-11-08 -> 2023-02-06
+    Candidate scenes: 4
+  Batch: 2023-02-06 -> 2023-05-07
+    Candidate scenes: 4
+  Batch: 2023-05-07 -> 2023-08-05
+    Candidate scenes: 5
+  Batch: 2023-08-05 -> 2023-11-03
+    Candidate scenes: 3
+  Batch: 2023-11-03 -> 2024-02-01
+    Candidate scenes: 5
+  Batch: 2024-02-01 -> 2024-05-01
+    Candidate scenes: 6
+  Batch: 2024-05-01 -> 2024-07-30
+    Candidate scenes: 2
+  Batch: 2024-07-30 -> 2024-10-28
+    Candidate scenes: 6
+  Batch: 2024-10-28 -> 2025-01-26
+    Candidate scenes: 7
+  Batch: 2025-01-26 -> 2025-04-26
+    Candidate scenes: 8
+  Batch: 2025-04-26 -> 2025-07-25
+    Candidate scenes: 7
+  Batch: 2025-07-25 -> 2025-10-23
+    Candidate scenes: 8
+  Batch: 2025-10-23 -> 2026-01-21
+    Candidate scenes: 7
+  Batch: 2026-01-21 -> 2026-04-21
+    Candidate scenes: 8
+  Batch: 2026-04-21 -> 2026-07-20
+    Candidate scenes: 8
+  Batch: 2026-07-20 -> 2026-09-17
+    Candidate scenes: 5
+
+-----------------------------------------------------------------
+Sentinel-1 AUDIT
+-----------------------------------------------------------------
+Rows: 121
+Date range: 2021-08-15 -> 2026-09-13
+Duplicate acquisition IDs: 0
+Synthetic data: DISABLED
+Interpolation: DISABLED
+Audit: PASS
+
+[3/3] Landsat LST
+  Batch: 2021-08-15 -> 2021-11-13
+    Candidate scenes: 14
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\SIH26_Downscaling\scripts\block\06_block_satellite.py", line 1391, in <module>
+    main()
+  File "C:\Users\Admin\Desktop\SIH26_Downscaling\scripts\block\06_block_satellite.py", line 1326, in main
+    lst_new = collect_landsat_lst(
+  File "C:\Users\Admin\Desktop\SIH26_Downscaling\scripts\block\06_block_satellite.py", line 890, in collect_landsat_lst
+    info = features.getInfo()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ee\collection.py", line 589, in getInfo
+    return super().getInfo()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ee\computedobject.py", line 108, in getInfo
+    return data.computeValue(self)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ee\data.py", line 1082, in computeValue
+    return _execute_cloud_call(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ee\data.py", line 361, in _execute_cloud_call
+    return call.execute(num_retries=num_retries)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\google_auth_httplib2.py", line 214, in request
+    response, content = self.http.request(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ee\_cloud_api_utils.py", line 79, in request
+    response = self._session.request(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1375, in getresponse
+    response.begin()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1130, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt
+PS C:\Users\Admin\Desktop\SIH26_Downscaling> 

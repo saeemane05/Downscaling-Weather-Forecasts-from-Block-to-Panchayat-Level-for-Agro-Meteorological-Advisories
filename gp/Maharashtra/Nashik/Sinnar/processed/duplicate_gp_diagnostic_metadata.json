@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-09-17T01:36:14.915726+00:00",
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block": "SInnar",
+  "raw_snapshot": "E:\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\SInnar\\raw\\boundaries\\gram_manchitra_gp_20260917T012721Z.geojson",
+  "records_in_snapshot": 119,
+  "duplicate_gp_ids": 5,
+  "duplicate_gp_id_values": [
+    "183696",
+    "183727",
+    "183683",
+    "183677",
+    "183667"
+  ],
+  "gp_id_column": "gp_code",
+  "gp_name_column": "gp_name",
+  "metric_epsg": 32643,
+  "outputs": {
+    "geometry_details": "E:\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\SInnar\\processed\\duplicate_gp_geometry_details.csv",
+    "spatial_relationships": "E:\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\SInnar\\processed\\duplicate_gp_spatial_relationships.csv",
+    "conflicting_geometries": "E:\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\SInnar\\processed\\duplicate_gp_conflicts.geojson"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-09-19T06:08:47Z",
+  "state": "Maharashtra",
+  "district": "Pune",
+  "block": "Baramati",
+  "report": {
+    "source": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Pune\\Baramati\\processed\\gp_merged_features.csv",
+    "rows_before": 99,
+    "rows_after": 99,
+    "exact_duplicate_rows_removed": 0,
+    "infinite_numeric_values_converted_to_nan": 0,
+    "missing_cells_before": 2094,
+    "missing_cells_after": 2094,
+    "imputation": false,
+    "interpolation": false,
+    "outlier_removal": false,
+    "feature_engineering": false,
+    "output": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\datasets\\cleaned\\Maharashtra\\Pune\\Baramati\\gp\\gp_merged_features.csv"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "collection_start": "2021-09-19",
+  "history_years_initial": 5,
+  "source": "reanalysis-era5-land",
+  "nodes_per_day": 2,
+  "times_utc": [
+    "00:00",
+    "12:00"
+  ],
+  "synthetic": false
+}

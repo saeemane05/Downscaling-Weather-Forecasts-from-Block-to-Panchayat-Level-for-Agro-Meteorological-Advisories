@@ -1,0 +1,21 @@
+{
+  "generated_utc": "2026-09-17T04:35:39.898063+00:00",
+  "state": "Maharashtra",
+  "district": "Nashik",
+  "block": "Sinnar",
+  "block_lgd": "4490",
+  "block_code11": "0205",
+  "source": "Official Gram Manchitra",
+  "raw_gp_snapshot": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\raw\\boundaries\\gram_manchitra_gp_20260917T043539Z.geojson",
+  "raw_gp_feature_count": 119,
+  "final_unique_gp_count": 113,
+  "duplicate_gp_count": 5,
+  "duplicate_handling": "Repeated GP IDs are consolidated by geometry union only after name consistency, geometry validity, Block containment, and absence of positive-area overlap with another GP ID.",
+  "synthetic_geometry": false,
+  "raw_data_modified": false,
+  "outputs": {
+    "gp_master_geojson": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\gp_master.geojson",
+    "gp_master_csv": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\gp_master.csv",
+    "duplicate_audit": "C:\\Users\\Admin\\Desktop\\SIH26_Downscaling\\gp\\Maharashtra\\Nashik\\Sinnar\\processed\\duplicate_gp_audit.csv"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "validation": {
+    "raw": {
+      "rmse": 6.896050090400669,
+      "mae": 2.5715068493150683,
+      "r2": -0.26065851471195334,
+      "mape_nonzero": 401.9611646614289
+    },
+    "corrected": {
+      "rmse": 5.6281674238317745,
+      "mae": 2.809139425293304,
+      "r2": 0.16028741341668928,
+      "mape_nonzero": 483.68277733876306
+    },
+    "rmse_improvement_percent": 18.38563597926576,
+    "occurrence_f1": 0.9075144508670521,
+    "wet_days": 178,
+    "total_days": 365
+  },
+  "test": {
+    "raw": {
+      "rmse": 7.354795392611243,
+      "mae": 2.1286259541984736,
+      "r2": 0.4866874986476536,
+      "mape_nonzero": 184.56682165202292
+    },
+    "corrected": {
+      "rmse": 7.06213874581084,
+      "mae": 2.708006590616919,
+      "r2": 0.5267254601202758,
+      "mape_nonzero": 493.2189735603678
+    },
+    "rmse_improvement_percent": 3.9791269665286877,
+    "occurrence_f1": 0.8333333333333334,
+    "wet_days": 117,
+    "total_days": 262
+  },
+  "horizon": "D6",
+  "split": {
+    "method": "calendar_year_chronological",
+    "train_ratio_target": 0.6,
+    "validation_ratio_target": 0.2,
+    "test_ratio_target": 0.2,
+    "train_years": [
+      2024
+    ],
+    "validation_years": [
+      2025
+    ],
+    "test_years": [
+      2026
+    ],
+    "train_rows": 348,
+    "validation_rows": 365,
+    "test_rows": 262
+  },
+  "model": {
+    "rain_model_weight": 0.7,
+    "raw_forecast_weight": 0.3,
+    "n_estimators": 400,
+    "min_samples_leaf": 3,
+    "random_state": 42
+  }
+}

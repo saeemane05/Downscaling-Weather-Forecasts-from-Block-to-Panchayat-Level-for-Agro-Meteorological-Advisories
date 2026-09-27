@@ -1,0 +1,50 @@
+{
+  "project": "SIH26",
+  "location": {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "taluka": "Sinnar"
+  },
+  "stage": "Stage-1 Block Forecast Correction",
+  "temperature": {
+    "method": "RAW_FORECAST",
+    "model_trained": false
+  },
+  "humidity": {
+    "method": "RAW_FORECAST",
+    "model_trained": false
+  },
+  "precipitation": {
+    "method": "SPECIALIZED_TWO_STAGE_CORRECTION",
+    "occurrence_model": "ExtraTreesClassifier",
+    "amount_model": "ExtraTreesRegressor",
+    "model_weight": 0.7,
+    "raw_weight": 0.3
+  },
+  "wind": {
+    "method": "RAW_FORECAST",
+    "model_trained": false,
+    "reason": "Source/unit/height/aggregation compatibility unresolved."
+  },
+  "pressure": {
+    "method": "UNAVAILABLE",
+    "model_trained": false,
+    "reason": "No verified block pressure forecast predictor."
+  },
+  "ground_truth_policy": {
+    "gp_weather_target": false,
+    "synthetic_data": false,
+    "interpolation": false,
+    "actual_weather_as_X": false
+  },
+  "random_state": 42,
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}

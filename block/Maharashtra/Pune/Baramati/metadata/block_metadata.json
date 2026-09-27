@@ -1,0 +1,26 @@
+{
+  "project": "SIH26 Weather Downscaling",
+  "state": "Maharashtra",
+  "district": "Pune",
+  "block_requested": "Baramati",
+  "resolved_block_name": "Baramati",
+  "block_lgd_code": "4512",
+  "district_name": "Pune",
+  "district_code": "521",
+  "state_name": "MAHARASHTRA",
+  "number_of_gp_polygons": 99,
+  "area_km2": 1317.1796135568634,
+  "centroid_lat": 18.208644677739866,
+  "centroid_lon": 74.45162954697538,
+  "bounds": {
+    "min_lon": 73.8396378507031,
+    "min_lat": 18.04411899783829,
+    "max_lon": 74.71161804130838,
+    "max_lat": 18.871020497105615
+  },
+  "crs": "EPSG:4326",
+  "source": "Gram Manchitra",
+  "source_url": "https://grammanchitragis.nic.in/grammanchitra/rest/services/panchayat/panchayat_admin/MapServer/3/query",
+  "construction": "Block geometry created by dissolving GP polygons belonging to the resolved Block LGD code.",
+  "synthetic_values_used": false
+}

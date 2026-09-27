@@ -1,0 +1,18 @@
+{
+  "project": "SIH26 Weather Forecast Downscaling",
+  "purpose": "Universal block-to-Gram-Panchayat weather forecast downscaling",
+  "architecture": {
+    "block": "coarse atmospheric/weather signal and historical forecast reference",
+    "gp": "high-resolution spatial predictors",
+    "datasets": "leakage-safe training/validation/testing tables",
+    "models": "trained downscaling models",
+    "scripts/common": "shared utilities such as geo.py"
+  },
+  "principles": [
+    "No synthetic fallback values",
+    "No future-information leakage",
+    "Preserve source provenance",
+    "State/District/Block are runtime inputs",
+    "Number of GPs is discovered dynamically"
+  ]
+}
