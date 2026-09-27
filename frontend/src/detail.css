@@ -1,3 +1,40 @@
 .detail-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(350px,.85fr);gap:12px;align-items:stretch}.detail-top>.map-card{min-width:0}.detail-lower{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(380px,1fr);gap:12px;margin-top:12px;align-items:start}.detail-lower>.environment,.detail-lower>.spatial-card{min-width:0}
 @media(max-width:1250px){.detail-top{grid-template-columns:minmax(0,1fr) minmax(300px,.9fr)}.detail-lower{grid-template-columns:1fr}}
 @media(max-width:850px){.detail-top{grid-template-columns:1fr}}
+
+/* Detail-page rows follow the same content-sized spacing as the dashboard. */
+@media (min-width:1100px) {
+  .detail-lower {
+    height:auto !important;
+    grid-auto-rows:auto;
+    align-items:stretch;
+    gap:22px;
+    margin-top:22px;
+    margin-bottom:22px;
+  }
+  .detail-lower > .forecast-card,
+  .detail-lower > .advisory-card {
+    height:auto !important;
+    min-height:275px;
+    overflow:visible;
+  }
+  .detail-lower > .environment,
+  .detail-lower > .spatial-card {
+    height:auto !important;
+    min-height:225px;
+    overflow:visible;
+  }
+  .detail-top .temp-caption,
+  .detail-lower .source-note,
+  .detail-lower .forecast-foot,
+  .detail-lower .advisory-copy p,
+  .detail-lower .advisory-disclaimer,
+  .detail-lower .spatial-card > p,
+  .detail-lower .date,
+  .detail-lower .forecast-day > small,
+  .detail-lower .env-item small,
+  .detail-lower .spatial-stats small {
+    color:#183f53;
+    font-weight:700;
+  }
+}
