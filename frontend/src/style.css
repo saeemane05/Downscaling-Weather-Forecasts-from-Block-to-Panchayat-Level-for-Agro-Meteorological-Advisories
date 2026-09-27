@@ -548,3 +548,35 @@ body { background: #c9eeeb; }
 .map-card { border-color: #72c9c0; box-shadow: 0 18px 38px rgba(8, 100, 94, .20); }
 .dashboard-meta > div { background: rgba(255,255,255,.94); border-color: #b9ded9; box-shadow: 0 6px 16px rgba(8, 91, 87, .09); }
 .location-panel, .selected-card { background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(244,253,252,.96)); }
+
+/* Readability, alignment, and interaction pass. */
+:root { --ui-border: #9fcfc9; --ui-border-soft: #c6dfdb; }
+.card, .map-card, .dashboard-meta > div, .metric, .env-item, .spatial-stats > div, .advisory-item, .forecast-grid, .crop-note, .chart-panel, .select-field > div, .map-select, .map-legend, .map-controls, .route-gp { border: 1px solid var(--ui-border-soft); }
+.card, .map-card, .dashboard-meta > div, .forecast-day, .advisory-item, .env-item, .spatial-stats > div, .crop-note, .route-gp { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background-color .2s ease; }
+.card:hover, .map-card:hover, .dashboard-meta > div:hover, .advisory-item:hover, .env-item:hover, .spatial-stats > div:hover, .crop-note:hover, .route-gp:hover { transform: translateY(-2px); border-color: var(--ui-border); box-shadow: 0 14px 30px rgba(8, 91, 87, .16); }
+.forecast-day:hover { background: #f0fbf8; transform: translateY(-1px); }
+button, .text-link { transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease; }
+button:not(:disabled):hover, .text-link:hover { transform: translateY(-2px); }
+button:not(:disabled):active, .text-link:active { transform: translateY(0); }
+@media (min-width: 1100px) {
+  :root { font-size: 17px; }
+  .lower-grid, .bottom-grid { align-items: stretch; }
+  .lower-grid > .card, .bottom-grid > .card, .bottom-stack > .card { height: auto !important; }
+  .bottom-stack { grid-auto-rows: 1fr; }
+  .forecast-card, .advisory-card { min-height: 220px; }
+  .environment, .spatial-card, .crop-card { min-height: 185px; }
+  .eyebrow { font-size: 15px; }
+  .card-heading h2 { font-size: 21px; }
+  .map-title h2 { font-size: 24px; }
+  .map-title p, .gp-heading p, .temp-caption, .source-note { font-size: 12px; }
+  .select-field > span, .layer-picker > b { font-size: 13px; }
+  .select-field select, .layer-picker button { font-size: 14px; }
+  .metric small, .env-item small, .spatial-stats small, .crop-selects label { font-size: 11px; }
+  .metric b, .env-item b { font-size: 16px; }
+  .forecast-day > b, .advisory-title h3 { font-size: 13px; }
+  .date, .forecast-day > small, .forecast-foot, .advisory-copy p, .advisory-disclaimer, .crop-note b, .crop-note p, .spatial-card > p { font-size: 11px; }
+  .period, .confidence, .confidence small { font-size: 10px; }
+  .spatial-stats b { font-size: 17px; }
+  .crop-selects select { font-size: 12px; height: 34px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
