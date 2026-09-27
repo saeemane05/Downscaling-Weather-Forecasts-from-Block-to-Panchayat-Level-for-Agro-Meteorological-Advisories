@@ -10,7 +10,8 @@ import type { Advisory, BlockData, GPWeather, LocationOption } from './types'
 import logo from '../HyperWeather.png'
 
 const weatherLayers=['Temperature','Rainfall','Humidity','Wind'] as const; type Layer=typeof weatherLayers[number]
-const format=(v:number|null,d=0)=>v===null?'Not available':v.toFixed(d)
+const isFiniteNumber=(value:unknown):value is number=>typeof value==='number'&&Number.isFinite(value)
+const format=(value:unknown,d=0)=>isFiniteNumber(value)?value.toFixed(d):'Not available'
 const dayLabel=(s:string)=>new Intl.DateTimeFormat('en',{day:'numeric',month:'short',timeZone:'UTC'}).format(new Date(`${s}T12:00:00Z`))
 const title=(s:string)=>s.replace(/_/g,' ').replace(/\b\w/g,(c:string)=>c.toUpperCase())
 function MapView({data,selected,onSelect,layer,showBoundary}:{data:BlockData;selected:GPWeather|null;onSelect:(gp:GPWeather)=>void;layer:Layer;showBoundary:boolean}){
