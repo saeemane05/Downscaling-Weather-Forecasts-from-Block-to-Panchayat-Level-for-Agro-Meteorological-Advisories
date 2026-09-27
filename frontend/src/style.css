@@ -496,3 +496,47 @@
   .brand-copy small { display: none; }
   .map-card { border-width: 1px; }
 }
+
+/* Final dashboard scale and depth pass. */
+:root { font-size: 16px; --shadow: 0 12px 30px rgba(22, 55, 73, .10); }
+body { background: #eaf1f1; }
+.page { background: radial-gradient(circle at 88% 4%, #fff1c9 0, transparent 27%), radial-gradient(circle at 9% 20%, #dcefe8 0, transparent 29%), #edf3f2; }
+.card, .map-card { border-color: #d8e4e3; box-shadow: 0 10px 26px rgba(22, 55, 73, .09); }
+.map-card { box-shadow: 0 18px 38px rgba(16, 96, 70, .16); }
+.map-legend, .map-controls { transform: none; box-shadow: 0 8px 20px rgba(22, 55, 73, .16); }
+
+@media (min-width: 1100px) {
+  .page { padding: 24px 38px 36px; }
+  .page-title h1 { font-size: 35px; }
+  .page-title p, .crumb { font-size: 14px; }
+  .dashboard-meta { height: 68px; }
+  .dashboard-meta b { font-size: 20px; }
+  .dashboard-meta span { font-size: 12px; }
+  .dashboard-top, .location-panel, .map-and-weather, .map-card, .selected-card { height: 570px; }
+  .dashboard-top { grid-template-columns: 260px minmax(0, 1fr); gap: 18px; }
+  .map-and-weather { grid-template-columns: minmax(0, 1fr) 370px; gap: 18px; }
+  .map-title { height: 78px; padding: 14px 20px; }
+  .map-title h2 { font-size: 23px; }
+  .map-title h2 span, .map-title p { font-size: 13px; }
+  .map-wrap { height: 490px; }
+  .location-panel { padding: 21px 18px; }
+  .location-panel h2 { font-size: 21px; }
+  .select-field > span, .layer-picker > b { font-size: 12px; }
+  .select-field > div { height: 39px; }
+  .select-field select, .layer-picker button { font-size: 13px; }
+  .layer-picker button { height: 34px; }
+  .selected-card { padding: 22px; }
+  .card-heading h2 { font-size: 20px; }
+  .gp-heading h3 { font-size: 16px; }
+  .gp-heading p, .temp-caption, .source-note { font-size: 11px; }
+  .metric { height: 74px; padding: 9px; }
+  .metric small { font-size: 10px; }
+  .metric b { font-size: 15px; }
+  .insight b { font-size: 13px; }
+  .insight p { font-size: 11px; }
+  .map-legend span, .map-controls button { font-size: 12px; }
+  .lower-grid, .bottom-grid { gap: 18px; }
+  .forecast-card, .advisory-card, .environment, .spatial-card, .crop-card { padding: 18px; }
+  .forecast-day > b, .advisory-title h3 { font-size: 12px; }
+  .forecast-day > small, .advisory-copy p, .forecast-foot { font-size: 10px; }
+}
