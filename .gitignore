@@ -1,9 +1,15 @@
-@"
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 
+# Python environments and local secrets
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Generated model/data artifacts
 *.csv
 *.zip
 *.parquet
@@ -18,7 +24,14 @@ __pycache__/
 *.joblib
 *.pkl
 
-.env
-.venv/
-venv/
-"@ | Out-File -Encoding utf8 .gitignore
+# Small forecast snapshots used by the read-only deployed dashboard
+!models/main_model/stage2_direct_gp_training/**/stage2_current_gp_forecast.csv
+
+# Generated registry downloads (the versioned page 0007000 is retained)
+/block/metadata/official_registry/gram_manchitra_block_registry.geojson
+/block/metadata/official_registry/pages/block_page_000[0-6]000.geojson
+
+# Local data-collection outputs
+/gp/**/raw/lst_source_metadata.json
+/gp/**/raw/open_meteo_gp_forecast/
+/gp/**/raw/boundaries/gram_manchitra_all_blocks_*.geojson

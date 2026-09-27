@@ -1,6 +1,6 @@
 """Read-only development API over the repository's existing model outputs."""
 from __future__ import annotations
-import csv, json, mimetypes
+import csv, json, mimetypes, os
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -132,5 +132,7 @@ class Handler(BaseHTTPRequestHandler):
     def log_message(self,fmt,*args):print('%s - %s'%(self.address_string(),fmt%args))
 
 if __name__=='__main__':
-    print(f'HyperWeather API at http://127.0.0.1:8000 (repository: {ROOT})')
-    ThreadingHTTPServer(('127.0.0.1',8000),Handler).serve_forever()
+    host=os.environ.get('HOST','0.0.0.0')
+    port=int(os.environ.get('PORT','8000'))
+    print(f'HyperWeather API at http://{host}:{port} (repository: {ROOT})')
+    ThreadingHTTPServer((host,port),Handler).serve_forever()

@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: hyperweather-api
+    runtime: python
+    buildCommand: echo "No API build required"
+    startCommand: python frontend/server.py
+    healthCheckPath: /api/locations
