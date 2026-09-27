@@ -580,3 +580,37 @@ button:not(:disabled):active, .text-link:active { transform: translateY(0); }
   .crop-selects select { font-size: 12px; height: 34px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
+
+/* High-visibility desktop treatment: keep every data row inside its card. */
+@media (min-width: 1100px) {
+  body { color: #102b3c; font-weight: 600; }
+  .lower-grid, .bottom-grid { grid-auto-rows: minmax(0, auto); }
+  .lower-grid > .forecast-card, .lower-grid > .advisory-card { height: auto !important; min-height: 275px; overflow: hidden; }
+  .bottom-grid > .environment, .bottom-stack > .spatial-card, .bottom-stack > .crop-card { height: auto !important; min-height: 225px; overflow: hidden; }
+  .bottom-stack { align-items: stretch; }
+
+  .eyebrow { color: #31586a; font-size: 17px; font-weight: 700; }
+  .card-heading h2, .map-title h2 { color: #082f45; font-size: 24px; font-weight: 800; }
+  .map-title p, .gp-heading p, .temp-caption, .source-note, .based { color: #36596a; font-size: 13px; font-weight: 700; }
+  .select-field > span, .layer-picker > b { color: #153d50; font-size: 14px; font-weight: 800; }
+  .select-field select, .layer-picker button { color: #173d50; font-size: 15px; font-weight: 700; }
+
+  .metric small, .env-item small, .spatial-stats small, .crop-selects label { color: #31586a; font-size: 12px; font-weight: 700; }
+  .metric b, .env-item b { color: #092e43; font-size: 18px; font-weight: 800; }
+  .forecast-day > b, .advisory-title h3 { color: #092e43; font-size: 15px; font-weight: 800; }
+  .date, .forecast-day > small, .forecast-foot, .advisory-copy p, .advisory-disclaimer, .crop-note b, .crop-note p, .spatial-card > p { color: #254c60; font-size: 12px; font-weight: 700; line-height: 1.45; }
+  .period, .confidence, .confidence small { font-size: 11px; font-weight: 800; }
+  .spatial-stats b { color: #092e43; font-size: 19px; font-weight: 800; }
+  .crop-selects select { color: #173d50; font-size: 13px; font-weight: 700; height: 38px; }
+
+  .forecast-day:nth-child(odd) { background: #f3fbff; }
+  .forecast-day:nth-child(even) { background: #f4fcf6; }
+  .env-item:nth-child(1) { background: #eff8ff; }
+  .env-item:nth-child(2) { background: #f2fbf4; }
+  .env-item:nth-child(3) { background: #fff9ed; }
+  .env-item:nth-child(4) { background: #f8f1ff; }
+  .spatial-stats > div { background: #eef9f7; }
+  .advisory-item { background: #fbfffe; }
+
+  button:not(:disabled):hover, .text-link:hover { box-shadow: 0 7px 16px rgba(8, 91, 87, .18); }
+}
