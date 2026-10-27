@@ -572,7 +572,13 @@ def ensure_frontend_build():
     print('Frontend build is missing; installing frontend dependencies and building it now.',flush=True)
     frontend_dir=DIST.parent
     for command in ([npm,'ci','--include=dev'],[npm,'run','build']):
-        result=subprocess.run(command,cwd=frontend_dir)
+        # Render's small instances cap Node's default V8 heap near 256 MB.
+        # Vite needs a little more while transforming the map bundle, but
+        # 384 MB remains within the usual 512 MB web-service allocation.
+        environment=dict(os.environ)
+        if command[-1]=='build' and '--max-old-space-size' not in environment.get('NODE_OPTIONS',''):
+            environment['NODE_OPTIONS']=' '.join(filter(None,[environment.get('NODE_OPTIONS',''),'--max-old-space-size=384']))
+        result=subprocess.run(command,cwd=frontend_dir,env=environment)
         if result.returncode:
             raise RuntimeError(f'Frontend build command failed ({" ".join(command)}; exit code {result.returncode}).')
     if not index_file.is_file():

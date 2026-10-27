@@ -7,7 +7,7 @@ services:
     # default "404 - Nothing matches the given URI" page.
     # Install build tooling explicitly: Render environments may set
     # NODE_ENV=production, which otherwise makes npm omit Vite/TypeScript.
-    buildCommand: python -m pip install -r requirements.txt && cd agri_advisory && npm ci --omit=dev && cd ../frontend && npm ci --include=dev && npm run build
+    buildCommand: python -m pip install -r requirements.txt && cd agri_advisory && npm ci --omit=dev && cd ../frontend && npm ci --include=dev && NODE_OPTIONS=--max-old-space-size=384 npm run build
     # Retain a start-time guard so a stale/cached or manually configured
     # Render service can never come up without the static application shell.
     startCommand: test -f frontend/dist/index.html || (cd frontend && npm ci --include=dev && npm run build); python frontend/server.py
