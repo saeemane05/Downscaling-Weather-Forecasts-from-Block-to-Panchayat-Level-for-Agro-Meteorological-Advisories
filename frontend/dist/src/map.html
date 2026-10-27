@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        SIH Hyperlocal Weather Map
+    </title>
+
+
+    <!-- =========================================================
+         MAPLIBRE CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/maplibre-gl@6.12.0/dist/maplibre-gl.css"
+    >
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+
+            margin: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            overflow: hidden;
+
+            font-family:
+                Inter,
+                Arial,
+                sans-serif;
+
+        }
+
+
+        #map {
+
+            position: absolute;
+
+            inset: 0;
+
+        }
+
+
+        /* =====================================================
+           CONTROL PANEL
+        ====================================================== */
+
+        .control-panel {
+
+            position: absolute;
+
+            top: 18px;
+
+            right: 18px;
+
+            z-index: 100;
+
+            width: 235px;
+
+            padding: 14px;
+
+            border-radius: 14px;
+
+            background:
+                rgba(255, 255, 255, 0.96);
+
+            box-shadow:
+                0 8px 30px
+                rgba(0, 0, 0, 0.20);
+
+            backdrop-filter:
+                blur(10px);
+
+        }
+
+
+        .panel-title {
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            margin-bottom: 7px;
+
+            color: #17202a;
+
+        }
+
+
+        .panel-section {
+
+            margin-bottom: 14px;
+
+        }
+
+
+        select {
+
+            width: 100%;
+
+            padding: 9px 10px;
+
+            border-radius: 8px;
+
+            border: 1px solid #d4d9dc;
+
+            background: white;
+
+            font-size: 13px;
+
+            outline: none;
+
+            cursor: pointer;
+
+        }
+
+
+        select:focus {
+
+            border-color: #4c9aff;
+
+        }
+
+
+        /* =====================================================
+           LEGEND
+        ====================================================== */
+
+        .legend {
+
+            position: absolute;
+
+            right: 18px;
+
+            bottom: 22px;
+
+            z-index: 100;
+
+            width: 230px;
+
+            padding: 14px;
+
+            border-radius: 13px;
+
+            background:
+                rgba(255,255,255,0.96);
+
+            box-shadow:
+                0 8px 30px
+                rgba(0,0,0,0.18);
+
+        }
+
+
+        .legend-title {
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .gradient {
+
+            height: 13px;
+
+            width: 100%;
+
+            border-radius: 20px;
+
+        }
+
+
+        .legend-labels {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-top: 5px;
+
+            font-size: 10px;
+
+            color: #555;
+
+        }
+
+
+        /* =====================================================
+           SELECTED GP CARD
+        ====================================================== */
+
+        .selected-card {
+
+            position: absolute;
+
+            left: 18px;
+
+            bottom: 22px;
+
+            z-index: 100;
+
+            width: 245px;
+
+            padding: 14px;
+
+            border-radius: 13px;
+
+            background:
+                rgba(255,255,255,0.96);
+
+            box-shadow:
+                0 8px 30px
+                rgba(0,0,0,0.18);
+
+        }
+
+
+        .selected-name {
+
+            font-weight: 800;
+
+            font-size: 14px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .selected-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 7px;
+
+        }
+
+
+        .metric {
+
+            padding: 8px;
+
+            background: #f4f6f7;
+
+            border-radius: 8px;
+
+            font-size: 11px;
+
+        }
+
+
+        .metric strong {
+
+            display: block;
+
+            font-size: 13px;
+
+            margin-top: 2px;
+
+        }
+
+
+        /* =====================================================
+           MAP ATTRIBUTION
+        ====================================================== */
+
+        .maplibregl-ctrl-attrib {
+
+            font-size: 9px;
+
+        }
+
+
+        /* =====================================================
+           POPUP
+        ====================================================== */
+
+        .popup {
+
+            min-width: 190px;
+
+            font-family:
+                Inter,
+                Arial,
+                sans-serif;
+
+        }
+
+
+        .popup-title {
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .popup-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 4px 0;
+
+            font-size: 12px;
+
+        }
+
+
+        /* =====================================================
+           MAP BUTTONS
+        ====================================================== */
+
+        .map-buttons {
+
+            position: absolute;
+
+            left: 18px;
+
+            top: 18px;
+
+            z-index: 100;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 6px;
+
+        }
+
+
+        .map-btn {
+
+            border: none;
+
+            padding: 9px 12px;
+
+            border-radius: 9px;
+
+            background:
+                rgba(255,255,255,0.94);
+
+            box-shadow:
+                0 4px 15px
+                rgba(0,0,0,.16);
+
+            cursor: pointer;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+        .map-btn:hover {
+
+            background: white;
+
+        }
+
+    </style>
+<style>
+  .control-panel, .legend, .selected-card, .map-buttons { display: none !important; }
+</style>
+
+  <script type="module" crossorigin src="/assets/map-CyIX7AB7.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     MAP
+========================================================== -->
+
+<div id="map"></div>
+
+
+<!-- =========================================================
+     MAP CONTROLS
+========================================================== -->
+
+<div class="control-panel">
+
+
+    <div class="panel-section">
+
+        <div class="panel-title">
+            BASE MAP
+        </div>
+
+        <select id="baseMapSelect">
+
+            <option value="satellite">
+                ðŸ›° Satellite
+            </option>
+
+            <option value="satellite-labels">
+                ðŸ›° Satellite + Labels
+            </option>
+
+            <option value="agriculture">
+                ðŸŒ¿ Agriculture
+            </option>
+
+            <option value="liberty">
+                ðŸ—º Liberty
+            </option>
+
+            <option value="positron">
+                â—» Positron
+            </option>
+
+            <option value="dark">
+                ðŸŒ™ Dark
+            </option>
+
+            <option value="fiord">
+                ðŸŒŠ Fiord
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="panel-section">
+
+        <div class="panel-title">
+            WEATHER VARIABLE
+        </div>
+
+        <select id="weatherSelect">
+
+            <option value="temperature">
+                ðŸŒ¡ Temperature
+            </option>
+
+            <option value="humidity">
+                ðŸ’§ Humidity
+            </option>
+
+            <option value="rainfall">
+                ðŸŒ§ Rainfall
+            </option>
+
+            <option value="wind">
+                ðŸ’¨ Wind
+            </option>
+
+        </select>
+
+    </div>
+
+
+</div>
+
+
+<!-- =========================================================
+     MAP QUICK BUTTONS
+========================================================== -->
+
+<div class="map-buttons">
+
+    <button
+        class="map-btn"
+        id="fitButton"
+    >
+        â›¶ Fit Gram Panchayats
+    </button>
+
+</div>
+
+
+<!-- =========================================================
+     LEGEND
+========================================================== -->
+
+<div class="legend">
+
+    <div
+        class="legend-title"
+        id="legendTitle"
+    >
+        Temperature
+    </div>
+
+
+    <div
+        class="gradient"
+        id="legendGradient"
+    ></div>
+
+
+    <div class="legend-labels">
+
+        <span id="legendMin">
+            15Â°C
+        </span>
+
+        <span id="legendMax">
+            40Â°C
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     SELECTED GP
+========================================================== -->
+
+<div
+    class="selected-card"
+    id="selectedCard"
+>
+
+    <div class="selected-name">
+        Select a Gram Panchayat
+    </div>
+
+    <div class="selected-grid">
+
+        <div class="metric">
+            ðŸŒ¡ Temperature
+            <strong>--</strong>
+        </div>
+
+        <div class="metric">
+            ðŸ’§ Humidity
+            <strong>--</strong>
+        </div>
+
+        <div class="metric">
+            ðŸŒ§ Rainfall
+            <strong>--</strong>
+        </div>
+
+        <div class="metric">
+            ðŸ’¨ Wind
+            <strong>--</strong>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MAPLIBRE
+========================================================== -->
+
+
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 node_modules/
-dist/
+# The production bundle is intentionally versioned so Render's small web
+# instance never has to run Vite during a deployment.
+frontend/
 __pycache__/
 *.tsbuildinfo
 gp/

@@ -552,42 +552,20 @@ class QuietDisconnectHTTPServer(ThreadingHTTPServer):
             return
         super().handle_error(request,client_address)
 
-def ensure_frontend_build():
-    """Build the SPA when a manually configured host skipped the build step.
-
-    Render web services created outside a Blueprint retain their dashboard
-    build command, so committing render.yaml alone does not update them.  The
-    API server is therefore responsible for recovering the required Vite
-    artifact before it accepts public traffic.
-    """
+def ensure_frontend_bundle():
+    """Require the versioned SPA bundle without compiling on the web instance."""
     index_file=DIST/'index.html'
     if index_file.is_file():
         return
-    npm=shutil.which('npm')
-    if not npm:
-        raise RuntimeError(
-            f'Frontend build is missing: {index_file}, and npm is unavailable. '
-            'Configure the Render build command to run `cd frontend && npm ci --include=dev && npm run build`.'
-        )
-    print('Frontend build is missing; installing frontend dependencies and building it now.',flush=True)
-    frontend_dir=DIST.parent
-    for command in ([npm,'ci','--include=dev'],[npm,'run','build']):
-        # Render's small instances cap Node's default V8 heap near 256 MB.
-        # Vite needs a little more while transforming the map bundle, but
-        # 384 MB remains within the usual 512 MB web-service allocation.
-        environment=dict(os.environ)
-        if command[-1]=='build' and '--max-old-space-size' not in environment.get('NODE_OPTIONS',''):
-            environment['NODE_OPTIONS']=' '.join(filter(None,[environment.get('NODE_OPTIONS',''),'--max-old-space-size=384']))
-        result=subprocess.run(command,cwd=frontend_dir,env=environment)
-        if result.returncode:
-            raise RuntimeError(f'Frontend build command failed ({" ".join(command)}; exit code {result.returncode}).')
-    if not index_file.is_file():
-        raise RuntimeError(f'Frontend build completed without creating {index_file}.')
+    raise RuntimeError(
+        f'Versioned frontend bundle is missing: {index_file}. '
+        'Run `npm run build` in frontend and commit frontend/dist.'
+    )
 
 if __name__=='__main__':
-    # This server owns both the API and the production SPA.  A dashboard
-    # configuration that skips Vite must not turn / into an opaque 404.
-    ensure_frontend_build()
+    # This server owns both the API and the production SPA.  The bundle is
+    # prebuilt in source control so startup remains within Render's memory cap.
+    ensure_frontend_bundle()
     host=os.environ.get('HOST','0.0.0.0')
     port=int(os.environ.get('PORT','8001'))
     node=shutil.which('node')
