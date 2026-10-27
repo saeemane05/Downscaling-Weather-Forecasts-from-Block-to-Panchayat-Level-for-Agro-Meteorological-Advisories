@@ -2,8 +2,15 @@ services:
   - type: web
     name: hyperweather-api
     runtime: python
-    buildCommand: python -m pip install -r requirements.txt && cd agri_advisory && npm install --omit=dev && cd ../frontend && npm ci && npm run build
-    startCommand: python frontend/server.py
+    # `frontend/server.py` serves frontend/dist itself.  If the Vite build is
+    # skipped, the otherwise healthy Python process responds to / with its
+    # default "404 - Nothing matches the given URI" page.
+    # Install build tooling explicitly: Render environments may set
+    # NODE_ENV=production, which otherwise makes npm omit Vite/TypeScript.
+    buildCommand: python -m pip install -r requirements.txt && cd agri_advisory && npm ci --omit=dev && cd ../frontend && npm ci --include=dev && npm run build
+    # Retain a start-time guard so a stale/cached or manually configured
+    # Render service can never come up without the static application shell.
+    startCommand: test -f frontend/dist/index.html || (cd frontend && npm ci --include=dev && npm run build); python frontend/server.py
     healthCheckPath: /api/locations
     envVars:
       - key: CDSAPI_URL
