@@ -552,16 +552,36 @@ class QuietDisconnectHTTPServer(ThreadingHTTPServer):
             return
         super().handle_error(request,client_address)
 
-if __name__=='__main__':
-    # This server owns both the API and the production SPA.  Do not accept
-    # traffic when the SPA has not been built: otherwise every request to /
-    # becomes BaseHTTPRequestHandler's opaque default 404 response.
+def ensure_frontend_build():
+    """Build the SPA when a manually configured host skipped the build step.
+
+    Render web services created outside a Blueprint retain their dashboard
+    build command, so committing render.yaml alone does not update them.  The
+    API server is therefore responsible for recovering the required Vite
+    artifact before it accepts public traffic.
+    """
     index_file=DIST/'index.html'
-    if not index_file.is_file():
+    if index_file.is_file():
+        return
+    npm=shutil.which('npm')
+    if not npm:
         raise RuntimeError(
-            f'Frontend build is missing: {index_file}. '
-            'Run `npm ci --include=dev && npm run build` in frontend before starting the service.'
+            f'Frontend build is missing: {index_file}, and npm is unavailable. '
+            'Configure the Render build command to run `cd frontend && npm ci --include=dev && npm run build`.'
         )
+    print('Frontend build is missing; installing frontend dependencies and building it now.',flush=True)
+    frontend_dir=DIST.parent
+    for command in ([npm,'ci','--include=dev'],[npm,'run','build']):
+        result=subprocess.run(command,cwd=frontend_dir)
+        if result.returncode:
+            raise RuntimeError(f'Frontend build command failed ({" ".join(command)}; exit code {result.returncode}).')
+    if not index_file.is_file():
+        raise RuntimeError(f'Frontend build completed without creating {index_file}.')
+
+if __name__=='__main__':
+    # This server owns both the API and the production SPA.  A dashboard
+    # configuration that skips Vite must not turn / into an opaque 404.
+    ensure_frontend_build()
     host=os.environ.get('HOST','0.0.0.0')
     port=int(os.environ.get('PORT','8001'))
     node=shutil.which('node')
