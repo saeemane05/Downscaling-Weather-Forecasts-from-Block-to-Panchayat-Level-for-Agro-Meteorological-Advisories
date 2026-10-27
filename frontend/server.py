@@ -553,6 +553,15 @@ class QuietDisconnectHTTPServer(ThreadingHTTPServer):
         super().handle_error(request,client_address)
 
 if __name__=='__main__':
+    # This server owns both the API and the production SPA.  Do not accept
+    # traffic when the SPA has not been built: otherwise every request to /
+    # becomes BaseHTTPRequestHandler's opaque default 404 response.
+    index_file=DIST/'index.html'
+    if not index_file.is_file():
+        raise RuntimeError(
+            f'Frontend build is missing: {index_file}. '
+            'Run `npm ci --include=dev && npm run build` in frontend before starting the service.'
+        )
     host=os.environ.get('HOST','0.0.0.0')
     port=int(os.environ.get('PORT','8001'))
     node=shutil.which('node')
